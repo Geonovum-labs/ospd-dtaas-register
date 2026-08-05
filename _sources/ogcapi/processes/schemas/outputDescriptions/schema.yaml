@@ -1,0 +1,2 @@
+anyOf:
+  - $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription

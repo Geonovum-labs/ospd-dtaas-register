@@ -1,0 +1,26 @@
+allOf:
+  - $ref: bblocks://ogc.api.processes.v1.schemas.process
+  - properties:
+      inputs:
+        $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription
+        additionalProperties: false
+      outputs:
+        $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription
+        additionalProperties: false
+      # output_column:
+      #   type: object
+      #   properties:
+      #     title:
+      #       type: string
+      #       const: Output column name
+      #     description:
+      #       type: string
+      #       const: Name of the column in which to store output metric. If this column exists, an error will be thrown
+      #     minOccurs:
+      #       type: integer
+      #       const: 0
+      #     maxOccurs:
+      #       type: integer
+      #       const: 1
+      #     schema:
+      #       $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema#/properties/output_column

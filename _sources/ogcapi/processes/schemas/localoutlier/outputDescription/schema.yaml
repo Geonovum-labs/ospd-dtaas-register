@@ -1,0 +1,17 @@
+allOf:
+  - $ref: bblocks://ogc.api.processes.v1.schemas.outputDescription
+properties:
+  schema:
+    type: object
+    properties:
+      output_dataset:
+        type: object
+        properties:
+          title:
+            type: string
+            const: Output Dataset
+          description:
+            type: string
+            const: output
+          schema:
+            $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema#/properties/output_dataset

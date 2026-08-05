@@ -1,0 +1,134 @@
+openapi: 3.1.0
+info:
+  title: "OGC API - Processes 1.0 geonovum example"
+  version: 1.0.0
+  description: |-
+    This is an OGC API - Processes 1.0 implementation using Building Blocks for a DTaaS demo.
+  contact:
+    name: "Geonovum"
+    email: info@geonovum.nl
+    url: 'https://github.com/nielshoffmann'
+  license:
+    name: Apache License, Version 2.0
+    url: "https://www.apache.org/licenses/LICENSE-2.0.txt"
+
+paths:
+  /:
+    $ref: "bblocks://ogc.api.processes.v1.paths.LandingPage"
+
+  /conformance:
+    $ref: "bblocks://ogc.api.processes.v1.paths.Conformance"
+
+  /processes:
+    $ref: "bblocks://ogc.api.processes.v1.paths.ProcessList"
+
+  /processes/localoutlier:
+    get:
+      summary: Get localoutlier process description
+      description: The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input (observation), in a set of such observations. It measures the local density deviation of a given data point with respect to its neighbors.
+      operationId: describeLocaloutlierProcess
+      tags:
+        - localoutlier
+      parameters:
+        - name: f
+          in: query
+          description: The optional f parameter indicates the output format which the server shall provide as part of the response document. The default format is GeoJSON.
+          required: false
+          style: form
+          explode: false
+          schema:
+            type: string
+            enum: [json, html, jsonld]
+            default: json
+      responses:
+        '200':
+          description: Localoutlier process description
+          content:
+            application/json:
+              schema:
+                $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription
+        default:
+          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+
+  /processes/localoutlier/execution:
+    post:
+      summary: Execute localoutlier process
+      description: Execute the local outlier factor (LOF) algorithm on a GeoJSON point dataset.
+      operationId: executeLocaloutlierJob
+      tags:
+        - localoutlier
+      parameters:
+        - name: Prefer
+          in: header
+          required: false
+          schema:
+            type: string
+            enum:
+              - respond-async
+          description: Execution preference (async or sync with timeout)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: bblocks://ogc.api.processes.v1.schemas.execute
+                - required: [inputs]
+                  properties:
+                    inputs:
+                      $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema
+            example:
+              inputs:
+                dataset: https://example.com/data/points.geojson
+                n_neighbors: 20
+                leaf_size: 30
+                output_column: abnormality
+      responses:
+        '200':
+          description: Synchronous execution completed
+          content:
+            application/json:
+              schema:
+                properties:
+                  outputs:
+                    $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema
+        '201':
+          $ref: "bblocks://ogc.api.processes.v1.responses.ExecuteAsync"
+        '404':
+          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
+        '500':
+          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+
+  /jobs:
+    $ref: "bblocks://ogc.api.processes.v1.paths.JobList"
+
+  /jobs/{jobId}:
+    $ref: "bblocks://ogc.api.processes.v1.api#paths/~1jobs~1{jobId}"
+
+  /jobs/{jobId}/results:
+    get:
+      summary: retrieve the result(s) of a job
+      description: |
+        Lists available results of a job. In case of a failure, lists exceptions instead.
+
+        For more information, see [Section 7.13](https://docs.ogc.org/is/18-062/18-062.html#sc_retrieve_job_results).
+      operationId: getResult
+      tags:
+        - Result
+      parameters:
+        - $ref: "bblocks://ogc.api.processes.v1.parameters.jobId"
+      responses:
+        '200':
+          description: Job results
+          content:
+            application/json:
+              schema:
+                $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions
+        '404':
+          $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
+        '500':
+          $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
+
+servers:
+  - description: Local development server
+    url: http://localhost:5000

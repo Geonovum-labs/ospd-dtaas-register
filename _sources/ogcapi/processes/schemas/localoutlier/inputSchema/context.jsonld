@@ -1,0 +1,6 @@
+{
+  "@context": {
+    "leaf_size": "http://definities.geostandaarden.nl/nen3610-2022/id/begrip/verkeerruimte",
+    "n_neighbors": "https://purl.stelselcatalogus.nl/id/mkg/BRTkenmerk_nummer-inrichtingselement"
+  }
+}
