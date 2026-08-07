@@ -1,0 +1,1 @@
+{"defs":{},"properties":[{"path":["output_dataset"],"schema_type":"object","sources":["bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"]}]}

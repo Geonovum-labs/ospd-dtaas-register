@@ -1,0 +1,138 @@
+openapi: 3.1.0
+info:
+  title: OGC API - Processes 1.0 geonovum example
+  version: 1.0.0
+  description: This is an OGC API - Processes 1.0 implementation using Building Blocks
+    for a DTaaS demo.
+  contact:
+    name: Geonovum
+    email: info@geonovum.nl
+    url: https://github.com/nielshoffmann
+  license:
+    name: Apache License, Version 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.txt
+paths:
+  /:
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/LandingPage/openapi.yaml
+  /conformance:
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/Conformance/openapi.yaml
+  /processes:
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/ProcessList/openapi.yaml
+  /processes/localoutlier:
+    get:
+      summary: Get localoutlier process description
+      description: The local outlier factor (LOF) algorithm computes a score indicating
+        the degree of abnormality of each input (observation), in a set of such observations.
+        It measures the local density deviation of a given data point with respect
+        to its neighbors.
+      operationId: describeLocaloutlierProcess
+      tags:
+      - localoutlier
+      parameters:
+      - name: f
+        in: query
+        description: The optional f parameter indicates the output format which the
+          server shall provide as part of the response document. The default format
+          is GeoJSON.
+        required: false
+        style: form
+        explode: false
+        schema:
+          type: string
+          enum:
+          - json
+          - html
+          - jsonld
+          default: json
+      responses:
+        '200':
+          description: Localoutlier process description
+          content:
+            application/json:
+              schema:
+                $ref: https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/schema.yaml
+        default:
+          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
+  /processes/localoutlier/execution:
+    post:
+      summary: Execute localoutlier process
+      description: Execute the local outlier factor (LOF) algorithm on a GeoJSON point
+        dataset.
+      operationId: executeLocaloutlierJob
+      tags:
+      - localoutlier
+      parameters:
+      - name: Prefer
+        in: header
+        required: false
+        schema:
+          type: string
+          enum:
+          - respond-async
+        description: Execution preference (async or sync with timeout)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/execute/schema.yaml
+              - required:
+                - inputs
+                properties:
+                  inputs:
+                    $ref: https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml
+            example:
+              inputs:
+                dataset: https://example.com/data/points.geojson
+                n_neighbors: 20
+                leaf_size: 30
+                output_column: abnormality
+      responses:
+        '200':
+          description: Synchronous execution completed
+          content:
+            application/json:
+              schema:
+                properties:
+                  outputs:
+                    $ref: https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml
+        '201':
+          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ExecuteAsync/schema.yaml
+        '404':
+          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
+        '500':
+          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
+  /jobs:
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/paths/JobList/openapi.yaml
+  /jobs/{jobId}:
+    $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/api/openapi.yaml
+  /jobs/{jobId}/results:
+    get:
+      summary: retrieve the result(s) of a job
+      description: 'Lists available results of a job. In case of a failure, lists
+        exceptions instead.
+
+
+        For more information, see [Section 7.13](https://docs.ogc.org/is/18-062/18-062.html#sc_retrieve_job_results).
+
+        '
+      operationId: getResult
+      tags:
+      - Result
+      parameters:
+      - $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/parameters/jobId/openapi.yaml
+      responses:
+        '200':
+          description: Job results
+          content:
+            application/json:
+              schema:
+                $ref: https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/outputDescriptions/schema.yaml
+        '404':
+          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
+        '500':
+          $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
+servers:
+- description: Local development server
+  url: http://localhost:5000

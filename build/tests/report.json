@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0,
+    "result": true
+  },
+  "bblocks": {
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema - Localoutlier process input schema",
+      "bblockName": "Localoutlier process input schema",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
+      "generated": "2026-08-07T10:05:01.220902+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema - Localoutlier process output schema",
+      "bblockName": "Localoutlier process output schema",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+      "generated": "2026-08-07T10:05:01.225043+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription - Localoutlier process input description",
+      "bblockName": "Localoutlier process input description",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
+      "generated": "2026-08-07T10:05:01.233208+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription - Localoutlier process output description",
+      "bblockName": "Localoutlier process output description",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription",
+      "generated": "2026-08-07T10:05:01.238041+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions - Example OGC API Processes instance input descriptions",
+      "bblockName": "Example OGC API Processes instance input descriptions",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
+      "generated": "2026-08-07T10:05:01.241861+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription - Localoutlier process description",
+      "bblockName": "Localoutlier process description",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
+      "generated": "2026-08-07T10:05:01.247045+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions - Example OGC API Processes instance output descriptions",
+      "bblockName": "Example OGC API Processes instance output descriptions",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
+      "generated": "2026-08-07T10:05:01.251010+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "geonovum.dtaas.ogcapi.processes.custom-api": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.custom-api - Demo OGC API processes instance - LOF",
+      "bblockName": "Demo OGC API processes instance - LOF",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.custom-api",
+      "generated": "2026-08-07T10:05:01.253499+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "geonovum.dtaas.ogcapi.processes.custom-api-ipt": {
+      "title": "Validation report for geonovum.dtaas.ogcapi.processes.custom-api-ipt - IPT profile of Geonovum custom API processes",
+      "bblockName": "IPT profile of Geonovum custom API processes",
+      "bblockId": "geonovum.dtaas.ogcapi.processes.custom-api-ipt",
+      "generated": "2026-08-07T10:05:01.255943+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    }
+  }
+}

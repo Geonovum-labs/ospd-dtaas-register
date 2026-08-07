@@ -1,0 +1,30 @@
+{
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.json"
+    }
+  ],
+  "properties": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "output_dataset": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "const": "Output Dataset"
+            },
+            "description": {
+              "type": "string",
+              "const": "output"
+            },
+            "schema": {
+              "$ref": "https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.json#/properties/output_dataset"
+            }
+          }
+        }
+      }
+    }
+  }
+}

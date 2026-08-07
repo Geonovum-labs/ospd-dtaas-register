@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for geonovum.dtaas.ogcapi.processes.custom-api-ipt - IPT profile of Geonovum custom API processes",
+  "bblockName": "IPT profile of Geonovum custom API processes",
+  "bblockId": "geonovum.dtaas.ogcapi.processes.custom-api-ipt",
+  "generated": "2026-08-07T10:05:01.255943+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "output_dataset": {
+      "type": "object",
+      "contentMediaType": "application/json"
+    }
+  }
+}

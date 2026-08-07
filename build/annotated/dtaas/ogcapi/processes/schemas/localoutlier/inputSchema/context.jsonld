@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "n_neighbors": "http://www.w3.org/2001/XMLSchema#integer",
+    "leaf_size": "http://www.w3.org/2001/XMLSchema#integer",
+    "@version": 1.1
+  }
+}

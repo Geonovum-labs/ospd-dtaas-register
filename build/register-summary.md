@@ -8,17 +8,17 @@ register for various examples of building blocks.
 
 ## Building Blocks
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
-
-**Type:** schema
-
-Output schema for the localoutlier process
-
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema` — Localoutlier process input schema
 
 **Type:** schema
 
 Input schema for the localoutlier process
+
+### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
+
+**Type:** schema
+
+Output schema for the localoutlier process
 
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription` — Localoutlier process input description
 
@@ -55,4 +55,10 @@ Collection of output descriptions
 **Type:** api
 
 An example of an OGC API Processes implementation using building blocks - Local Outlier Factor
+
+### `geonovum.dtaas.ogcapi.processes.custom-api-ipt` — IPT profile of Geonovum custom API processes
+
+**Type:** api
+
+Profile of Geonovum's custom OGC API Processes for IPT (Integrity Provenance Trust) aspects.
 

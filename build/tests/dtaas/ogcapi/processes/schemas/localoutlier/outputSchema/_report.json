@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema - Localoutlier process output schema",
+  "bblockName": "Localoutlier process output schema",
+  "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+  "generated": "2026-08-07T10:05:01.225043+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

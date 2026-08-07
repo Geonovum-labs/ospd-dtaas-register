@@ -1,0 +1,21 @@
+type: object
+required:
+- dataset
+properties:
+  dataset:
+    type: string
+    format: url
+  n_neighbors:
+    oneOf:
+    - type: integer
+    default: 20
+    x-jsonld-id: http://www.w3.org/2001/XMLSchema#integer
+  leaf_size:
+    oneOf:
+    - type: integer
+    default: 30
+    x-jsonld-id: http://www.w3.org/2001/XMLSchema#integer
+  output_column:
+    oneOf:
+    - type: string
+    default: abnormality
