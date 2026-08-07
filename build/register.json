@@ -2,7 +2,7 @@
   "name": "OSPD / DTaaS block collection",
   "abstract": "OSPD / DTaaS block collection\n",
   "description": "register for various examples of building blocks.\n",
-  "modified": "2026-08-07T10:07:01.331480",
+  "modified": "2026-08-07T10:11:18.587189",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"989dc6251d43604afdfd4b503bdbd417e88a5876",
@@ -167,8 +167,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription"
       ],
       "schema": {
         "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml",
@@ -356,23 +356,23 @@
       },
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
-        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
-        "bblocks://ogc.api.processes.v1.responses.NotFound",
-        "bblocks://ogc.api.processes.v1.paths.Conformance",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
-        "bblocks://ogc.api.processes.v1.parameters.jobId",
-        "bblocks://ogc.api.processes.v1.paths.ProcessList",
         "bblocks://ogc.api.processes.v1.schemas.inputDescription",
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
+        "bblocks://ogc.api.processes.v1.responses.NotFound",
+        "bblocks://ogc.api.processes.v1.parameters.jobId",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-        "bblocks://ogc.api.processes.v1.schemas.execute",
-        "bblocks://ogc.api.processes.v1.paths.JobList",
-        "bblocks://ogc.api.processes.v1.api",
+        "bblocks://ogc.api.processes.v1.paths.Conformance",
+        "bblocks://ogc.api.processes.v1.paths.ProcessList",
         "bblocks://ogc.api.processes.v1.responses.ServerError",
-        "bblocks://ogc.api.processes.v1.paths.LandingPage"
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
+        "bblocks://ogc.api.processes.v1.paths.JobList",
+        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
+        "bblocks://ogc.api.processes.v1.api",
+        "bblocks://ogc.api.processes.v1.schemas.execute",
+        "bblocks://ogc.api.processes.v1.paths.LandingPage",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions"
       ],
       "sourceOpenAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/openapi.yaml",
       "openAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/custom-api/openapi.yaml",
@@ -404,10 +404,10 @@
       "version": "0.1",
       "dependsOn": [
         "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
-        "bblocks://ogc.osc.api-profiles.processes.ipt.results",
         "bblocks://ogc.api.processes.v1.schemas.inputDescription",
+        "bblocks://ogc.osc.api-profiles.processes.sample-implementation.schemas.inputDescriptions",
         "bblocks://ogc.api.processes.v1.schemas.outputDescription",
-        "bblocks://ogc.osc.api-profiles.processes.sample-implementation.schemas.inputDescriptions"
+        "bblocks://ogc.osc.api-profiles.processes.ipt.results"
       ],
       "extensionPoints": {
         "baseBuildingBlock": "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
