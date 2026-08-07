@@ -1,0 +1,36 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
+  "name": "Localoutlier process input description",
+  "abstract": "Input description for the localoutlier process",
+  "status": "under-development",
+  "dateTimeAddition": "2025-12-17T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "version": "1.0",
+  "dateOfLastChange": "2026-08-05",
+  "maturity": "development",
+  "tags": [
+    "examples",
+    "ogc api",
+    "ogc api processes"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.processes.v1.schemas.inputDescription",
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema"
+  ],
+  "schema": {
+    "application/yaml": "https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml",
+    "application/json": "https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.json"
+  },
+  "sourceSchema": "https://Geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml",
+  "ldContext": "https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/context.jsonld",
+  "resolvedSchemaProperties": "https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/resolvedProperties.json",
+  "sourceFiles": "https://Geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/inputDescription/",
+  "validationPassed": true,
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.yaml\ntype: object\nproperties:\n  dataset:\n    type: object\n    properties:\n      title:\n        type: string\n        const: Dataset\n      description:\n        type: string\n        const: geojson dataset of points, in one CRS, for which LOF scores should\n          be computed.\n      minOccurs:\n        type: integer\n        const: 1\n      maxOccurs:\n        type: integer\n        const: 1\n      schema:\n        $ref: https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml#/properties/dataset\n  n_neighbors:\n    type: object\n    properties:\n      title:\n        type: string\n        const: Number of neighbors\n      description:\n        type: string\n        const: Number of neighbors to use by default for `kneighbors` queries. If\n          `n_neighbors` is larger than the number of samples provided, all samples\n          will be used.\n      minOccurs:\n        type: integer\n        const: 0\n      maxOccurs:\n        type: integer\n        const: 1\n      schema:\n        $ref: https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml#/properties/n_neighbors\n  leaf_size:\n    type: object\n    properties:\n      title:\n        type: string\n        const: Leaf size\n      description:\n        type: string\n        const: Leaf size passed to BallTree or KDTree. This can affect the speed of\n          the construction and query, as well as the memory required to store the\n          tree.\n      minOccurs:\n        type: integer\n        const: 0\n      maxOccurs:\n        type: integer\n        const: 1\n      schema:\n        $ref: https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml#/properties/leaf_size\n  output_column:\n    type: object\n    properties:\n      title:\n        type: string\n        const: Output column name\n      description:\n        type: string\n        const: Name of the column in which to store output metric. If this column\n          exists, an error will be thrown\n      minOccurs:\n        type: integer\n        const: 0\n      maxOccurs:\n        type: integer\n        const: 1\n      schema:\n        $ref: https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml#/properties/output_column\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/ogcapi/processes/schemas/localoutlier/inputDescription"
+}

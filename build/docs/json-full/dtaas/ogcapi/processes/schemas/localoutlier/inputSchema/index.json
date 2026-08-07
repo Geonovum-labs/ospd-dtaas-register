@@ -1,0 +1,33 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
+  "name": "Localoutlier process input schema",
+  "abstract": "Input schema for the localoutlier process",
+  "status": "under-development",
+  "dateTimeAddition": "2025-12-17T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "version": "1.0",
+  "dateOfLastChange": "2026-08-05",
+  "maturity": "development",
+  "tags": [
+    "examples",
+    "ogc api",
+    "ogc api processes"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/context.jsonld",
+  "schema": {
+    "application/yaml": "https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml",
+    "application/json": "https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json"
+  },
+  "sourceSchema": "https://Geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml",
+  "sourceLdContext": "https://Geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/inputSchema/context.jsonld",
+  "resolvedSchemaProperties": "https://Geonovum-labs.github.io/ospd-dtaas-register/build-local/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/resolvedProperties.json",
+  "sourceFiles": "https://Geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/inputSchema/",
+  "validationPassed": true,
+  "annotatedSchema": "type: object\nrequired:\n- dataset\nproperties:\n  dataset:\n    type: string\n    format: url\n  n_neighbors:\n    oneOf:\n    - type: integer\n    default: 20\n    x-jsonld-id: http://www.w3.org/2001/XMLSchema#integer\n  leaf_size:\n    oneOf:\n    - type: integer\n    default: 30\n    x-jsonld-id: http://www.w3.org/2001/XMLSchema#integer\n  output_column:\n    oneOf:\n    - type: string\n    default: abnormality\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/ogcapi/processes/schemas/localoutlier/inputSchema"
+}
