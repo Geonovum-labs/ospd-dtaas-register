@@ -1,7 +1,7 @@
 {
   "anyOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.json"
+      "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.json"
     }
   ]
 }

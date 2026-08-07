@@ -36,8 +36,8 @@ properties:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml)
+* YAML version: [schema.yaml](https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json)
+* JSON version: [schema.json](https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml)
 
 
 # JSON-LD Context
@@ -53,7 +53,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/context.jsonld)
+[context.jsonld](https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/context.jsonld)
 
 
 # For developers

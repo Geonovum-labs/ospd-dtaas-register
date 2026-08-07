@@ -26,7 +26,7 @@
           "const": 1
         },
         "schema": {
-          "$ref": "https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json#/properties/dataset"
+          "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json#/properties/dataset"
         }
       }
     },
@@ -50,7 +50,7 @@
           "const": 1
         },
         "schema": {
-          "$ref": "https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json#/properties/n_neighbors"
+          "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json#/properties/n_neighbors"
         }
       }
     },
@@ -74,7 +74,7 @@
           "const": 1
         },
         "schema": {
-          "$ref": "https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json#/properties/leaf_size"
+          "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json#/properties/leaf_size"
         }
       }
     },
@@ -98,7 +98,7 @@
           "const": 1
         },
         "schema": {
-          "$ref": "https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json#/properties/output_column"
+          "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json#/properties/output_column"
         }
       }
     }

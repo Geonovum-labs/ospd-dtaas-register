@@ -14,4 +14,4 @@ properties:
             type: string
             const: output
           schema:
-            $ref: https://raw.githubusercontent.com/Geonovum-labs/ospd-dtaas-register/undefined/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml#/properties/output_dataset
+            $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml#/properties/output_dataset
