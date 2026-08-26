@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2025-12-17",
+  "dateOfLastChange": "2026-08-26",
   "maturity": "development",
   "tags": [
     "examples",
@@ -29,6 +29,33 @@
   "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/outputDescriptions/resolvedProperties.json",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/outputDescriptions/",
   "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/schemas/outputDescriptions/",
+  "examples": [
+    {
+      "title": "Localoutlier output descriptions",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/outputDescriptions/examples/localoutlier.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/outputDescriptions/example_1_1.json",
+          "sizeBytes": 128,
+          "code": "{\n  \"schema\": {\"type\": \"object\", \"properties\": {\"output_dataset\": {\"type\": \"object\", \"contentMediaType\": \"application/json\"}}}\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/outputDescriptions/example_1_1.jsonld",
+          "sizeBytes": 326,
+          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/outputDescriptions/context.jsonld\",\n  \"schema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"output_dataset\": {\n        \"type\": \"object\",\n        \"contentMediaType\": \"application/json\"\n      }\n    }\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/outputDescriptions/example_1_1.ttl",
+          "sizeBytes": 244,
+          "code": "@prefix proc: <https://w3id.org/ogc/api/processes/> .\n\n[] proc:schema [ proc:properties [ proc:output_dataset [ proc:contentMediaType \"application/json\" ;\n                            proc:type \"object\" ] ] ;\n            proc:type \"object\" ] .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "anyOf:\n- $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/schemas/outputDescriptions"

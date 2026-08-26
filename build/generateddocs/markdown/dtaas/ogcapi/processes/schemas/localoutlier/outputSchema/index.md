@@ -7,6 +7,25 @@ Output schema for the localoutlier process
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Localoutlier output values
+#### json
+```json
+{
+  "output_dataset": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {"abnormality": 1.05},
+        "geometry": {"type": "Point", "coordinates": [5.1214, 52.0907]}
+      }
+    ]
+  }
+}
+```
+
 ## Schema
 
 ```yaml

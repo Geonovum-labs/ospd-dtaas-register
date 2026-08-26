@@ -1,0 +1,6 @@
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+
+[] proc:schema [ proc:properties [ proc:output_dataset [ proc:contentMediaType "application/json" ;
+                            proc:type "object" ] ] ;
+            proc:type "object" ] .
+

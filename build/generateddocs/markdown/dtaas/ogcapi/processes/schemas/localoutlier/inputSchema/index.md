@@ -7,6 +7,40 @@ Input schema for the localoutlier process
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Localoutlier input values
+#### json
+```json
+{
+  "dataset": "https://example.org/data/points.geojson",
+  "n_neighbors": 5,
+  "leaf_size": 30,
+  "output_column": "abnormality"
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/context.jsonld",
+  "dataset": "https://example.org/data/points.geojson",
+  "n_neighbors": 5,
+  "leaf_size": 30,
+  "output_column": "abnormality"
+}
+```
+
+#### ttl
+```ttl
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] xsd:integer 5,
+        30 .
+
+
+```
+
 ## Schema
 
 ```yaml

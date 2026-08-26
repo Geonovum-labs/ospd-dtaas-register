@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2025-12-17",
+  "dateOfLastChange": "2026-08-26",
   "maturity": "development",
   "tags": [
     "examples",
@@ -25,6 +25,21 @@
   "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/resolvedProperties.json",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/",
   "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/",
+  "examples": [
+    {
+      "title": "Localoutlier output values",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/examples/localoutlier.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/example_1_1.json",
+          "sizeBytes": 246,
+          "code": "{\n  \"output_dataset\": {\n    \"type\": \"FeatureCollection\",\n    \"features\": [\n      {\n        \"type\": \"Feature\",\n        \"properties\": {\"abnormality\": 1.05},\n        \"geometry\": {\"type\": \"Point\", \"coordinates\": [5.1214, 52.0907]}\n      }\n    ]\n  }\n}"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "type: object\nproperties:\n  output_dataset:\n    type: object\n    contentMediaType: application/json\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/schemas/localoutlier/outputSchema"

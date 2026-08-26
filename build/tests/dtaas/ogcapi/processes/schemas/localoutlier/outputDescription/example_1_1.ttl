@@ -1,0 +1,7 @@
+@prefix ns1: <https://w3id.org/ogc/api/schema/> .
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+
+[] proc:schema [ proc:type "object" ;
+            ns1:properties [ ns1:output_dataset [ proc:type "object" ;
+                            ns1:contentMediaType "application/json" ] ] ] .
+

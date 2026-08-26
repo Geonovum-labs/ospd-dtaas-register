@@ -1,0 +1,12 @@
+{
+  "@context": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/context.jsonld",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "output_dataset": {
+        "type": "object",
+        "contentMediaType": "application/json"
+      }
+    }
+  }
+}

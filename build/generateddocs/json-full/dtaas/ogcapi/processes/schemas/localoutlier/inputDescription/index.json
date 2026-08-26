@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2025-12-17",
+  "dateOfLastChange": "2026-08-26",
   "maturity": "development",
   "tags": [
     "examples",
@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.inputDescription",
-    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema"
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
+    "ogc.api.processes.v1.schemas.inputDescription"
   ],
   "schema": {
     "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml",
@@ -30,6 +30,33 @@
   "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/resolvedProperties.json",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/inputDescription/",
   "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/",
+  "examples": [
+    {
+      "title": "Localoutlier input descriptions",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/inputDescription/examples/localoutlier.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/example_1_1.json",
+          "sizeBytes": 1092,
+          "code": "{\n  \"schema\": {\"type\": \"object\"},\n  \"dataset\": {\n    \"title\": \"Dataset\",\n    \"description\": \"geojson dataset of points, in one CRS, for which LOF scores should be computed.\",\n    \"minOccurs\": 1,\n    \"maxOccurs\": 1,\n    \"schema\": \"https://example.org/data/points.geojson\"\n  },\n  \"n_neighbors\": {\n    \"title\": \"Number of neighbors\",\n    \"description\": \"Number of neighbors to use by default for `kneighbors` queries. If `n_neighbors` is larger than the number of samples provided, all samples will be used.\",\n    \"minOccurs\": 0,\n    \"maxOccurs\": 1,\n    \"schema\": 5\n  },\n  \"leaf_size\": {\n    \"title\": \"Leaf size\",\n    \"description\": \"Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree.\",\n    \"minOccurs\": 0,\n    \"maxOccurs\": 1,\n    \"schema\": 30\n  },\n  \"output_column\": {\n    \"title\": \"Output column name\",\n    \"description\": \"Name of the column in which to store output metric. If this column exists, an error will be thrown\",\n    \"minOccurs\": 0,\n    \"maxOccurs\": 1,\n    \"schema\": \"abnormality\"\n  }\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/example_1_1.jsonld",
+          "sizeBytes": 1261,
+          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/context.jsonld\",\n  \"schema\": {\n    \"type\": \"object\"\n  },\n  \"dataset\": {\n    \"title\": \"Dataset\",\n    \"description\": \"geojson dataset of points, in one CRS, for which LOF scores should be computed.\",\n    \"minOccurs\": 1,\n    \"maxOccurs\": 1,\n    \"schema\": \"https://example.org/data/points.geojson\"\n  },\n  \"n_neighbors\": {\n    \"title\": \"Number of neighbors\",\n    \"description\": \"Number of neighbors to use by default for `kneighbors` queries. If `n_neighbors` is larger than the number of samples provided, all samples will be used.\",\n    \"minOccurs\": 0,\n    \"maxOccurs\": 1,\n    \"schema\": 5\n  },\n  \"leaf_size\": {\n    \"title\": \"Leaf size\",\n    \"description\": \"Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree.\",\n    \"minOccurs\": 0,\n    \"maxOccurs\": 1,\n    \"schema\": 30\n  },\n  \"output_column\": {\n    \"title\": \"Output column name\",\n    \"description\": \"Name of the column in which to store output metric. If this column exists, an error will be thrown\",\n    \"minOccurs\": 0,\n    \"maxOccurs\": 1,\n    \"schema\": \"abnormality\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/example_1_1.ttl",
+          "sizeBytes": 1420,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix proc: <https://w3id.org/ogc/api/processes/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] proc:dataset [ dct:description \"geojson dataset of points, in one CRS, for which LOF scores should be computed.\" ;\n            dct:title \"Dataset\" ;\n            proc:maxOccurs 1 ;\n            proc:minOccurs 1 ;\n            proc:schema \"https://example.org/data/points.geojson\" ] ;\n    proc:leaf_size [ dct:description \"Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree.\" ;\n            dct:title \"Leaf size\" ;\n            proc:maxOccurs 1 ;\n            proc:minOccurs 0 ;\n            proc:schema 30 ] ;\n    proc:n_neighbors [ dct:description \"Number of neighbors to use by default for `kneighbors` queries. If `n_neighbors` is larger than the number of samples provided, all samples will be used.\" ;\n            dct:title \"Number of neighbors\" ;\n            proc:maxOccurs 1 ;\n            proc:minOccurs 0 ;\n            proc:schema 5 ] ;\n    proc:output_column [ dct:description \"Name of the column in which to store output metric. If this column exists, an error will be thrown\" ;\n            dct:title \"Output column name\" ;\n            proc:maxOccurs 1 ;\n            proc:minOccurs 0 ;\n            proc:schema \"abnormality\" ] ;\n    proc:schema [ proc:type \"object\" ] .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/inputDescription/schema.yaml\ntype: object\nproperties:\n  dataset:\n    type: object\n    properties:\n      title:\n        type: string\n        const: Dataset\n      description:\n        type: string\n        const: geojson dataset of points, in one CRS, for which LOF scores should\n          be computed.\n      minOccurs:\n        type: integer\n        const: 1\n      maxOccurs:\n        type: integer\n        const: 1\n      schema:\n        $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml#/properties/dataset\n  n_neighbors:\n    type: object\n    properties:\n      title:\n        type: string\n        const: Number of neighbors\n      description:\n        type: string\n        const: Number of neighbors to use by default for `kneighbors` queries. If\n          `n_neighbors` is larger than the number of samples provided, all samples\n          will be used.\n      minOccurs:\n        type: integer\n        const: 0\n      maxOccurs:\n        type: integer\n        const: 1\n      schema:\n        $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml#/properties/n_neighbors\n  leaf_size:\n    type: object\n    properties:\n      title:\n        type: string\n        const: Leaf size\n      description:\n        type: string\n        const: Leaf size passed to BallTree or KDTree. This can affect the speed of\n          the construction and query, as well as the memory required to store the\n          tree.\n      minOccurs:\n        type: integer\n        const: 0\n      maxOccurs:\n        type: integer\n        const: 1\n      schema:\n        $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml#/properties/leaf_size\n  output_column:\n    type: object\n    properties:\n      title:\n        type: string\n        const: Output column name\n      description:\n        type: string\n        const: Name of the column in which to store output metric. If this column\n          exists, an error will be thrown\n      minOccurs:\n        type: integer\n        const: 0\n      maxOccurs:\n        type: integer\n        const: 1\n      schema:\n        $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml#/properties/output_column\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/schemas/localoutlier/inputDescription"

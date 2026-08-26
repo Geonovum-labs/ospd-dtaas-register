@@ -1,0 +1,10 @@
+{
+  "version": "0.1",
+  "id": "localoutlier",
+  "title": "Local outlier factor (LOF)",
+  "description": "The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation.",
+  "jobControlOptions": [
+    "sync-execute",
+    "async-execute"
+  ]
+}

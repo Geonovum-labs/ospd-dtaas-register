@@ -9,7 +9,7 @@
   "itemClass": "api",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2025-12-17",
+  "dateOfLastChange": "2026-08-26",
   "maturity": "development",
   "tags": [
     "examples",
@@ -28,28 +28,70 @@
   },
   "shaclShapes": {},
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
-    "ogc.api.processes.v1.schemas.inputDescription",
-    "ogc.api.processes.v1.responses.NotFound",
-    "ogc.api.processes.v1.parameters.jobId",
     "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
+    "geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
+    "ogc.api.processes.v1.schemas.outputDescription",
+    "ogc.api.processes.v1.responses.NotFound",
+    "ogc.api.processes.v1.schemas.inputDescription",
     "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+    "ogc.api.processes.v1.schemas.execute",
     "ogc.api.processes.v1.paths.Conformance",
+    "ogc.api.processes.v1.parameters.jobId",
+    "ogc.api.processes.v1.paths.JobList",
+    "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
     "ogc.api.processes.v1.paths.ProcessList",
     "ogc.api.processes.v1.responses.ServerError",
-    "ogc.api.processes.v1.schemas.outputDescription",
-    "ogc.api.processes.v1.paths.JobList",
-    "ogc.api.processes.v1.responses.ExecuteAsync",
-    "ogc.api.processes.v1.api",
-    "ogc.api.processes.v1.schemas.execute",
     "ogc.api.processes.v1.paths.LandingPage",
-    "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-    "geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions"
+    "ogc.api.processes.v1.api",
+    "ogc.api.processes.v1.responses.ExecuteAsync",
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription"
   ],
   "sourceOpenAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/openapi.yaml",
   "openAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/custom-api/openapi.yaml",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/",
   "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/custom-api/",
+  "examples": [
+    {
+      "title": "Localoutlier process description",
+      "content": "A process description returned by the custom API.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/examples/process-description.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/custom-api/example_1_1.json",
+          "sizeBytes": 1583,
+          "code": "{\n  \"version\": \"0.1\",\n  \"id\": \"localoutlier\",\n  \"title\": \"Local outlier factor (LOF)\",\n  \"description\": \"The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation.\",\n  \"keywords\": [\"local outlier factor\", \"LOF\", \"outlier detection\"],\n  \"jobControlOptions\": [\"sync-execute\", \"async-execute\"],\n  \"inputs\": {\n    \"dataset\": {\n      \"title\": \"Dataset\",\n      \"description\": \"GeoJSON dataset of points in one CRS for which LOF scores should be computed.\",\n      \"schema\": {\"type\": \"string\", \"format\": \"url\"},\n      \"minOccurs\": 1,\n      \"maxOccurs\": 1\n    },\n    \"n_neighbors\": {\n      \"title\": \"Number of neighbors\",\n      \"description\": \"Number of neighbors to use for neighbor queries.\",\n      \"schema\": {\"type\": \"integer\", \"default\": 20},\n      \"minOccurs\": 0,\n      \"maxOccurs\": 1\n    },\n    \"leaf_size\": {\n      \"title\": \"Leaf size\",\n      \"description\": \"Leaf size passed to the spatial tree.\",\n      \"schema\": {\"type\": \"integer\", \"default\": 30},\n      \"minOccurs\": 0,\n      \"maxOccurs\": 1\n    },\n    \"output_column\": {\n      \"title\": \"Output column name\",\n      \"description\": \"Name of the column in which to store the output metric.\",\n      \"schema\": {\"type\": \"string\", \"default\": \"abnormality\"},\n      \"minOccurs\": 0,\n      \"maxOccurs\": 1\n    }\n  },\n  \"outputs\": {\n    \"output_dataset\": {\n      \"title\": \"Output Dataset\",\n      \"description\": \"The input dataset with the computed LOF metric.\",\n      \"schema\": {\"type\": \"object\", \"contentMediaType\": \"application/json\"}\n    }\n  },\n  \"outputTransmission\": [\"value\"]\n}"
+        }
+      ]
+    },
+    {
+      "title": "Localoutlier execution request",
+      "content": "A synchronous execution request for a GeoJSON point dataset.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/examples/execution-request.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/custom-api/example_2_1.json",
+          "sizeBytes": 157,
+          "code": "{\n  \"inputs\": {\n    \"dataset\": \"https://example.org/data/points.geojson\",\n    \"n_neighbors\": 5,\n    \"leaf_size\": 30,\n    \"output_column\": \"abnormality\"\n  }\n}"
+        }
+      ]
+    },
+    {
+      "title": "Localoutlier execution response",
+      "content": "A synchronous execution response containing the processed dataset.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/examples/execution-response.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/custom-api/example_3_1.json",
+          "sizeBytes": 285,
+          "code": "{\n  \"outputs\": {\n    \"output_dataset\": {\n      \"type\": \"FeatureCollection\",\n      \"features\": [\n        {\n          \"type\": \"Feature\",\n          \"properties\": {\"abnormality\": 1.05},\n          \"geometry\": {\"type\": \"Point\", \"coordinates\": [5.1214, 52.0907]}\n        }\n      ]\n    }\n  }\n}"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": null,
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/custom-api"

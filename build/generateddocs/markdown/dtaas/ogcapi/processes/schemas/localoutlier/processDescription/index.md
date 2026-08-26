@@ -7,6 +7,41 @@ Process description for the localoutlier process
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Localoutlier process description
+#### json
+```json
+{
+  "version": "0.1",
+  "id": "localoutlier",
+  "title": "Local outlier factor (LOF)",
+  "description": "The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation.",
+  "jobControlOptions": ["sync-execute", "async-execute"]
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/context.jsonld",
+  "version": "0.1",
+  "id": "localoutlier",
+  "title": "Local outlier factor (LOF)",
+  "description": "The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation.",
+  "jobControlOptions": [
+    "sync-execute",
+    "async-execute"
+  ]
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 ## Schema
 
 ```yaml

@@ -7,6 +7,43 @@ Collection of output descriptions
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Localoutlier output descriptions
+#### json
+```json
+{
+  "schema": {"type": "object", "properties": {"output_dataset": {"type": "object", "contentMediaType": "application/json"}}}
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/outputDescriptions/context.jsonld",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "output_dataset": {
+        "type": "object",
+        "contentMediaType": "application/json"
+      }
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+
+[] proc:schema [ proc:properties [ proc:output_dataset [ proc:contentMediaType "application/json" ;
+                            proc:type "object" ] ] ;
+            proc:type "object" ] .
+
+
+```
+
 ## Schema
 
 ```yaml

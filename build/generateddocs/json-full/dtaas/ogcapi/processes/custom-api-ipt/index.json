@@ -11,10 +11,10 @@
   "version": "0.1",
   "dependsOn": [
     "geonovum.dtaas.ogcapi.processes.custom-api",
-    "ogc.api.processes.v1.schemas.inputDescription",
-    "ogc.osc.api-profiles.processes.sample-implementation.schemas.inputDescriptions",
     "ogc.api.processes.v1.schemas.outputDescription",
-    "ogc.osc.api-profiles.processes.ipt.results"
+    "ogc.api.processes.v1.schemas.inputDescription",
+    "ogc.osc.api-profiles.processes.ipt.results",
+    "ogc.osc.api-profiles.processes.sample-implementation.schemas.inputDescriptions"
   ],
   "extensionPoints": {
     "baseBuildingBlock": "geonovum.dtaas.ogcapi.processes.custom-api",
