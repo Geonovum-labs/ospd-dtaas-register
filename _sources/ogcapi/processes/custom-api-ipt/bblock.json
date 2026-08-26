@@ -8,14 +8,16 @@
   "version": "0.1",
   "dependsOn": [
     "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
-    "bblocks://ogc.osc.api-profiles.processes.sample-implementation.schemas.inputDescriptions",
+    "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
+    "bblocks://ogc.osc.api-profiles.processes.ipt.execute",
     "bblocks://ogc.osc.api-profiles.processes.ipt.results"
   ],
   "extensionPoints": {
     "baseBuildingBlock": "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
     "extensions": {
-      "ogc.api.processes.v1.schemas.inputDescription": "bblocks://ogc.osc.api-profiles.processes.sample-implementation.schemas.inputDescriptions",
+      "ogc.api.processes.v1.schemas.inputDescription": "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
       "ogc.api.processes.v1.schemas.outputDescription": "bblocks://ogc.osc.api-profiles.processes.ipt.results"
     }
-  }
+  },
+  "description": "The custom API uses the IPT result schema for provenance-bearing process results. The returned result contains a qualified value whose value is a PROV activity or entity."
 }

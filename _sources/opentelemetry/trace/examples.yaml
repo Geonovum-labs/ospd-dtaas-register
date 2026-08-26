@@ -1,0 +1,6 @@
+examples:
+  - title: Localoutlier OpenTelemetry trace
+    content: An OTLP JSON trace carrying the DTaaS processing activity, subject, and object attributes.
+    snippets:
+      - language: json
+        ref: examples/localoutlier-trace.json

@@ -1,0 +1,7 @@
+type: object
+required: [trace, iptResult]
+properties:
+  trace:
+    $ref: bblocks://geonovum.dtaas.opentelemetry.trace
+  iptResult:
+    $ref: bblocks://ogc.osc.api-profiles.processes.ipt.results

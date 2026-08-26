@@ -1,0 +1,19 @@
+{
+  "name": "Localoutlier OpenTelemetry provenance",
+  "abstract": "PROV-O representation of an OpenTelemetry-traced localoutlier custom API execution.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "dateTimeAddition": "2026-08-26T00:00:00Z",
+  "version": "0.1",
+  "maturity": "development",
+  "tags": ["ogc api processes", "localoutlier", "opentelemetry", "prov-o", "provenance"],
+  "isProfileOf": ["geonovum.dtaas.ogcapi.processes.custom-api"],
+  "dependsOn": [
+    "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
+    "bblocks://geonovum.dtaas.ogcapi.processes.custom-api-ipt",
+    "bblocks://ogc.osc.api-profiles.processes.ipt.results",
+    "bblocks://geonovum.dtaas.opentelemetry.trace",
+    "bblocks://geonovum.dtaas.prov-o.opentelemetry-mapping"
+  ]
+}

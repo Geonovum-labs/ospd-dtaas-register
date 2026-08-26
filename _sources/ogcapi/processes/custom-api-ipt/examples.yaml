@@ -1,0 +1,6 @@
+examples:
+  - title: IPT provenance-bearing process result
+    content: A custom API result using the OGC IPT results schema with a PROV activity inline.
+    snippets:
+      - language: json
+        ref: examples/provenance-result.json

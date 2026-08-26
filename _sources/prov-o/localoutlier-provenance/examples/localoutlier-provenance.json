@@ -1,0 +1,44 @@
+{
+  "trace": {
+    "resourceSpans": [
+      {
+        "resource": {"attributes": [{"key": "service.name", "value": {"stringValue": "localoutlier-api"}}]},
+        "scopeSpans": [{
+          "scope": {"name": "geonovum.dtaas.localoutlier"},
+          "spans": [{
+            "traceId": "98bdcae79e7fa7d4ccbc981e0653e8fd",
+            "spanId": "dff0fb279813ee0d",
+            "name": "localoutlier.execute",
+            "startTimeUnixNano": "1739370701786437325",
+            "endTimeUnixNano": "1739370702000265566",
+            "attributes": [
+              {"key": "ogc.process.id", "value": {"stringValue": "localoutlier"}},
+              {"key": "dpl.core.processing_activity_id", "value": {"stringValue": "geonovum.dtaas.ogcapi.processes.custom-api/localoutlier"}},
+              {"key": "dpl.core.data_subject_id", "value": {"stringValue": "demo-subject"}},
+              {"key": "dpl.objects.data_object_id", "value": {"intValue": "2069296"}},
+              {"key": "dpl.objects.data_object_def", "value": {"stringValue": "https://example.org/objects/point-dataset"}}
+            ]
+          }]
+        }]
+      }
+    ]
+  },
+  "iptResult": {
+    "encoding": "json",
+    "mediaType": "application/ld+json",
+    "schema": "https://example.org/provenance/activity/98bdcae79e7fa7d4ccbc981e0653e8fd",
+    "value": {
+      "id": "https://example.org/provenance/activity/98bdcae79e7fa7d4ccbc981e0653e8fd",
+      "provType": "Activity",
+      "startedAtTime": "2025-02-12T10:31:41.786437325Z",
+      "endedAtTime": "2025-02-12T10:31:42.000265566Z",
+      "used": "https://example.org/objects/point-dataset",
+      "wasAssociatedWith": "https://example.org/provenance/agent/geonovum.dtaas.ogcapi.processes.custom-api/localoutlier",
+      "qualifiedUsage": {
+        "id": "https://example.org/provenance/usage/2069296",
+        "type": "Usage",
+        "entity": "https://example.org/objects/point-dataset"
+      }
+    }
+  }
+}

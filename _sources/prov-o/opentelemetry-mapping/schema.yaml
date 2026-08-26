@@ -1,0 +1,15 @@
+type: object
+required: [sourceFormat, mappingLanguage, outputVocabulary, mappingDocument]
+properties:
+  sourceFormat:
+    type: string
+    const: OTLP JSON resourceSpans
+  mappingLanguage:
+    type: string
+    const: RML
+  outputVocabulary:
+    type: string
+    const: PROV-O
+  mappingDocument:
+    type: string
+    format: uri-reference

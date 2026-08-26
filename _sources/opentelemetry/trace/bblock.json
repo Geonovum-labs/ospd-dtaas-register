@@ -1,0 +1,11 @@
+{
+  "name": "OpenTelemetry trace with DTaaS provenance attributes",
+  "abstract": "OTLP JSON trace shape used to record OGC API Processes provenance.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "dateTimeAddition": "2026-08-26T00:00:00Z",
+  "version": "0.1",
+  "maturity": "development",
+  "tags": ["opentelemetry", "otlp", "provenance", "ogc api processes"]
+}

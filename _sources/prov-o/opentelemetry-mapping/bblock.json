@@ -1,0 +1,12 @@
+{
+  "name": "OpenTelemetry to PROV-O mapping",
+  "abstract": "Experimental RML mapping from an OTLP trace to PROV-O activities, agents, entities, usages, and associations.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "dateTimeAddition": "2026-08-26T00:00:00Z",
+  "version": "0.1",
+  "maturity": "development",
+  "tags": ["opentelemetry", "prov-o", "rml", "provenance"],
+  "dependsOn": ["bblocks://geonovum.dtaas.opentelemetry.trace"]
+}
