@@ -1,0 +1,5 @@
+examples:
+  - title: Localoutlier input values
+    snippets:
+      - language: json
+        ref: examples/localoutlier.json

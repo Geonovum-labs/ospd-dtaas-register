@@ -1,0 +1,5 @@
+examples:
+  - title: Localoutlier process description
+    snippets:
+      - language: json
+        ref: examples/localoutlier.json

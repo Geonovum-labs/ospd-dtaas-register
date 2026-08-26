@@ -1,0 +1,18 @@
+examples:
+  - title: Localoutlier process description
+    content: A process description returned by the custom API.
+    snippets:
+      - language: json
+        ref: examples/process-description.json
+
+  - title: Localoutlier execution request
+    content: A synchronous execution request for a GeoJSON point dataset.
+    snippets:
+      - language: json
+        ref: examples/execution-request.json
+
+  - title: Localoutlier execution response
+    content: A synchronous execution response containing the processed dataset.
+    snippets:
+      - language: json
+        ref: examples/execution-response.json
