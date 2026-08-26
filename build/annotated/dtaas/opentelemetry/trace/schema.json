@@ -1,0 +1,123 @@
+{
+  "type": "object",
+  "required": [
+    "resourceSpans"
+  ],
+  "properties": {
+    "resourceSpans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "resource",
+          "scopeSpans"
+        ],
+        "properties": {
+          "resource": {
+            "type": "object",
+            "properties": {
+              "attributes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/attribute"
+                }
+              }
+            }
+          },
+          "scopeSpans": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "spans"
+              ],
+              "properties": {
+                "scope": {
+                  "type": "object"
+                },
+                "spans": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "traceId",
+                      "spanId",
+                      "name",
+                      "startTimeUnixNano",
+                      "endTimeUnixNano"
+                    ],
+                    "properties": {
+                      "traceId": {
+                        "type": "string"
+                      },
+                      "spanId": {
+                        "type": "string"
+                      },
+                      "parentSpanId": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "kind": {
+                        "type": "integer"
+                      },
+                      "startTimeUnixNano": {
+                        "type": "string"
+                      },
+                      "endTimeUnixNano": {
+                        "type": "string"
+                      },
+                      "attributes": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/$defs/attribute"
+                        }
+                      },
+                      "status": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "attribute": {
+      "type": "object",
+      "required": [
+        "key",
+        "value"
+      ],
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "object",
+          "properties": {
+            "stringValue": {
+              "type": "string"
+            },
+            "intValue": {
+              "type": "string"
+            },
+            "boolValue": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  }
+}

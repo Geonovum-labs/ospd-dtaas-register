@@ -2,13 +2,38 @@
   "title": "Validation report for geonovum.dtaas.ogcapi.processes.custom-api-ipt - IPT profile of Geonovum custom API processes",
   "bblockName": "IPT profile of Geonovum custom API processes",
   "bblockId": "geonovum.dtaas.ogcapi.processes.custom-api-ipt",
-  "generated": "2026-08-26T09:59:56.463144+00:00",
+  "generated": "2026-08-26T11:56:25.604754+00:00",
   "result": true,
-  "items": [],
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/dtaas/ogcapi/processes/custom-api-ipt/example_1_1.json",
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/custom-api-ipt/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/provenance-result.json from examples"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "globalErrors": {},
   "counts": {
-    "total": 0,
-    "passed": 0,
+    "total": 1,
+    "passed": 1,
     "failed": 0
   }
 }

@@ -1,0 +1,15 @@
+Validation report for geonovum.dtaas.prov-o.localoutlier-provenance - Localoutlier OpenTelemetry provenance
+Generated 2026-08-26T11:56:25.907266+00:00
+=== Files ===
+Using examples/localoutlier-provenance.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+
+** Validation error **
+**Empty** output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

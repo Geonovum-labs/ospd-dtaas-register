@@ -1,0 +1,51 @@
+{
+  "title": "Validation report for geonovum.dtaas.opentelemetry.trace - OpenTelemetry trace with DTaaS provenance attributes",
+  "bblockName": "OpenTelemetry trace with DTaaS provenance attributes",
+  "bblockId": "geonovum.dtaas.opentelemetry.trace",
+  "generated": "2026-08-26T11:56:24.935248+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/dtaas/opentelemetry/trace/example_1_1.json",
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/opentelemetry/trace/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/localoutlier-trace.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  }
+}

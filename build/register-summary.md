@@ -8,17 +8,29 @@ register for various examples of building blocks.
 
 ## Building Blocks
 
+### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
+
+**Type:** schema
+
+Output schema for the localoutlier process
+
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema` — Localoutlier process input schema
 
 **Type:** schema
 
 Input schema for the localoutlier process
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
+### `geonovum.dtaas.opentelemetry.trace` — OpenTelemetry trace with DTaaS provenance attributes
 
 **Type:** schema
 
-Output schema for the localoutlier process
+OTLP JSON trace shape used to record OGC API Processes provenance.
+
+### `geonovum.dtaas.prov-o.opentelemetry-mapping` — OpenTelemetry to PROV-O mapping
+
+**Type:** schema
+
+Experimental RML mapping from an OTLP trace to PROV-O activities, agents, entities, usages, and associations.
 
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription` — Localoutlier process input description
 
@@ -61,4 +73,10 @@ An example of an OGC API Processes implementation using building blocks - Local 
 **Type:** api
 
 Profile of Geonovum's custom OGC API Processes for IPT (Integrity Provenance Trust) aspects.
+
+### `geonovum.dtaas.prov-o.localoutlier-provenance` — Localoutlier OpenTelemetry provenance
+
+**Type:** schema
+
+PROV-O representation of an OpenTelemetry-traced localoutlier custom API execution.
 

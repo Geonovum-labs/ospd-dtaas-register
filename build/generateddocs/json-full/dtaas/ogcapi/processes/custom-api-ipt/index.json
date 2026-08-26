@@ -10,23 +10,41 @@
   "dateTimeAddition": "2026-08-07T00:00:00Z",
   "version": "0.1",
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.custom-api",
-    "ogc.api.processes.v1.schemas.outputDescription",
-    "ogc.api.processes.v1.schemas.inputDescription",
     "ogc.osc.api-profiles.processes.ipt.results",
-    "ogc.osc.api-profiles.processes.sample-implementation.schemas.inputDescriptions"
+    "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
+    "geonovum.dtaas.ogcapi.processes.custom-api",
+    "ogc.api.processes.v1.schemas.inputDescription",
+    "ogc.api.processes.v1.schemas.outputDescription",
+    "ogc.osc.api-profiles.processes.ipt.execute"
   ],
   "extensionPoints": {
     "baseBuildingBlock": "geonovum.dtaas.ogcapi.processes.custom-api",
     "extensions": {
-      "ogc.api.processes.v1.schemas.inputDescription": "ogc.osc.api-profiles.processes.sample-implementation.schemas.inputDescriptions",
+      "ogc.api.processes.v1.schemas.inputDescription": "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
       "ogc.api.processes.v1.schemas.outputDescription": "ogc.osc.api-profiles.processes.ipt.results"
     }
   },
+  "description": "The custom API uses the IPT result schema for provenance-bearing process results. The returned result contains a qualified value whose value is a PROV activity or entity.",
   "shaclShapes": {},
   "dateOfLastChange": "2026-08-07",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api-ipt/",
   "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/custom-api-ipt/",
+  "examples": [
+    {
+      "title": "IPT provenance-bearing process result",
+      "content": "A custom API result using the OGC IPT results schema with a PROV activity inline.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api-ipt/examples/provenance-result.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/custom-api-ipt/example_1_1.json",
+          "sizeBytes": 741,
+          "code": "{\n  \"encoding\": \"json\",\n  \"mediaType\": \"application/ld+json\",\n  \"schema\": \"https://example.org/provenance/activity/98bdcae79e7fa7d4ccbc981e0653e8fd\",\n  \"value\": {\n    \"id\": \"https://example.org/provenance/activity/98bdcae79e7fa7d4ccbc981e0653e8fd\",\n    \"provType\": \"Activity\",\n    \"startedAtTime\": \"2025-02-12T10:31:41.786437325Z\",\n    \"endedAtTime\": \"2025-02-12T10:31:42.000265566Z\",\n    \"used\": \"https://example.org/objects/point-dataset\",\n    \"wasAssociatedWith\": \"https://example.org/provenance/agent/geonovum.dtaas.ogcapi.processes.custom-api/localoutlier\",\n    \"qualifiedUsage\": {\n      \"id\": \"https://example.org/provenance/usage/2069296\",\n      \"type\": \"Usage\",\n      \"entity\": \"https://example.org/objects/point-dataset\"\n    }\n  }\n}"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": null,
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/custom-api-ipt"

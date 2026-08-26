@@ -1,0 +1,12 @@
+Validation report for ogc.osc.api-profiles.processes.ipt.results - Result schema for IPT
+Generated 2026-08-26T11:56:26.184015+00:00
+=== Unknown errors ===
+
+** Validation error **
+Traceback (most recent call last):
+,  File "/src/ogc/bblocks/validate.py", line 388, in validate_transform_output
+    validation_resources=profile_bblock.validation_resources,
+,AttributeError: 'ImportedBBlockProxy' object has no attribute 'validation_resources'
+
+=== End Unknown errors ===
+

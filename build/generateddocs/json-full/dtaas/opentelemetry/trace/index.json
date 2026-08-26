@@ -1,0 +1,48 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.opentelemetry.trace",
+  "name": "OpenTelemetry trace with DTaaS provenance attributes",
+  "abstract": "OTLP JSON trace shape used to record OGC API Processes provenance.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "dateTimeAddition": "2026-08-26T00:00:00Z",
+  "version": "0.1",
+  "maturity": "development",
+  "tags": [
+    "opentelemetry",
+    "otlp",
+    "provenance",
+    "ogc api processes"
+  ],
+  "shaclShapes": {},
+  "dateOfLastChange": "2026-08-26",
+  "schema": {
+    "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.yaml",
+    "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.json"
+  },
+  "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/opentelemetry/trace/schema.yaml",
+  "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/resolvedProperties.json",
+  "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/opentelemetry/trace/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/opentelemetry/trace/",
+  "examples": [
+    {
+      "title": "Localoutlier OpenTelemetry trace",
+      "content": "An OTLP JSON trace carrying the DTaaS processing activity, subject, and object attributes.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/opentelemetry/trace/examples/localoutlier-trace.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/opentelemetry/trace/example_1_1.json",
+          "sizeBytes": 1301,
+          "code": "{\n  \"resourceSpans\": [\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\"key\": \"service.name\", \"value\": {\"stringValue\": \"localoutlier-api\"}}\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\"name\": \"geonovum.dtaas.localoutlier\"},\n          \"spans\": [\n            {\n              \"traceId\": \"98bdcae79e7fa7d4ccbc981e0653e8fd\",\n              \"spanId\": \"dff0fb279813ee0d\",\n              \"parentSpanId\": \"\",\n              \"name\": \"localoutlier.execute\",\n              \"kind\": 1,\n              \"startTimeUnixNano\": \"1739370701786437325\",\n              \"endTimeUnixNano\": \"1739370702000265566\",\n              \"attributes\": [\n                {\"key\": \"ogc.process.id\", \"value\": {\"stringValue\": \"localoutlier\"}},\n                {\"key\": \"dpl.core.processing_activity_id\", \"value\": {\"stringValue\": \"geonovum.dtaas.ogcapi.processes.custom-api/localoutlier\"}},\n                {\"key\": \"dpl.core.data_subject_id\", \"value\": {\"stringValue\": \"demo-subject\"}},\n                {\"key\": \"dpl.objects.data_object_id\", \"value\": {\"intValue\": \"2069296\"}},\n                {\"key\": \"dpl.objects.data_object_def\", \"value\": {\"stringValue\": \"https://example.org/objects/point-dataset\"}}\n              ],\n              \"status\": {\"code\": 1}\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "type: object\nrequired:\n- resourceSpans\nproperties:\n  resourceSpans:\n    type: array\n    items:\n      type: object\n      required:\n      - resource\n      - scopeSpans\n      properties:\n        resource:\n          type: object\n          properties:\n            attributes:\n              type: array\n              items:\n                $ref: '#/$defs/attribute'\n        scopeSpans:\n          type: array\n          items:\n            type: object\n            required:\n            - spans\n            properties:\n              scope:\n                type: object\n              spans:\n                type: array\n                items:\n                  type: object\n                  required:\n                  - traceId\n                  - spanId\n                  - name\n                  - startTimeUnixNano\n                  - endTimeUnixNano\n                  properties:\n                    traceId:\n                      type: string\n                    spanId:\n                      type: string\n                    parentSpanId:\n                      type: string\n                    name:\n                      type: string\n                    kind:\n                      type: integer\n                    startTimeUnixNano:\n                      type: string\n                    endTimeUnixNano:\n                      type: string\n                    attributes:\n                      type: array\n                      items:\n                        $ref: '#/$defs/attribute'\n                    status:\n                      type: object\n                      properties:\n                        code:\n                          type: integer\n$defs:\n  attribute:\n    type: object\n    required:\n    - key\n    - value\n    properties:\n      key:\n        type: string\n      value:\n        type: object\n        properties:\n          stringValue:\n            type: string\n          intValue:\n            type: string\n          boolValue:\n            type: boolean\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/opentelemetry/trace"
+}

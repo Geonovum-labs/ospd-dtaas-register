@@ -1,0 +1,28 @@
+{
+  "encoding": "json",
+  "mediaType": "application/ld+json",
+  "value": {
+    "id": "https://example.org/provenance/span/dff0fb279813ee0d",
+    "provType": "Activity",
+    "startedAtTime": "2025-02-12T14:31:41.786437325Z",
+    "endedAtTime": "2025-02-12T14:31:42.000265566Z",
+    "wasGeneratedBy": "https://example.org/provenance/trace/98bdcae79e7fa7d4ccbc981e0653e8fd",
+    "used": {
+      "id": "https://example.org/provenance/entity/https://example.org/objects/point-dataset",
+      "provType": "Entity",
+      "value": "https://example.org/objects/point-dataset"
+    },
+    "wasAssociatedWith": [
+      {
+        "id": "https://example.org/provenance/agent/processing-activity/geonovum.dtaas.ogcapi.processes.custom-api/localoutlier",
+        "provType": "Agent",
+        "value": "geonovum.dtaas.ogcapi.processes.custom-api/localoutlier"
+      },
+      {
+        "id": "https://example.org/provenance/agent/data-subject/demo-subject",
+        "provType": "Agent",
+        "value": "demo-subject"
+      }
+    ]
+  }
+}

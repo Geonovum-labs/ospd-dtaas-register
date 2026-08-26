@@ -1,0 +1,10 @@
+Validation report for geonovum.dtaas.prov-o.opentelemetry-mapping - OpenTelemetry to PROV-O mapping
+Generated 2026-08-26T11:56:24.943180+00:00
+=== Files ===
+Using examples/localoutlier-trace.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
