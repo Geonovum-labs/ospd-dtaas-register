@@ -1,0 +1,6 @@
+examples:
+  - title: Localoutlier IPT provenance result
+    content: OpenTelemetry-derived provenance expressed as an IPT-qualified PROV activity result.
+    snippets:
+      - language: json
+        ref: examples/localoutlier-provenance.json

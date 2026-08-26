@@ -1,8 +1,6 @@
 examples:
-  - title: OTLP to PROV-O RML mapping
-    content: The experimental mapping used by the reference project to derive PROV-O from the OpenTelemetry trace.
+  - title: OTLP to PROV-O transform input
+    content: An OTLP trace transformed into a PROV-O JSON-LD graph.
     snippets:
       - language: json
-        ref: examples/mapping.json
-      - language: turtle
-        ref: examples/otel-prov.rml.ttl
+        ref: examples/localoutlier-trace.json

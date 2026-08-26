@@ -1,0 +1,60 @@
+transforms:
+  - id: otlp-to-prov-o
+    description: Convert an OpenTelemetry OTLP JSON trace into an IPT-qualified PROV activity result.
+    type: python
+    inputs:
+      mediaTypes:
+        - application/json
+    outputs: {mediaTypes: [application/ld+json], profiles: [bblocks://ogc.osc.api-profiles.processes.ipt.results]}
+    code: |
+      import json
+      from datetime import datetime, timezone
+      from urllib.parse import quote
+
+      data = json.loads(input_data)
+      base = "https://example.org/provenance/"
+      def iri(value):
+          return base + quote(str(value), safe="/:?#[]@!$&'()*+,;=%")
+
+      def timestamp(value):
+          seconds, nanos = divmod(int(value), 1_000_000_000)
+          instant = datetime.fromtimestamp(seconds, timezone.utc)
+          return instant.strftime("%Y-%m-%dT%H:%M:%S") + f".{nanos:09d}Z"
+
+      def attr_map(attributes):
+          result = {}
+          for attribute in attributes or []:
+              value = attribute.get("value", {})
+              result[attribute.get("key")] = next(iter(value.values()), None)
+          return result
+
+      result = None
+      for resource_span in data.get("resourceSpans", []):
+          for scope_span in resource_span.get("scopeSpans", []):
+              for span in scope_span.get("spans", []):
+                  trace_id = span.get("traceId")
+                  span_id = span.get("spanId")
+                  trace_ref = iri("trace/" + trace_id)
+                  span_ref = iri("span/" + span_id)
+                  attributes = attr_map(span.get("attributes"))
+                  activity = {
+                      "id": span_ref,
+                      "provType": "Activity",
+                      "startedAtTime": timestamp(span["startTimeUnixNano"]),
+                      "endedAtTime": timestamp(span["endTimeUnixNano"]),
+                      "wasGeneratedBy": trace_ref
+                  }
+                  object_definition = attributes.get("dpl.objects.data_object_def")
+                  if object_definition:
+                      entity_ref = iri("entity/" + object_definition)
+                      activity["used"] = {"id": entity_ref, "provType": "Entity", "value": object_definition}
+                  for key, role in (("dpl.core.processing_activity_id", "processing-activity"), ("dpl.core.data_subject_id", "data-subject")):
+                      agent_value = attributes.get(key)
+                      if agent_value:
+                          agent_ref = iri("agent/" + role + "/" + agent_value)
+                          activity.setdefault("wasAssociatedWith", []).append({"id": agent_ref, "provType": "Agent", "value": agent_value})
+                  result = {"encoding": "json", "mediaType": "application/ld+json", "value": activity}
+
+      if result is None:
+          raise ValueError("The OTLP trace contains no spans")
+      output_data = json.dumps(result, indent=2)
