@@ -10,12 +10,12 @@
   "dateTimeAddition": "2026-08-07T00:00:00Z",
   "version": "0.1",
   "dependsOn": [
+    "ogc.osc.api-profiles.processes.ipt.execute",
     "ogc.osc.api-profiles.processes.ipt.results",
+    "ogc.api.processes.v1.schemas.outputDescription",
     "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
     "geonovum.dtaas.ogcapi.processes.custom-api",
-    "ogc.api.processes.v1.schemas.inputDescription",
-    "ogc.api.processes.v1.schemas.outputDescription",
-    "ogc.osc.api-profiles.processes.ipt.execute"
+    "ogc.api.processes.v1.schemas.inputDescription"
   ],
   "extensionPoints": {
     "baseBuildingBlock": "geonovum.dtaas.ogcapi.processes.custom-api",

@@ -1,16 +1,16 @@
 {
-  "title": "Validation report for geonovum.dtaas.prov-o.opentelemetry-mapping - OpenTelemetry to PROV-O mapping",
-  "bblockName": "OpenTelemetry to PROV-O mapping",
-  "bblockId": "geonovum.dtaas.prov-o.opentelemetry-mapping",
-  "generated": "2026-08-26T11:56:24.943231+00:00",
+  "title": "Validation report for geonovum.dtaas.prov-o.opentelemetry-mapping-rml - OpenTelemetry to PROV-O mapping (RML plugin)",
+  "bblockName": "OpenTelemetry to PROV-O mapping (RML plugin)",
+  "bblockId": "geonovum.dtaas.prov-o.opentelemetry-mapping-rml",
+  "generated": "2026-08-28T13:25:30.947926+00:00",
   "result": true,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "build/tests/dtaas/prov-o/opentelemetry-mapping/example_1_1.json",
-        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/opentelemetry-mapping/example_1_1.json",
+        "filename": "build/tests/dtaas/prov-o/opentelemetry-mapping-rml/example_1_1.json",
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using examples/localoutlier-trace.json from examples"
+              "message": "Using ../../opentelemetry/trace/examples/localoutlier-trace.json from examples"
             }
           ]
         },

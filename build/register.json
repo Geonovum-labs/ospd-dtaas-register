@@ -2,12 +2,12 @@
   "name": "OSPD / DTaaS block collection",
   "abstract": "OSPD / DTaaS block collection\n",
   "description": "register for various examples of building blocks.\n",
-  "modified": "2026-08-26T11:56:19.829088",
+  "modified": "2026-08-28T13:25:19.605106",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"d5ae6f4bd95e268894921440229917592e2976c4",
-      "shortCommitId": "\"d5ae6f",
-      "date": "2026-08-25T08:35:43+00:00\""
+      "commitId": "\"447ae31f978ca3b124bfcbcf5473c7aadddb56af",
+      "shortCommitId": "\"447ae3",
+      "date": "2026-08-26T14:44:03+00:00\""
     }
   },
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
@@ -31,7 +31,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "maturity": "development",
       "tags": [
         "examples",
@@ -72,7 +72,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "maturity": "development",
       "tags": [
         "examples",
@@ -149,89 +149,6 @@
       }
     },
     {
-      "itemIdentifier": "geonovum.dtaas.prov-o.opentelemetry-mapping",
-      "name": "OpenTelemetry to PROV-O mapping",
-      "abstract": "Experimental RML mapping from an OTLP trace to PROV-O activities, agents, entities, usages, and associations.",
-      "status": "under-development",
-      "itemClass": "schema",
-      "register": "ogc-building-block-examples",
-      "dateTimeAddition": "2026-08-26T00:00:00Z",
-      "version": "0.1",
-      "maturity": "development",
-      "tags": [
-        "opentelemetry",
-        "prov-o",
-        "rml",
-        "provenance"
-      ],
-      "dependsOn": [
-        "bblocks://geonovum.dtaas.opentelemetry.trace"
-      ],
-      "description": "The transform converts OTLP resourceSpans into an IPT-qualified result. Span and trace records become PROV activities; dpl.objects.data_object_def values become PROV entities; and dpl.core.processing_activity_id and dpl.core.data_subject_id values become PROV agents.",
-      "resources": [
-        {
-          "title": "Reference RML mapping",
-          "role": "mapping",
-          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping/examples/otel-prov.rml.ttl",
-          "format": "text/turtle"
-        }
-      ],
-      "shaclShapes": {},
-      "dateOfLastChange": "2026-08-26",
-      "schema": {
-        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping/schema.yaml",
-        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping/schema.json"
-      },
-      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping/schema.yaml",
-      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping/resolvedProperties.json",
-      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/opentelemetry-mapping/",
-      "transforms": [
-        {
-          "id": "otlp-to-prov-o",
-          "description": "Convert an OpenTelemetry OTLP JSON trace into an IPT-qualified PROV activity result.",
-          "type": "python",
-          "inputs": {
-            "mediaTypes": [
-              {
-                "mimeType": "application/json",
-                "label": "JSON",
-                "defaultExtension": "json"
-              }
-            ]
-          },
-          "outputs": {
-            "mediaTypes": [
-              {
-                "mimeType": "application/ld+json",
-                "label": "JSON-LD",
-                "defaultExtension": "jsonld"
-              }
-            ],
-            "profiles": [
-              "bblocks://ogc.osc.api-profiles.processes.ipt.results"
-            ]
-          },
-          "code": "import json\nfrom datetime import datetime, timezone\nfrom urllib.parse import quote\n\ndata = json.loads(input_data)\nbase = \"https://example.org/provenance/\"\ndef iri(value):\n    return base + quote(str(value), safe=\"/:?#[]@!$&'()*+,;=%\")\n\ndef timestamp(value):\n    seconds, nanos = divmod(int(value), 1_000_000_000)\n    instant = datetime.fromtimestamp(seconds, timezone.utc)\n    return instant.strftime(\"%Y-%m-%dT%H:%M:%S\") + f\".{nanos:09d}Z\"\n\ndef attr_map(attributes):\n    result = {}\n    for attribute in attributes or []:\n        value = attribute.get(\"value\", {})\n        result[attribute.get(\"key\")] = next(iter(value.values()), None)\n    return result\n\nresult = None\nfor resource_span in data.get(\"resourceSpans\", []):\n    for scope_span in resource_span.get(\"scopeSpans\", []):\n        for span in scope_span.get(\"spans\", []):\n            trace_id = span.get(\"traceId\")\n            span_id = span.get(\"spanId\")\n            trace_ref = iri(\"trace/\" + trace_id)\n            span_ref = iri(\"span/\" + span_id)\n            attributes = attr_map(span.get(\"attributes\"))\n            activity = {\n                \"id\": span_ref,\n                \"provType\": \"Activity\",\n                \"startedAtTime\": timestamp(span[\"startTimeUnixNano\"]),\n                \"endedAtTime\": timestamp(span[\"endTimeUnixNano\"]),\n                \"wasGeneratedBy\": trace_ref\n            }\n            object_definition = attributes.get(\"dpl.objects.data_object_def\")\n            if object_definition:\n                entity_ref = iri(\"entity/\" + object_definition)\n                activity[\"used\"] = {\"id\": entity_ref, \"provType\": \"Entity\", \"value\": object_definition}\n            for key, role in ((\"dpl.core.processing_activity_id\", \"processing-activity\"), (\"dpl.core.data_subject_id\", \"data-subject\")):\n                agent_value = attributes.get(key)\n                if agent_value:\n                    agent_ref = iri(\"agent/\" + role + \"/\" + agent_value)\n                    activity.setdefault(\"wasAssociatedWith\", []).append({\"id\": agent_ref, \"provType\": \"Agent\", \"value\": agent_value})\n            result = {\"encoding\": \"json\", \"mediaType\": \"application/ld+json\", \"value\": activity}\n\nif result is None:\n    raise ValueError(\"The OTLP trace contains no spans\")\noutput_data = json.dumps(result, indent=2)"
-        }
-      ],
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/opentelemetry-mapping/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/opentelemetry-mapping/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.opentelemetry-mapping"
-        }
-      }
-    },
-    {
       "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
       "name": "Localoutlier process input description",
       "abstract": "Input description for the localoutlier process",
@@ -240,7 +157,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "maturity": "development",
       "tags": [
         "examples",
@@ -286,7 +203,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "maturity": "development",
       "tags": [
         "examples",
@@ -295,8 +212,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription"
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
       ],
       "schema": {
         "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml",
@@ -332,7 +249,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "maturity": "development",
       "tags": [
         "examples",
@@ -377,7 +294,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "maturity": "development",
       "tags": [
         "examples",
@@ -386,8 +303,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription",
         "bblocks://ogc.api.processes.v1.schemas.process",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription"
       ],
       "schema": {
@@ -424,7 +341,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "maturity": "development",
       "tags": [
         "examples",
@@ -469,7 +386,7 @@
       "itemClass": "api",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "maturity": "development",
       "tags": [
         "examples",
@@ -488,23 +405,23 @@
       },
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://ogc.api.processes.v1.paths.ProcessList",
-        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
-        "bblocks://ogc.api.processes.v1.paths.LandingPage",
-        "bblocks://ogc.api.processes.v1.paths.Conformance",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
-        "bblocks://ogc.api.processes.v1.paths.JobList",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
-        "bblocks://ogc.api.processes.v1.responses.NotFound",
-        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
-        "bblocks://ogc.api.processes.v1.api",
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
         "bblocks://ogc.api.processes.v1.parameters.jobId",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
+        "bblocks://ogc.api.processes.v1.paths.Conformance",
+        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
+        "bblocks://ogc.api.processes.v1.responses.ServerError",
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
         "bblocks://ogc.api.processes.v1.schemas.execute",
-        "bblocks://ogc.api.processes.v1.responses.ServerError"
+        "bblocks://ogc.api.processes.v1.api",
+        "bblocks://ogc.api.processes.v1.responses.NotFound",
+        "bblocks://ogc.api.processes.v1.paths.LandingPage",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
+        "bblocks://ogc.api.processes.v1.paths.ProcessList",
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
+        "bblocks://ogc.api.processes.v1.paths.JobList",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions"
       ],
       "sourceOpenAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/openapi.yaml",
       "openAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/custom-api/openapi.yaml",
@@ -536,12 +453,12 @@
       "dateTimeAddition": "2026-08-07T00:00:00Z",
       "version": "0.1",
       "dependsOn": [
+        "bblocks://ogc.osc.api-profiles.processes.ipt.execute",
         "bblocks://ogc.osc.api-profiles.processes.ipt.results",
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
         "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
-        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
-        "bblocks://ogc.osc.api-profiles.processes.ipt.execute"
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription"
       ],
       "extensionPoints": {
         "baseBuildingBlock": "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
@@ -572,57 +489,110 @@
       }
     },
     {
-      "itemIdentifier": "geonovum.dtaas.prov-o.localoutlier-provenance",
-      "name": "Localoutlier OpenTelemetry provenance",
-      "abstract": "PROV-O representation of an OpenTelemetry-traced localoutlier custom API execution.",
+      "itemIdentifier": "geonovum.dtaas.prov-o.opentelemetry-mapping-rml",
+      "name": "OpenTelemetry to PROV-O mapping (RML plugin)",
+      "abstract": "OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.",
       "status": "under-development",
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
-      "dateTimeAddition": "2026-08-26T00:00:00Z",
+      "dateTimeAddition": "2026-08-28T00:00:00Z",
       "version": "0.1",
       "maturity": "development",
       "tags": [
-        "ogc api processes",
-        "localoutlier",
         "opentelemetry",
         "prov-o",
+        "rml",
         "provenance"
       ],
-      "isProfileOf": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.custom-api"
-      ],
       "dependsOn": [
-        "bblocks://geonovum.dtaas.prov-o.opentelemetry-mapping",
-        "bblocks://geonovum.dtaas.ogcapi.processes.custom-api-ipt",
-        "bblocks://ogc.osc.api-profiles.processes.ipt.results",
-        "bblocks://geonovum.dtaas.ogcapi.processes.custom-api"
+        "bblocks://geonovum.dtaas.opentelemetry.trace",
+        "bblocks://geonovum.dtaas.ogcapi.processes.custom-api-ipt"
+      ],
+      "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references.",
+      "resources": [
+        {
+          "title": "RML mapping",
+          "role": "mapping",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping-rml/examples/otel-prov.rml.ttl",
+          "format": "text/turtle"
+        }
       ],
       "shaclShapes": {},
-      "dateOfLastChange": "2026-08-26",
+      "dateOfLastChange": "2026-08-28",
       "schema": {
-        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/localoutlier-provenance/schema.yaml",
-        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/localoutlier-provenance/schema.json"
+        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.yaml",
+        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.json"
       },
-      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/localoutlier-provenance/schema.yaml",
-      "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/localoutlier-provenance/context.jsonld",
-      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/localoutlier-provenance/resolvedProperties.json",
-      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/localoutlier-provenance/",
-      "validationPassed": false,
-      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/localoutlier-provenance/",
+      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping-rml/schema.yaml",
+      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/resolvedProperties.json",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping-rml/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/",
+      "transforms": [
+        {
+          "id": "otlp-to-prov-o-rml",
+          "description": "Convert an OpenTelemetry OTLP JSON trace into PROV-O RDF using the RML transform plugin.",
+          "type": "rml",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "text/turtle",
+                "label": "RDF/Turtle",
+                "defaultExtension": "ttl"
+              }
+            ]
+          },
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping-rml/examples/otel-prov.rml.ttl",
+          "code": "@prefix rr: <http://www.w3.org/ns/r2rml#> .\n@prefix rml: <http://semweb.mmlab.be/ns/rml#> .\n@prefix ql: <http://semweb.mmlab.be/ns/ql#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@base <http://example.com/ns#> .\n\n<#TraceMapping> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"http://trace.example.com/trace/{traceId}\" ;\n    rr:class prov:Activity\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdfs:label ;\n    rr:objectMap [ rml:reference \"traceId\" ]\n  ] .\n\n<#SpanMapping> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"http://trace.example.com/span/{spanId}\" ;\n    rr:class prov:Activity\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdfs:label ;\n    rr:objectMap [ rml:reference \"name\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:wasGeneratedBy ;\n    rr:objectMap [\n      rr:parentTriplesMap <#TraceMapping> ;\n      rr:joinCondition [ rr:child \"traceId\" ; rr:parent \"traceId\" ]\n    ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:qualifiedUsage ;\n    rr:objectMap [\n      rr:parentTriplesMap <#ObjectUsageMapping> ;\n      rr:joinCondition [\n        rr:child \"http://trace.example.com/span/{spanId}\" ;\n        rr:parent \"http://trace.example.com/span/{spanId}\"\n      ]\n    ]\n  ] .\n\n<#ObjectUsageMapping> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[2].value.arrayValue.values[*]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"http://trace.example.com/use/{intValue}\" ;\n    rr:class prov:Usage\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdfs:label ;\n    rr:objectMap [ rml:reference \"intValue\" ]\n  ] .\n"
+        }
+      ],
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/localoutlier-provenance/index.md"
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/opentelemetry-mapping-rml/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/localoutlier-provenance/index.json"
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/opentelemetry-mapping-rml/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.localoutlier-provenance"
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.opentelemetry-mapping-rml"
         }
       }
+    }
+  ],
+  "transformPlugins": [
+    {
+      "modules": [
+        {
+          "module": "bbplugin_rml",
+          "transformers": [
+            {
+              "class": "RmlTransformer",
+              "types": [
+                "rml"
+              ],
+              "defaultInputs": [
+                "application/json"
+              ],
+              "defaultOutputs": [
+                "text/turtle"
+              ]
+            }
+          ]
+        }
+      ],
+      "pip": "./rml-transform-plugin"
     }
   ],
   "remoteCacheDir": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/_cache",

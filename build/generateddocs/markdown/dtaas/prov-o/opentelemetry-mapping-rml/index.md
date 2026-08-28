@@ -1,32 +1,23 @@
 
-# OpenTelemetry trace with DTaaS provenance attributes (Schema)
+# OpenTelemetry to PROV-O mapping (RML plugin) (Schema)
 
-`geonovum.dtaas.opentelemetry.trace` *v0.1*
+`geonovum.dtaas.prov-o.opentelemetry-mapping-rml` *v0.1*
 
-OTLP JSON trace shape used to record OGC API Processes provenance.
+OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
-# Opentelemetry Trace
+# Mapping from OpenTelemetry (LDV profile) to PROV-O (RML based)
 
-This BBlock contains an example trace in OpenTelemetry format.
-This is an example originating from the 'Logboek Dataverwerkingen voor Objecten' research project
-https://geonovum.github.io/logboek-dataverwerkingen-voor-objecten/
+This building block performs the transform from Opentelemetry to PROV-O using a (experimental) RML Transformer.
 
-This project researched the options to integrate the ['Logboek Dataverkeringen'](https://logius-standaarden.github.io/logboek-dataverwerkingen/) into OGC API Processes for Digital Twin scenarios.
 
-The LDV Standard used OpenTelemetry as a backend-logging system. The 'Logboek Dataverwerkingen voor Objecten' project also researched the mapping from OTEL to PROV-O: https://geonovum.github.io/logboek-dataverwerkingen-voor-objecten/#H4
-
-This scenario is documented in these building blocks.
-
-This building block contains the Opentelemetry Trace.
-Other Building Blocks provide the transform to PROV-O and the integration into the IPT profile that is realized in the OSPD2026 testbed. 
 ## Examples
 
-### Localoutlier OpenTelemetry trace
-An OTLP JSON trace carrying the DTaaS processing activity, subject, and object attributes.
+### OTLP to PROV-O RML transform input
+An OTLP trace transformed into PROV-O RDF using the RML plugin.
 #### json
 ```json
 {
@@ -332,93 +323,14 @@ An OTLP JSON trace carrying the DTaaS processing activity, subject, and object a
 ## Schema
 
 ```yaml
-type: object
-required:
-- resourceSpans
-properties:
-  resourceSpans:
-    type: array
-    items:
-      type: object
-      required:
-      - resource
-      - scopeSpans
-      properties:
-        resource:
-          type: object
-          properties:
-            attributes:
-              type: array
-              items:
-                $ref: '#/$defs/attribute'
-        scopeSpans:
-          type: array
-          items:
-            type: object
-            required:
-            - spans
-            properties:
-              scope:
-                type: object
-              spans:
-                type: array
-                items:
-                  type: object
-                  required:
-                  - traceId
-                  - spanId
-                  - name
-                  - startTimeUnixNano
-                  - endTimeUnixNano
-                  properties:
-                    traceId:
-                      type: string
-                    spanId:
-                      type: string
-                    parentSpanId:
-                      type: string
-                    name:
-                      type: string
-                    kind:
-                      type: integer
-                    startTimeUnixNano:
-                      type: string
-                    endTimeUnixNano:
-                      type: string
-                    attributes:
-                      type: array
-                      items:
-                        $ref: '#/$defs/attribute'
-                    status:
-                      type: object
-                      properties:
-                        code:
-                          type: integer
-$defs:
-  attribute:
-    type: object
-    required:
-    - key
-    - value
-    properties:
-      key:
-        type: string
-      value:
-        type: object
-        properties:
-          stringValue:
-            type: string
-          intValue:
-            type: string
-          boolValue:
-            type: boolean
+$ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.yaml
 
 ```
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.json)
-* JSON version: [schema.json](https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.yaml)
+* YAML version: [schema.yaml](https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.json)
+* JSON version: [schema.json](https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.yaml)
 
 
 # For developers
@@ -426,5 +338,5 @@ Links to the schema:
 The source code for this Building Block can be found in the following repository:
 
 * URL: [https://github.com/Geonovum-labs/ospd-dtaas-register](https://github.com/Geonovum-labs/ospd-dtaas-register)
-* Path: `_sources/opentelemetry/trace`
+* Path: `_sources/prov-o/opentelemetry-mapping-rml`
 

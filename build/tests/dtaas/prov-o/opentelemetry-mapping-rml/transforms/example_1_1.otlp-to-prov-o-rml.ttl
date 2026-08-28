@@ -1,0 +1,162 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://trace.example.com/span/f2773d02c278c008> rdfs:label "LocalOutlierFactor" ;
+    prov:wasGeneratedBy <http://trace.example.com/trace/14e2af11847bde8d76f65f7c6e8d86e0> .
+
+<http://trace.example.com/use/2011> rdfs:label "2011" .
+
+<http://trace.example.com/use/203> rdfs:label "203" .
+
+<http://trace.example.com/use/204> rdfs:label "204" .
+
+<http://trace.example.com/use/205> rdfs:label "205" .
+
+<http://trace.example.com/use/206> rdfs:label "206" .
+
+<http://trace.example.com/use/207> rdfs:label "207" .
+
+<http://trace.example.com/use/208> rdfs:label "208" .
+
+<http://trace.example.com/use/209> rdfs:label "209" .
+
+<http://trace.example.com/use/210> rdfs:label "210" .
+
+<http://trace.example.com/use/211> rdfs:label "211" .
+
+<http://trace.example.com/use/212> rdfs:label "212" .
+
+<http://trace.example.com/use/213> rdfs:label "213" .
+
+<http://trace.example.com/use/214> rdfs:label "214" .
+
+<http://trace.example.com/use/215> rdfs:label "215" .
+
+<http://trace.example.com/use/216> rdfs:label "216" .
+
+<http://trace.example.com/use/218> rdfs:label "218" .
+
+<http://trace.example.com/use/225> rdfs:label "225" .
+
+<http://trace.example.com/use/229> rdfs:label "229" .
+
+<http://trace.example.com/use/233> rdfs:label "233" .
+
+<http://trace.example.com/use/235> rdfs:label "235" .
+
+<http://trace.example.com/use/236> rdfs:label "236" .
+
+<http://trace.example.com/use/237> rdfs:label "237" .
+
+<http://trace.example.com/use/238> rdfs:label "238" .
+
+<http://trace.example.com/use/239> rdfs:label "239" .
+
+<http://trace.example.com/use/240> rdfs:label "240" .
+
+<http://trace.example.com/use/242> rdfs:label "242" .
+
+<http://trace.example.com/use/248> rdfs:label "248" .
+
+<http://trace.example.com/use/249> rdfs:label "249" .
+
+<http://trace.example.com/use/251> rdfs:label "251" .
+
+<http://trace.example.com/use/252> rdfs:label "252" .
+
+<http://trace.example.com/use/257> rdfs:label "257" .
+
+<http://trace.example.com/use/258> rdfs:label "258" .
+
+<http://trace.example.com/use/260> rdfs:label "260" .
+
+<http://trace.example.com/use/265> rdfs:label "265" .
+
+<http://trace.example.com/use/267> rdfs:label "267" .
+
+<http://trace.example.com/use/269> rdfs:label "269" .
+
+<http://trace.example.com/use/270> rdfs:label "270" .
+
+<http://trace.example.com/use/273> rdfs:label "273" .
+
+<http://trace.example.com/use/275> rdfs:label "275" .
+
+<http://trace.example.com/use/277> rdfs:label "277" .
+
+<http://trace.example.com/use/278> rdfs:label "278" .
+
+<http://trace.example.com/use/279> rdfs:label "279" .
+
+<http://trace.example.com/use/280> rdfs:label "280" .
+
+<http://trace.example.com/use/283> rdfs:label "283" .
+
+<http://trace.example.com/use/285> rdfs:label "285" .
+
+<http://trace.example.com/use/286> rdfs:label "286" .
+
+<http://trace.example.com/use/290> rdfs:label "290" .
+
+<http://trace.example.com/use/308> rdfs:label "308" .
+
+<http://trace.example.com/use/310> rdfs:label "310" .
+
+<http://trace.example.com/use/311> rdfs:label "311" .
+
+<http://trace.example.com/use/312> rdfs:label "312" .
+
+<http://trace.example.com/use/313> rdfs:label "313" .
+
+<http://trace.example.com/use/315> rdfs:label "315" .
+
+<http://trace.example.com/use/316> rdfs:label "316" .
+
+<http://trace.example.com/use/317> rdfs:label "317" .
+
+<http://trace.example.com/use/319> rdfs:label "319" .
+
+<http://trace.example.com/use/320> rdfs:label "320" .
+
+<http://trace.example.com/use/321> rdfs:label "321" .
+
+<http://trace.example.com/use/323> rdfs:label "323" .
+
+<http://trace.example.com/use/324> rdfs:label "324" .
+
+<http://trace.example.com/use/330> rdfs:label "330" .
+
+<http://trace.example.com/use/331> rdfs:label "331" .
+
+<http://trace.example.com/use/340> rdfs:label "340" .
+
+<http://trace.example.com/use/343> rdfs:label "343" .
+
+<http://trace.example.com/use/344> rdfs:label "344" .
+
+<http://trace.example.com/use/348> rdfs:label "348" .
+
+<http://trace.example.com/use/350> rdfs:label "350" .
+
+<http://trace.example.com/use/356> rdfs:label "356" .
+
+<http://trace.example.com/use/370> rdfs:label "370" .
+
+<http://trace.example.com/use/375> rdfs:label "375" .
+
+<http://trace.example.com/use/377> rdfs:label "377" .
+
+<http://trace.example.com/use/380> rdfs:label "380" .
+
+<http://trace.example.com/use/391> rdfs:label "391" .
+
+<http://trace.example.com/use/392> rdfs:label "392" .
+
+<http://trace.example.com/use/871> rdfs:label "871" .
+
+<http://trace.example.com/use/873> rdfs:label "873" .
+
+<http://trace.example.com/use/990> rdfs:label "990" .
+
+<http://trace.example.com/trace/14e2af11847bde8d76f65f7c6e8d86e0> rdfs:label "14e2af11847bde8d76f65f7c6e8d86e0" .
+
