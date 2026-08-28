@@ -1,5 +1,10 @@
 {
   "@context": {
+    "description": "dct:description",
+    "title": "dct:title",
+    "id": "@id",
+    "jobControlOptions": "proc:jobControlOptions",
+    "version": "dct:hasVersion",
     "nullable": "proc:nullable",
     "type": "proc:type",
     "$ref": {

@@ -1,1 +1,9 @@
-# Empty Turtle file
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+
+<file:///github/workspace/localoutlier> dct:description "The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation." ;
+    dct:hasVersion "0.1" ;
+    dct:title "Local outlier factor (LOF)" ;
+    proc:jobControlOptions "async-execute",
+        "sync-execute" .
+

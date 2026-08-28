@@ -38,6 +38,14 @@ Process description for the localoutlier process
 
 #### ttl
 ```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix proc: <https://w3id.org/ogc/api/processes/> .
+
+<file:///github/workspace/localoutlier> dct:description "The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation." ;
+    dct:hasVersion "0.1" ;
+    dct:title "Local outlier factor (LOF)" ;
+    proc:jobControlOptions "async-execute",
+        "sync-execute" .
 
 
 ```
@@ -54,6 +62,12 @@ allOf:
     outputs:
       $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml
       additionalProperties: false
+x-jsonld-extra-terms:
+  id: '@id'
+  version: http://purl.org/dc/terms/hasVersion
+  title: http://purl.org/dc/terms/title
+  description: http://purl.org/dc/terms/description
+  jobControlOptions: https://w3id.org/ogc/api/processes/jobControlOptions
 
 ```
 
@@ -68,6 +82,11 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "description": "dct:description",
+    "title": "dct:title",
+    "id": "@id",
+    "jobControlOptions": "proc:jobControlOptions",
+    "version": "dct:hasVersion",
     "nullable": "proc:nullable",
     "type": "proc:type",
     "$ref": {

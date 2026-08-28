@@ -7,3 +7,9 @@ allOf:
     outputs:
       $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml
       additionalProperties: false
+x-jsonld-extra-terms:
+  id: '@id'
+  version: http://purl.org/dc/terms/hasVersion
+  title: http://purl.org/dc/terms/title
+  description: http://purl.org/dc/terms/description
+  jobControlOptions: https://w3id.org/ogc/api/processes/jobControlOptions

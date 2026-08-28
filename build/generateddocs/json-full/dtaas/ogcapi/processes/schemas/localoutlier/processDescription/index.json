@@ -18,19 +18,20 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.process",
     "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription",
+    "ogc.api.processes.v1.schemas.process",
     "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription"
   ],
+  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/context.jsonld",
   "schema": {
     "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/schema.yaml",
     "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/schema.json"
   },
   "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/processDescription/schema.yaml",
-  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/context.jsonld",
+  "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/processDescription/context.jsonld",
   "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/resolvedProperties.json",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/processDescription/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/",
   "examples": [
     {
@@ -52,13 +53,13 @@
         {
           "language": "ttl",
           "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/example_1_1.ttl",
-          "sizeBytes": 1,
-          "code": "\n"
+          "sizeBytes": 422,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix proc: <https://w3id.org/ogc/api/processes/> .\n\n<file:///github/workspace/localoutlier> dct:description \"The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation.\" ;\n    dct:hasVersion \"0.1\" ;\n    dct:title \"Local outlier factor (LOF)\" ;\n    proc:jobControlOptions \"async-execute\",\n        \"sync-execute\" .\n\n"
         }
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml\n- properties:\n    inputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml\n      additionalProperties: false\n    outputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml\n      additionalProperties: false\n",
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml\n- properties:\n    inputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml\n      additionalProperties: false\n    outputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml\n      additionalProperties: false\nx-jsonld-extra-terms:\n  id: '@id'\n  version: http://purl.org/dc/terms/hasVersion\n  title: http://purl.org/dc/terms/title\n  description: http://purl.org/dc/terms/description\n  jobControlOptions: https://w3id.org/ogc/api/processes/jobControlOptions\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/schemas/localoutlier/processDescription"
 }

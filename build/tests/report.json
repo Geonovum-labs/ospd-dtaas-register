@@ -1,16 +1,16 @@
 {
   "summary": {
     "total": 11,
-    "passed": 10,
-    "failed": 1,
-    "result": false
+    "passed": 11,
+    "failed": 0,
+    "result": true
   },
   "bblocks": {
     "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema": {
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema - Localoutlier process input schema",
       "bblockName": "Localoutlier process input schema",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
-      "generated": "2026-08-28T13:41:01.488376+00:00",
+      "generated": "2026-08-28T13:46:22.359650+00:00",
       "result": true,
       "items": [
         {
@@ -80,7 +80,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema - Localoutlier process output schema",
       "bblockName": "Localoutlier process output schema",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-      "generated": "2026-08-28T13:41:01.495275+00:00",
+      "generated": "2026-08-28T13:46:22.364619+00:00",
       "result": true,
       "items": [
         {
@@ -131,7 +131,7 @@
       "title": "Validation report for geonovum.dtaas.opentelemetry.trace - OpenTelemetry trace with DTaaS provenance attributes",
       "bblockName": "OpenTelemetry trace with DTaaS provenance attributes",
       "bblockId": "geonovum.dtaas.opentelemetry.trace",
-      "generated": "2026-08-28T13:41:01.508854+00:00",
+      "generated": "2026-08-28T13:46:22.373933+00:00",
       "result": true,
       "items": [
         {
@@ -182,7 +182,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription - Localoutlier process input description",
       "bblockName": "Localoutlier process input description",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
-      "generated": "2026-08-28T13:41:02.041589+00:00",
+      "generated": "2026-08-28T13:46:24.149193+00:00",
       "result": true,
       "items": [
         {
@@ -252,7 +252,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription - Localoutlier process output description",
       "bblockName": "Localoutlier process output description",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription",
-      "generated": "2026-08-28T13:41:02.650368+00:00",
+      "generated": "2026-08-28T13:46:24.493502+00:00",
       "result": true,
       "items": [
         {
@@ -322,7 +322,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions - Example OGC API Processes instance input descriptions",
       "bblockName": "Example OGC API Processes instance input descriptions",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-      "generated": "2026-08-28T13:41:03.046821+00:00",
+      "generated": "2026-08-28T13:46:24.677894+00:00",
       "result": true,
       "items": [
         {
@@ -392,8 +392,8 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription - Localoutlier process description",
       "bblockName": "Localoutlier process description",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
-      "generated": "2026-08-28T13:41:03.558408+00:00",
-      "result": false,
+      "generated": "2026-08-28T13:46:25.021544+00:00",
+      "result": true,
       "items": [
         {
           "source": {
@@ -405,7 +405,7 @@
             "snippetIndex": 1,
             "language": "application/json"
           },
-          "result": false,
+          "result": true,
           "sections": [
             {
               "name": "FILES",
@@ -428,11 +428,11 @@
                 },
                 {
                   "op": "ttl-create",
-                  "empty": true,
+                  "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 0,
-                  "isError": true,
-                  "message": "**Empty** output Turtle example_1_1.ttl created"
+                  "size": 5,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
                 }
               ]
             },
@@ -454,15 +454,15 @@
       "globalErrors": {},
       "counts": {
         "total": 1,
-        "passed": 0,
-        "failed": 1
+        "passed": 1,
+        "failed": 0
       }
     },
     "geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions": {
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions - Example OGC API Processes instance output descriptions",
       "bblockName": "Example OGC API Processes instance output descriptions",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
-      "generated": "2026-08-28T13:41:04.015503+00:00",
+      "generated": "2026-08-28T13:46:25.215813+00:00",
       "result": true,
       "items": [
         {
@@ -532,7 +532,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.custom-api - Demo OGC API processes instance - LOF",
       "bblockName": "Demo OGC API processes instance - LOF",
       "bblockId": "geonovum.dtaas.ogcapi.processes.custom-api",
-      "generated": "2026-08-28T13:41:04.021748+00:00",
+      "generated": "2026-08-28T13:46:25.220314+00:00",
       "result": true,
       "items": [
         {
@@ -619,7 +619,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.custom-api-ipt - IPT profile of Geonovum custom API processes",
       "bblockName": "IPT profile of Geonovum custom API processes",
       "bblockId": "geonovum.dtaas.ogcapi.processes.custom-api-ipt",
-      "generated": "2026-08-28T13:41:04.026969+00:00",
+      "generated": "2026-08-28T13:46:25.224141+00:00",
       "result": true,
       "items": [
         {
@@ -658,7 +658,7 @@
       "title": "Validation report for geonovum.dtaas.prov-o.opentelemetry-mapping-rml - OpenTelemetry to PROV-O mapping (RML plugin)",
       "bblockName": "OpenTelemetry to PROV-O mapping (RML plugin)",
       "bblockId": "geonovum.dtaas.prov-o.opentelemetry-mapping-rml",
-      "generated": "2026-08-28T13:41:04.035363+00:00",
+      "generated": "2026-08-28T13:46:25.230408+00:00",
       "result": true,
       "items": [
         {

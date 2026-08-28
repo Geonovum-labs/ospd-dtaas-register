@@ -15,5 +15,12 @@
         }
       }
     }
-  ]
+  ],
+  "x-jsonld-extra-terms": {
+    "id": "@id",
+    "version": "http://purl.org/dc/terms/hasVersion",
+    "title": "http://purl.org/dc/terms/title",
+    "description": "http://purl.org/dc/terms/description",
+    "jobControlOptions": "https://w3id.org/ogc/api/processes/jobControlOptions"
+  }
 }
