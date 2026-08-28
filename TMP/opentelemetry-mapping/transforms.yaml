@@ -5,7 +5,7 @@ transforms:
     inputs:
       mediaTypes:
         - application/json
-    outputs: {mediaTypes: [application/ld+json], profiles: [bblocks://ogc.osc.api-profiles.processes.ipt.results]}
+    outputs: {mediaTypes: [application/ld+json], profiles: [bblocks://geonovum.dtaas.prov-o.localoutlier-provenance]}
     code: |
       import json
       from datetime import datetime, timezone
@@ -25,7 +25,14 @@ transforms:
           result = {}
           for attribute in attributes or []:
               value = attribute.get("value", {})
-              result[attribute.get("key")] = next(iter(value.values()), None)
+              if "arrayValue" in value:
+                  result[attribute.get("key")] = [
+                      item.get("intValue")
+                      for item in value["arrayValue"].get("values", [])
+                      if "intValue" in item
+                  ]
+              else:
+                  result[attribute.get("key")] = next(iter(value.values()), None)
           return result
 
       result = None
@@ -37,12 +44,17 @@ transforms:
                   trace_ref = iri("trace/" + trace_id)
                   span_ref = iri("span/" + span_id)
                   attributes = attr_map(span.get("attributes"))
+                  data_object_ids = attributes.get("dpl.objects.data_object_id", [])
                   activity = {
                       "id": span_ref,
                       "provType": "Activity",
                       "startedAtTime": timestamp(span["startTimeUnixNano"]),
                       "endedAtTime": timestamp(span["endTimeUnixNano"]),
-                      "wasGeneratedBy": trace_ref
+                      "wasGeneratedBy": trace_ref,
+                      "qualifiedUsage": [
+                          iri("usage/" + data_object_id)
+                          for data_object_id in data_object_ids
+                      ]
                   }
                   object_definition = attributes.get("dpl.objects.data_object_def")
                   if object_definition:
@@ -53,7 +65,24 @@ transforms:
                       if agent_value:
                           agent_ref = iri("agent/" + role + "/" + agent_value)
                           activity.setdefault("wasAssociatedWith", []).append({"id": agent_ref, "provType": "Agent", "value": agent_value})
-                  result = {"encoding": "json", "mediaType": "application/ld+json", "value": activity}
+                  result = {
+                      "@context": {
+                          "id": "@id",
+                          "provType": "@type",
+                          "startedAtTime": "http://www.w3.org/ns/prov#startedAtTime",
+                          "endedAtTime": "http://www.w3.org/ns/prov#endedAtTime",
+                          "wasGeneratedBy": "http://www.w3.org/ns/prov#wasGeneratedBy",
+                          "qualifiedUsage": "http://www.w3.org/ns/prov#qualifiedUsage",
+                          "used": "http://www.w3.org/ns/prov#used",
+                          "wasAssociatedWith": "http://www.w3.org/ns/prov#wasAssociatedWith",
+                          "label": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "comment": "http://www.w3.org/2000/01/rdf-schema#comment",
+                          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+                      },
+                      "encoding": "json",
+                      "mediaType": "application/ld+json",
+                      "value": activity
+                  }
 
       if result is None:
           raise ValueError("The OTLP trace contains no spans")

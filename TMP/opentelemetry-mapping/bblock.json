@@ -8,7 +8,10 @@
   "version": "0.1",
   "maturity": "development",
   "tags": ["opentelemetry", "prov-o", "rml", "provenance"],
-  "dependsOn": ["bblocks://geonovum.dtaas.opentelemetry.trace"],
+  "dependsOn": [
+    "bblocks://geonovum.dtaas.opentelemetry.trace",
+    "bblocks://geonovum.dtaas.ogcapi.processes.custom-api-ipt"
+  ],
   "description": "The transform converts OTLP resourceSpans into an IPT-qualified result. Span and trace records become PROV activities; dpl.objects.data_object_def values become PROV entities; and dpl.core.processing_activity_id and dpl.core.data_subject_id values become PROV agents.",
   "resources": [
     {

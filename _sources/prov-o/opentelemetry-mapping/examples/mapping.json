@@ -1,6 +1,0 @@
-{
-  "sourceFormat": "OTLP JSON resourceSpans",
-  "mappingLanguage": "RML",
-  "outputVocabulary": "PROV-O",
-  "mappingDocument": "examples/otel-prov.rml.ttl"
-}

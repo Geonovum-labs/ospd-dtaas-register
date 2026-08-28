@@ -20,6 +20,12 @@ imports:
   - https://ogcincubator.github.io/bblocks-ogcapi-processes
   - https://ogcincubator.github.io/bblocks-openscience/
 
+plugins:
+  transforms:
+    - pip: ./rml-transform-plugin
+      modules:
+        - bbplugin_rml
+
 # Whether to enable the (highly experimental) downcompiling of JSON schemas to an OpenAPI 3.0-compatible
 # version
 schema-oas30-downcompile: False

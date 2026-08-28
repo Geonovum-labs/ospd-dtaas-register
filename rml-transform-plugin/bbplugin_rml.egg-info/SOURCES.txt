@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+bbplugin_rml/__init__.py
+bbplugin_rml.egg-info/PKG-INFO
+bbplugin_rml.egg-info/SOURCES.txt
+bbplugin_rml.egg-info/dependency_links.txt
+bbplugin_rml.egg-info/requires.txt
+bbplugin_rml.egg-info/top_level.txt

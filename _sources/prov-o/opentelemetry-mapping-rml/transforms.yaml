@@ -1,0 +1,11 @@
+transforms:
+  - id: otlp-to-prov-o-rml
+    description: Convert an OpenTelemetry OTLP JSON trace into PROV-O RDF using the RML transform plugin.
+    type: rml
+    inputs:
+      mediaTypes:
+        - application/json
+    outputs:
+      mediaTypes:
+        - text/turtle
+    ref: examples/otel-prov.rml.ttl
