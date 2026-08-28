@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.outputDescription",
-    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+    "ogc.api.processes.v1.schemas.outputDescription"
   ],
   "schema": {
     "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml",

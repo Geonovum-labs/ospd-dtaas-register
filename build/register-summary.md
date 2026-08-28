@@ -8,17 +8,17 @@ register for various examples of building blocks.
 
 ## Building Blocks
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
-
-**Type:** schema
-
-Output schema for the localoutlier process
-
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema` — Localoutlier process input schema
 
 **Type:** schema
 
 Input schema for the localoutlier process
+
+### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
+
+**Type:** schema
+
+Output schema for the localoutlier process
 
 ### `geonovum.dtaas.opentelemetry.trace` — OpenTelemetry trace with DTaaS provenance attributes
 

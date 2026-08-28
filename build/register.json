@@ -2,7 +2,7 @@
   "name": "OSPD / DTaaS block collection",
   "abstract": "OSPD / DTaaS block collection\n",
   "description": "register for various examples of building blocks.\n",
-  "modified": "2026-08-28T13:25:19.605106",
+  "modified": "2026-08-28T13:40:45.905290",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"447ae31f978ca3b124bfcbcf5473c7aadddb56af",
@@ -22,47 +22,6 @@
     "https://ogcincubator.github.io/bblocks-openscience/build/register.json"
   ],
   "bblocks": [
-    {
-      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-      "name": "Localoutlier process output schema",
-      "abstract": "Output schema for the localoutlier process",
-      "status": "under-development",
-      "dateTimeAddition": "2025-12-17T00:00:00Z",
-      "itemClass": "schema",
-      "register": "ogc-building-block-examples",
-      "version": "1.0",
-      "dateOfLastChange": "2026-08-28",
-      "maturity": "development",
-      "tags": [
-        "examples",
-        "ogc api",
-        "ogc api processes"
-      ],
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml",
-        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.json"
-      },
-      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml",
-      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/resolvedProperties.json",
-      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
-        }
-      }
-    },
     {
       "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
       "name": "Localoutlier process input schema",
@@ -103,6 +62,47 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+      "name": "Localoutlier process output schema",
+      "abstract": "Output schema for the localoutlier process",
+      "status": "under-development",
+      "dateTimeAddition": "2025-12-17T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-examples",
+      "version": "1.0",
+      "dateOfLastChange": "2026-08-28",
+      "maturity": "development",
+      "tags": [
+        "examples",
+        "ogc api",
+        "ogc api processes"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml",
+        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.json"
+      },
+      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml",
+      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/resolvedProperties.json",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
         }
       }
     },
@@ -166,8 +166,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
-        "bblocks://ogc.api.processes.v1.schemas.inputDescription"
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema"
       ],
       "schema": {
         "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml",
@@ -212,8 +212,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription"
       ],
       "schema": {
         "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml",
@@ -405,23 +405,23 @@
       },
       "shaclShapes": {},
       "dependsOn": [
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
+        "bblocks://ogc.api.processes.v1.paths.Conformance",
+        "bblocks://ogc.api.processes.v1.paths.ProcessList",
         "bblocks://ogc.api.processes.v1.parameters.jobId",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
-        "bblocks://ogc.api.processes.v1.paths.Conformance",
-        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
-        "bblocks://ogc.api.processes.v1.responses.ServerError",
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-        "bblocks://ogc.api.processes.v1.schemas.execute",
-        "bblocks://ogc.api.processes.v1.api",
-        "bblocks://ogc.api.processes.v1.responses.NotFound",
-        "bblocks://ogc.api.processes.v1.paths.LandingPage",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
-        "bblocks://ogc.api.processes.v1.paths.ProcessList",
-        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
         "bblocks://ogc.api.processes.v1.paths.JobList",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions"
+        "bblocks://ogc.api.processes.v1.responses.NotFound",
+        "bblocks://ogc.api.processes.v1.responses.ServerError",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
+        "bblocks://ogc.api.processes.v1.paths.LandingPage",
+        "bblocks://ogc.api.processes.v1.schemas.execute",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
+        "bblocks://ogc.api.processes.v1.api",
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
+        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync"
       ],
       "sourceOpenAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/openapi.yaml",
       "openAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/custom-api/openapi.yaml",
@@ -453,11 +453,11 @@
       "dateTimeAddition": "2026-08-07T00:00:00Z",
       "version": "0.1",
       "dependsOn": [
-        "bblocks://ogc.osc.api-profiles.processes.ipt.execute",
         "bblocks://ogc.osc.api-profiles.processes.ipt.results",
+        "bblocks://ogc.osc.api-profiles.processes.ipt.execute",
         "bblocks://ogc.api.processes.v1.schemas.outputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
         "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
         "bblocks://ogc.api.processes.v1.schemas.inputDescription"
       ],
       "extensionPoints": {
@@ -592,7 +592,10 @@
           ]
         }
       ],
-      "pip": "./rml-transform-plugin"
+      "pip": "git+https://github.com/Geonovum-labs/bblocks-rml-transform-plugin.git@main",
+      "urls": [
+        "https://github.com/Geonovum-labs/bblocks-rml-transform-plugin"
+      ]
     }
   ],
   "remoteCacheDir": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/_cache",
