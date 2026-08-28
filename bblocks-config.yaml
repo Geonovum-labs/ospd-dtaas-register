@@ -22,7 +22,7 @@ imports:
 
 plugins:
   transforms:
-    - pip: ./rml-transform-plugin
+    - pip: git+https://github.com/Geonovum-labs/bblocks-rml-transform-plugin.git@main
       modules:
         - bbplugin_rml
 

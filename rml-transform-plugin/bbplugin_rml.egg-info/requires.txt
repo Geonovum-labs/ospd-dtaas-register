@@ -1,2 +1,0 @@
-jsonpath-ng>=1.6.1
-rdflib>=7.0.0
