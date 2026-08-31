@@ -1,16 +1,16 @@
 {
-  "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription - Localoutlier process input description",
-  "bblockName": "Localoutlier process input description",
-  "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
-  "generated": "2026-08-31T14:30:19.774124+00:00",
+  "title": "Validation report for geonovum.dtaas.prov-o.otel-ipt - Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
+  "bblockName": "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
+  "bblockId": "geonovum.dtaas.prov-o.otel-ipt",
+  "generated": "2026-08-31T14:30:20.923822+00:00",
   "result": true,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "build/tests/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/example_1_1.json",
-        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/example_1_1.json",
+        "filename": "build/tests/dtaas/prov-o/otel-ipt/example_1_1.json",
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/otel-ipt/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using examples/localoutlier.json from examples"
+              "message": "Using examples/otel-ipt-example.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 26,
+              "size": 18,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }

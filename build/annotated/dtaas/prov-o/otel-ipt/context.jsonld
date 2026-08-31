@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "description": "http://purl.org/dc/terms/description",
+    "process": {
+      "@context": {
+        "id": "@id",
+        "type": "@type"
+      },
+      "@id": "https://example.org/terms/process"
+    },
+    "provenance": {
+      "@context": {
+        "id": "@id",
+        "type": "@type",
+        "label": "rdfs:label",
+        "used": {
+          "@context": {
+            "role": "prov:role"
+          },
+          "@id": "prov:used",
+          "@type": "@id"
+        },
+        "wasAssociatedWith": {
+          "@id": "prov:wasAssociatedWith",
+          "@type": "@id"
+        }
+      },
+      "@id": "https://example.org/terms/provenance"
+    },
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "@version": 1.1
+  }
+}

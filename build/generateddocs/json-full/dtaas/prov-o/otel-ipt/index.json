@@ -1,0 +1,75 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.prov-o.otel-ipt",
+  "name": "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
+  "abstract": "OTLP JSON trace transformed to IPT Provenenance from OGC API Processes.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "geonovum-dtaas-ospd",
+  "dateTimeAddition": "2026-08-31T00:00:00Z",
+  "version": "0.1",
+  "maturity": "development",
+  "tags": [
+    "opentelemetry",
+    "otlp",
+    "provenance",
+    "ogc api processes",
+    "ipt"
+  ],
+  "dependsOn": [
+    "geonovum.dtaas.ogcapi.processes.custom-api-ipt",
+    "geonovum.dtaas.prov-o.opentelemetry-mapping-rml"
+  ],
+  "resources": [
+    {
+      "title": "Example IPT provenance output for a Local Outlier Factor trace",
+      "role": "example",
+      "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/examples/otel-ipt-example.json",
+      "format": "application/json"
+    }
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/context.jsonld",
+  "dateOfLastChange": "2026-08-31",
+  "schema": {
+    "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml",
+    "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/schema.json"
+  },
+  "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/schema.yaml",
+  "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/context.jsonld",
+  "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/resolvedProperties.json",
+  "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/otel-ipt/",
+  "examples": [
+    {
+      "title": "Localoutlier OpenTelemetry trace mapped to IPT Profile",
+      "content": "An OTLP JSON trace carrying the DTaaS processing activity, subject, and object attributes.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/examples/otel-ipt-example.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/otel-ipt/example_1_1.json",
+          "sizeBytes": 1072,
+          "code": "{\n  \"description\": \"Example IPT provenance output for a Local Outlier Factor process after the OTLP-to-PROV mapping.\",\n  \"process\": {\n    \"id\": \"localoutlier_simple\",\n    \"type\": \"https://example.org/processes/localoutlier_simple\"\n  },\n  \"provenance\": {\n    \"activity\": {\n      \"id\": \"https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175\",\n      \"type\": \"prov:Activity\",\n      \"label\": \"LocalOutlierFactor\"\n    },\n    \"used\": [\n      {\n        \"id\": \"http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor\",\n        \"type\": \"prov:Entity\",\n        \"role\": \"dataObject\"\n      },\n      {\n        \"id\": \"2011\",\n        \"type\": \"prov:Entity\",\n        \"role\": \"input\"\n      },\n      {\n        \"id\": \"203\",\n        \"type\": \"prov:Entity\",\n        \"role\": \"input\"\n      },\n      {\n        \"id\": \"204\",\n        \"type\": \"prov:Entity\",\n        \"role\": \"input\"\n      }\n    ],\n    \"wasAssociatedWith\": {\n      \"id\": \"http://localhost:5000/processes/localoutlier_simple\",\n      \"type\": \"prov:SoftwareAgent\"\n    }\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/otel-ipt/example_1_1.jsonld",
+          "sizeBytes": 1193,
+          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/context.jsonld\",\n  \"description\": \"Example IPT provenance output for a Local Outlier Factor process after the OTLP-to-PROV mapping.\",\n  \"process\": {\n    \"id\": \"localoutlier_simple\",\n    \"type\": \"https://example.org/processes/localoutlier_simple\"\n  },\n  \"provenance\": {\n    \"activity\": {\n      \"id\": \"https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175\",\n      \"type\": \"prov:Activity\",\n      \"label\": \"LocalOutlierFactor\"\n    },\n    \"used\": [\n      {\n        \"id\": \"http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor\",\n        \"type\": \"prov:Entity\",\n        \"role\": \"dataObject\"\n      },\n      {\n        \"id\": \"2011\",\n        \"type\": \"prov:Entity\",\n        \"role\": \"input\"\n      },\n      {\n        \"id\": \"203\",\n        \"type\": \"prov:Entity\",\n        \"role\": \"input\"\n      },\n      {\n        \"id\": \"204\",\n        \"type\": \"prov:Entity\",\n        \"role\": \"input\"\n      }\n    ],\n    \"wasAssociatedWith\": {\n      \"id\": \"http://localhost:5000/processes/localoutlier_simple\",\n      \"type\": \"prov:SoftwareAgent\"\n    }\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/otel-ipt/example_1_1.ttl",
+          "sizeBytes": 1229,
+          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ns1: <https://example.org/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n\n<file:///github/workspace/2011> a prov:Entity ;\n    prov:role \"input\" .\n\n<file:///github/workspace/203> a prov:Entity ;\n    prov:role \"input\" .\n\n<file:///github/workspace/204> a prov:Entity ;\n    prov:role \"input\" .\n\n<file:///github/workspace/localoutlier_simple> a <https://example.org/processes/localoutlier_simple> .\n\n<http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> a prov:Entity ;\n    prov:role \"dataObject\" .\n\n<http://localhost:5000/processes/localoutlier_simple> a prov:SoftwareAgent .\n\n[] dcterms:description \"Example IPT provenance output for a Local Outlier Factor process after the OTLP-to-PROV mapping.\" ;\n    ns1:process <file:///github/workspace/localoutlier_simple> ;\n    ns1:provenance [ prov:used <file:///github/workspace/2011>,\n                <file:///github/workspace/203>,\n                <file:///github/workspace/204>,\n                <http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> ;\n            prov:wasAssociatedWith <http://localhost:5000/processes/localoutlier_simple> ] .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "type: object\nrequired:\n- process\n- provenance\nproperties:\n  process:\n    type: object\n    required:\n    - id\n    - type\n    properties:\n      id:\n        type: string\n        x-jsonld-id: '@id'\n      type:\n        type: string\n        x-jsonld-id: '@type'\n    x-jsonld-id: https://example.org/terms/process\n  provenance:\n    type: object\n    required:\n    - activity\n    - used\n    - wasAssociatedWith\n    properties:\n      activity:\n        type: object\n        required:\n        - id\n        - type\n        - label\n        properties:\n          id:\n            type: string\n            x-jsonld-id: '@id'\n          type:\n            type: string\n            x-jsonld-id: '@type'\n          label:\n            type: string\n            x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\n      used:\n        type: array\n        items:\n          type: object\n          required:\n          - id\n          - type\n          - role\n          properties:\n            id:\n              type: string\n              x-jsonld-id: '@id'\n            type:\n              type: string\n              x-jsonld-id: '@type'\n            role:\n              type: string\n              x-jsonld-id: http://www.w3.org/ns/prov#role\n        x-jsonld-id: http://www.w3.org/ns/prov#used\n        x-jsonld-type: '@id'\n      wasAssociatedWith:\n        type: object\n        required:\n        - id\n        - type\n        properties:\n          id:\n            type: string\n            x-jsonld-id: '@id'\n          type:\n            type: string\n            x-jsonld-id: '@type'\n        x-jsonld-id: http://www.w3.org/ns/prov#wasAssociatedWith\n        x-jsonld-type: '@id'\n    x-jsonld-id: https://example.org/terms/provenance\nx-jsonld-extra-terms:\n  description: http://purl.org/dc/terms/description\nx-jsonld-prefixes:\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  prov: http://www.w3.org/ns/prov#\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/prov-o/otel-ipt"
+}

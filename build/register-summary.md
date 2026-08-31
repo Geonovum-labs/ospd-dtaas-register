@@ -26,6 +26,12 @@ Output schema for the localoutlier process
 
 OTLP JSON trace shape used to record OGC API Processes provenance.
 
+### `geonovum.dtaas.prov-o.opentelemetry-mapping-rml` — OpenTelemetry to PROV-O mapping (RML plugin)
+
+**Type:** schema
+
+OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
+
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription` — Localoutlier process input description
 
 **Type:** schema
@@ -68,9 +74,9 @@ An example of an OGC API Processes implementation using building blocks - Local 
 
 Profile of Geonovum's custom OGC API Processes for IPT (Integrity Provenance Trust) aspects.
 
-### `geonovum.dtaas.prov-o.opentelemetry-mapping-rml` — OpenTelemetry to PROV-O mapping (RML plugin)
+### `geonovum.dtaas.prov-o.otel-ipt` — Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace
 
 **Type:** schema
 
-OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
+OTLP JSON trace transformed to IPT Provenenance from OGC API Processes.
 

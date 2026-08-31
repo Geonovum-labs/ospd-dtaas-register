@@ -1,0 +1,16 @@
+path	@id	schema
+/process	https://example.org/terms/process	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/process/id	@id	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/process/type	@type	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance	https://example.org/terms/provenance	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/activity		/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/activity/id	@id	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/activity/type	@type	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/activity/label	http://www.w3.org/2000/01/rdf-schema#label	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/used	http://www.w3.org/ns/prov#used	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/used/id	@id	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/used/type	@type	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/used/role	http://www.w3.org/ns/prov#role	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/wasAssociatedWith	http://www.w3.org/ns/prov#wasAssociatedWith	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/wasAssociatedWith/id	@id	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml
+/provenance/wasAssociatedWith/type	@type	/github/workspace/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml

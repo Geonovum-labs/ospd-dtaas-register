@@ -6,7 +6,7 @@
   "abstract": "OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.",
   "status": "under-development",
   "itemClass": "schema",
-  "register": "ogc-building-block-examples",
+  "register": "geonovum-dtaas-ospd",
   "dateTimeAddition": "2026-08-28T00:00:00Z",
   "version": "0.1",
   "maturity": "development",
@@ -17,8 +17,7 @@
     "provenance"
   ],
   "dependsOn": [
-    "geonovum.dtaas.opentelemetry.trace",
-    "geonovum.dtaas.ogcapi.processes.custom-api-ipt"
+    "geonovum.dtaas.opentelemetry.trace"
   ],
   "description": "# Mapping from OpenTelemetry (LDV profile) to PROV-O (RML based)\n\nThis building block performs the transform from Opentelemetry to PROV-O using a (experimental) RML Transformer.\n\n",
   "resources": [

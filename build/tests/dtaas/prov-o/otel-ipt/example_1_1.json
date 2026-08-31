@@ -1,0 +1,40 @@
+{
+  "description": "Example IPT provenance output for a Local Outlier Factor process after the OTLP-to-PROV mapping.",
+  "process": {
+    "id": "localoutlier_simple",
+    "type": "https://example.org/processes/localoutlier_simple"
+  },
+  "provenance": {
+    "activity": {
+      "id": "https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175",
+      "type": "prov:Activity",
+      "label": "LocalOutlierFactor"
+    },
+    "used": [
+      {
+        "id": "http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor",
+        "type": "prov:Entity",
+        "role": "dataObject"
+      },
+      {
+        "id": "2011",
+        "type": "prov:Entity",
+        "role": "input"
+      },
+      {
+        "id": "203",
+        "type": "prov:Entity",
+        "role": "input"
+      },
+      {
+        "id": "204",
+        "type": "prov:Entity",
+        "role": "input"
+      }
+    ],
+    "wasAssociatedWith": {
+      "id": "http://localhost:5000/processes/localoutlier_simple",
+      "type": "prov:SoftwareAgent"
+    }
+  }
+}

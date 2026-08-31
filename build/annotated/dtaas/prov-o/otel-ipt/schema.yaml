@@ -1,0 +1,81 @@
+type: object
+required:
+- process
+- provenance
+properties:
+  process:
+    type: object
+    required:
+    - id
+    - type
+    properties:
+      id:
+        type: string
+        x-jsonld-id: '@id'
+      type:
+        type: string
+        x-jsonld-id: '@type'
+    x-jsonld-id: https://example.org/terms/process
+  provenance:
+    type: object
+    required:
+    - activity
+    - used
+    - wasAssociatedWith
+    properties:
+      activity:
+        type: object
+        required:
+        - id
+        - type
+        - label
+        properties:
+          id:
+            type: string
+            x-jsonld-id: '@id'
+          type:
+            type: string
+            x-jsonld-id: '@type'
+          label:
+            type: string
+            x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
+      used:
+        type: array
+        items:
+          type: object
+          required:
+          - id
+          - type
+          - role
+          properties:
+            id:
+              type: string
+              x-jsonld-id: '@id'
+            type:
+              type: string
+              x-jsonld-id: '@type'
+            role:
+              type: string
+              x-jsonld-id: http://www.w3.org/ns/prov#role
+        x-jsonld-id: http://www.w3.org/ns/prov#used
+        x-jsonld-type: '@id'
+      wasAssociatedWith:
+        type: object
+        required:
+        - id
+        - type
+        properties:
+          id:
+            type: string
+            x-jsonld-id: '@id'
+          type:
+            type: string
+            x-jsonld-id: '@type'
+        x-jsonld-id: http://www.w3.org/ns/prov#wasAssociatedWith
+        x-jsonld-type: '@id'
+    x-jsonld-id: https://example.org/terms/provenance
+x-jsonld-extra-terms:
+  description: http://purl.org/dc/terms/description
+x-jsonld-prefixes:
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  prov: http://www.w3.org/ns/prov#
