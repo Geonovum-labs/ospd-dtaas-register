@@ -1,0 +1,45 @@
+type: object
+required: [process, provenance]
+properties:
+  process:
+    type: object
+    required: [id, type]
+    properties:
+      id:
+        type: string
+      type:
+        type: string
+  provenance:
+    type: object
+    required: [activity, used, wasAssociatedWith]
+    properties:
+      activity:
+        type: object
+        required: [id, type, label]
+        properties:
+          id:
+            type: string
+          type:
+            type: string
+          label:
+            type: string
+      used:
+        type: array
+        items:
+          type: object
+          required: [id, type, role]
+          properties:
+            id:
+              type: string
+            type:
+              type: string
+            role:
+              type: string
+      wasAssociatedWith:
+        type: object
+        required: [id, type]
+        properties:
+          id:
+            type: string
+          type:
+            type: string

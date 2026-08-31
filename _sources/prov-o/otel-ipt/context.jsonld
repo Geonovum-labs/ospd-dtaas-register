@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "id": "@id",
+    "type": "@type",
+    "label": "rdfs:label",
+    "description": "http://purl.org/dc/terms/description",
+    "process": "https://example.org/terms/process",
+    "provenance": "https://example.org/terms/provenance",
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "role": "prov:role"
+  }
+}

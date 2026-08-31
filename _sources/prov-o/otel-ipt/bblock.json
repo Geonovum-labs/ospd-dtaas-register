@@ -1,0 +1,23 @@
+{
+  "name": "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
+  "abstract": "OTLP JSON trace transformed to IPT Provenenance from OGC API Processes.",
+  "status": "under-development",
+  "itemClass": "schema",
+  "register": "geonovum-dtaas-ospd",
+  "dateTimeAddition": "2026-08-31T00:00:00Z",
+  "version": "0.1",
+  "maturity": "development",
+  "tags": ["opentelemetry", "otlp", "provenance", "ogc api processes", "ipt"],
+  "dependsOn": [
+    "bblocks://geonovum.dtaas.prov-o.opentelemetry-mapping-rml",
+    "bblocks://geonovum.dtaas.ogcapi.processes.custom-api-ipt"
+  ],
+  "resources": [
+    {
+      "title": "Example IPT provenance output for a Local Outlier Factor trace",
+      "role": "example",
+      "ref": "examples/otel-ipt-example.json",
+      "format": "application/json"
+    }
+  ]
+}
