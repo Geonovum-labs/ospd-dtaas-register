@@ -1,5 +1,5 @@
 Validation report for geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions - Example OGC API Processes instance output descriptions
-Generated 2026-08-31T14:30:20.901183+00:00
+Generated 2026-09-01T10:21:59.321185+00:00
 === Files ===
 Using examples/localoutlier.json from examples
 JSON-LD context is present - uplifting

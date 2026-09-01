@@ -1,0 +1,51 @@
+{
+  "title": "Validation report for geonovum.dtaas.prov-o.otel-ipt - Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
+  "bblockName": "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
+  "bblockId": "geonovum.dtaas.prov-o.otel-ipt",
+  "generated": "2026-09-01T10:21:59.522219+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "TRANSFORM_OUTPUT",
+        "requireFail": false,
+        "filename": "build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl",
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl",
+        "language": {
+          "id": "ttl",
+          "defaultExtension": "ttl",
+          "label": "RDF/Turtle",
+          "mimeType": "text/turtle",
+          "aliases": [
+            "turtle",
+            "rdf/turtle"
+          ],
+          "extensions": [
+            "ttl"
+          ]
+        },
+        "transformId": "otlp-to-prov-o-rml"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "UNKNOWN",
+          "title": "Unknown errors",
+          "entries": [
+            {
+              "exception": "TypeError",
+              "isError": true,
+              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 383, in validate_transform_output\n    validator.validate(\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 348, in validate\n    graph = self._load_graph(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 295, in _load_graph\n    rdf_format = NATIVE_RDF_LANGS.get(file_format,\n,TypeError: unhashable type: 'dict'\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  }
+}

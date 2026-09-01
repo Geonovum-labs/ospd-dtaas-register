@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2026-08-31",
+  "dateOfLastChange": "2026-09-01",
   "maturity": "development",
   "tags": [
     "examples",
@@ -19,8 +19,8 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.api.processes.v1.schemas.process",
-    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
-    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription"
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription",
+    "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription"
   ],
   "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/context.jsonld",
   "schema": {

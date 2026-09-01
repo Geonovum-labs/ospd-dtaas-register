@@ -1,0 +1,16 @@
+Validation report for geonovum.dtaas.prov-o.otel-ipt - Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace
+Generated 2026-09-01T10:21:59.522023+00:00
+=== Unknown errors ===
+
+** Validation error **
+Traceback (most recent call last):
+,  File "/src/ogc/bblocks/validate.py", line 383, in validate_transform_output
+    validator.validate(
+,  File "/src/ogc/bblocks/validation/rdf.py", line 348, in validate
+    graph = self._load_graph(filename, output_filename, report,
+,  File "/src/ogc/bblocks/validation/rdf.py", line 295, in _load_graph
+    rdf_format = NATIVE_RDF_LANGS.get(file_format,
+,TypeError: unhashable type: 'dict'
+
+=== End Unknown errors ===
+

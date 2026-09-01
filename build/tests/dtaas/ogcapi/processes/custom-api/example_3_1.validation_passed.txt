@@ -1,5 +1,5 @@
 Validation report for geonovum.dtaas.ogcapi.processes.custom-api - Demo OGC API processes instance - LOF
-Generated 2026-08-31T14:30:20.906331+00:00
+Generated 2026-09-01T10:21:59.326078+00:00
 === Files ===
 Using examples/execution-response.json from examples
 === End Files ===

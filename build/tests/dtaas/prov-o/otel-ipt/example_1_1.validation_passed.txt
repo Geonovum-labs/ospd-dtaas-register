@@ -1,5 +1,5 @@
 Validation report for geonovum.dtaas.prov-o.otel-ipt - Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace
-Generated 2026-08-31T14:30:20.923775+00:00
+Generated 2026-09-01T10:21:59.342181+00:00
 === Files ===
 Using examples/otel-ipt-example.json from examples
 JSON-LD context is present - uplifting

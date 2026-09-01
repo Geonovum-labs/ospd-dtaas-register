@@ -13,64 +13,59 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<bblocks://geonovum.dtaas.prov-o.otel-ipt> a skos:Concept,
+<bblocks://geonovum.dtaas.prov-o.opentelemetry-mapping-rml> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
         bblocks:Schema ;
-    rdfs:label "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace" ;
-    dct:abstract "OTLP JSON trace transformed to IPT Provenenance from OGC API Processes."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2026-08-31T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/otel-ipt/index.json> ],
+    rdfs:label "OpenTelemetry to PROV-O mapping (RML plugin)" ;
+    dct:abstract "OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-08-28T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/opentelemetry-mapping-rml/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/opentelemetry-mapping-rml/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.otel-ipt> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/otel-ipt/index.md> ] ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.opentelemetry-mapping-rml> ],
+        "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-08-28"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
-    skos:prefLabel "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace" ;
+    skos:prefLabel "OpenTelemetry to PROV-O mapping (RML plugin)" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
-    dcat:keyword "ipt",
-        "ogc api processes",
-        "opentelemetry",
-        "otlp",
-        "provenance" ;
-    prof:hasResource [ dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/examples/otel-ipt-example.json> ;
-            prof:hasRole <https://geonovum-labs.github.io/example> ],
+    dcat:keyword "opentelemetry",
+        "prov-o",
+        "provenance",
+        "rml" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:format "text/turtle" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping-rml/examples/otel-prov.rml.ttl> ;
+            prof:hasRole <https://geonovum-labs.github.io/mapping> ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml> ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.json> ;
             prof:hasRole role:schema ] ;
-    bblocks:dependsOn <bblocks://geonovum.dtaas.ogcapi.processes.custom-api-ipt>,
-        <bblocks://geonovum.dtaas.prov-o.opentelemetry-mapping-rml> ;
-    bblocks:hasSourceJsonLdContext <https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/context.jsonld> ;
+    bblocks:dependsOn <bblocks://geonovum.dtaas.opentelemetry.trace>,
+        <bblocks://geonovum.dtaas.prov-o.otel-ipt> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
 <https://geonovum-labs.github.io/ospd-dtaas-register/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N3003ba4d19db48618e020deaf28f687d ;
+    prov:wasAttributedTo _:N09df0cf378604547a76d25ff915fa71f ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-08-31T14:30:21.320975"^^xsd:dateTime ;
-            prov:startedAtTime "2026-08-31T14:30:21.129907"^^xsd:dateTime ;
+            prov:endedAtTime "2026-09-01T10:21:59.726668"^^xsd:dateTime ;
+            prov:startedAtTime "2026-09-01T10:21:59.548070"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-                [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:27f2227353012dc6fa2bdaff743f350fab309ee3" ;
-                    rdfs:seeAlso <https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json> ] ;
-            prov:wasAssociatedWith _:N3003ba4d19db48618e020deaf28f687d ] .
+                    dct:hasVersion "git:2c46d90d21b8d78c5cd3443eea3590b64b3cb2ac" ;
+                    rdfs:seeAlso <https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N09df0cf378604547a76d25ff915fa71f ] .
 
 <bblocks://geonovum.dtaas.ogcapi.processes.custom-api> a skos:Concept,
         dcat:Dataset,
@@ -79,14 +74,14 @@
     rdfs:label "Demo OGC API processes instance - LOF" ;
     dct:abstract "An example of an OGC API Processes implementation using building blocks - Local Outlier Factor"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-12-17T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/custom-api/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.custom-api> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/custom-api/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/custom-api/index.md> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-09-01"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     skos:prefLabel "Demo OGC API processes instance - LOF" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
@@ -121,10 +116,10 @@
     rdfs:label "IPT profile of Geonovum custom API processes" ;
     dct:abstract "Profile of Geonovum's custom OGC API Processes for IPT (Integrity Provenance Trust) aspects."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-07T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/custom-api-ipt/index.json> ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.custom-api-ipt> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/custom-api-ipt/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/custom-api-ipt/index.md> ],
         "The custom API uses the IPT result schema for provenance-bearing process results. The returned result contains a qualified value whose value is a PROV activity or entity."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
@@ -149,32 +144,32 @@
     rdfs:label "Localoutlier process description" ;
     dct:abstract "Process description for the localoutlier process"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-12-17T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/index.json> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/index.json> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-09-01"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     skos:prefLabel "Localoutlier process description" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     dcat:keyword "examples",
         "ogc api",
         "ogc api processes" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/context.jsonld> ;
-            prof:hasRole role:mapping ],
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/schema.yaml> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/schema.json> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/schema.yaml> ;
-            prof:hasRole role:schema ] ;
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:dependsOn <bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription>,
         <bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription>,
         <bblocks://ogc.api.processes.v1.schemas.process> ;
@@ -189,32 +184,32 @@
     rdfs:label "Example OGC API Processes instance output descriptions" ;
     dct:abstract "Collection of output descriptions"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-12-17T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions> ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/outputDescriptions/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/outputDescriptions/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions> ] ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/outputDescriptions/index.md> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-09-01"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     skos:prefLabel "Example OGC API Processes instance output descriptions" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     dcat:keyword "examples",
         "ogc api",
         "ogc api processes" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/outputDescriptions/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/outputDescriptions/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/outputDescriptions/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/outputDescriptions/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -226,12 +221,12 @@
     rdfs:label "OpenTelemetry trace with DTaaS provenance attributes" ;
     dct:abstract "OTLP JSON trace shape used to record OGC API Processes provenance."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-26T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/opentelemetry/trace/index.json> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.opentelemetry.trace> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/opentelemetry/trace/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.opentelemetry.trace> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/opentelemetry/trace/index.json> ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2026-08-26"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
@@ -252,41 +247,46 @@
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<bblocks://geonovum.dtaas.prov-o.opentelemetry-mapping-rml> a skos:Concept,
+<bblocks://geonovum.dtaas.prov-o.otel-ipt> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
         bblocks:Schema ;
-    rdfs:label "OpenTelemetry to PROV-O mapping (RML plugin)" ;
-    dct:abstract "OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2026-08-28T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.opentelemetry-mapping-rml> ],
+    rdfs:label "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace" ;
+    dct:abstract "OTLP JSON trace transformed to IPT Provenenance from OGC API Processes."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-08-31T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/otel-ipt/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/opentelemetry-mapping-rml/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/opentelemetry-mapping-rml/index.json> ],
-        "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/otel-ipt/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.otel-ipt> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-28"^^xsd:date ;
+    dct:modified "2026-08-31"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
-    skos:prefLabel "OpenTelemetry to PROV-O mapping (RML plugin)" ;
+    skos:prefLabel "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
-    dcat:keyword "opentelemetry",
-        "prov-o",
-        "provenance",
-        "rml" ;
+    dcat:keyword "ipt",
+        "ogc api processes",
+        "opentelemetry",
+        "otlp",
+        "provenance" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.yaml> ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:format "text/turtle" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping-rml/examples/otel-prov.rml.ttl> ;
-            prof:hasRole <https://geonovum-labs.github.io/mapping> ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.json> ;
-            prof:hasRole role:schema ] ;
-    bblocks:dependsOn <bblocks://geonovum.dtaas.opentelemetry.trace> ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:format "application/json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/examples/otel-ipt-example.json> ;
+            prof:hasRole <https://geonovum-labs.github.io/example> ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://geonovum.dtaas.ogcapi.processes.custom-api-ipt> ;
+    bblocks:hasSourceJsonLdContext <https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/otel-ipt/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -304,25 +304,25 @@
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-09-01"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     skos:prefLabel "Example OGC API Processes instance input descriptions" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     dcat:keyword "examples",
         "ogc api",
         "ogc api processes" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/inputDescriptions/schema.json> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/inputDescriptions/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/inputDescriptions/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/inputDescriptions/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/inputDescriptions/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -336,26 +336,26 @@
     dct:created "2025-12-17T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/index.json> ] ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/index.md> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-09-01"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     skos:prefLabel "Localoutlier process input description" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     dcat:keyword "examples",
         "ogc api",
         "ogc api processes" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/context.jsonld> ;
             prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.json> ;
@@ -372,32 +372,32 @@
     rdfs:label "Localoutlier process input schema" ;
     dct:abstract "Input schema for the localoutlier process"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-12-17T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/index.json> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-09-01"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     skos:prefLabel "Localoutlier process input schema" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     dcat:keyword "examples",
         "ogc api",
         "ogc api processes" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/schema.yaml> ;
-            prof:hasRole role:schema ] ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputSchema/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:hasSourceJsonLdContext <https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/inputSchema/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -411,29 +411,29 @@
     dct:created "2025-12-17T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/index.json> ] ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-09-01"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     skos:prefLabel "Localoutlier process output description" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     dcat:keyword "examples",
         "ogc api",
         "ogc api processes" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputDescription/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema>,
         <bblocks://ogc.api.processes.v1.schemas.outputDescription> ;
@@ -447,14 +447,14 @@
     rdfs:label "Localoutlier process output schema" ;
     dct:abstract "Output schema for the localoutlier process"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-12-17T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema> ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema> ] ;
+            rdfs:isDefinedBy <https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.json> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-31"^^xsd:date ;
+    dct:modified "2026-09-01"^^xsd:date ;
     skos:inScheme <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     skos:prefLabel "Localoutlier process output schema" ;
     skos:topConceptOf <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
@@ -462,12 +462,12 @@
         "ogc api",
         "ogc api processes" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.json> ;
             prof:hasRole role:schema ] ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -480,7 +480,7 @@
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:description """register for various examples of building blocks.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-08-31T14:30:11.418620"^^xsd:dateTime ;
+    dct:modified "2026-09-01T10:21:48.517839"^^xsd:dateTime ;
     owl:imports <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/register.json>,
         <https://ogcincubator.github.io/bblocks-openscience/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> ;
@@ -497,14 +497,14 @@
         <bblocks://geonovum.dtaas.prov-o.opentelemetry-mapping-rml>,
         <bblocks://geonovum.dtaas.prov-o.otel-ipt> ;
     skos:prefLabel "Building Blocks - OSPD / DTaaS block collection" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
-            dct:type "application/ld+json" ;
-            ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://geonovum-labs.github.io/ospd-dtaas-register/build/bblocks.jsonld> ],
-        [ rdfs:label "This Building Blocks Register in JSON format" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
             dct:type "application/json" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
             ns1:hasTarget <https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://geonovum-labs.github.io/ospd-dtaas-register/build/bblocks.jsonld> ],
         [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
@@ -512,7 +512,7 @@
     foaf:homepage <https://geonovum-labs.github.io/ospd-dtaas-register/> ;
     bblocks:hasValidationReport <https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/report.html> .
 
-_:N3003ba4d19db48618e020deaf28f687d a prov:Agent,
+_:N09df0cf378604547a76d25ff915fa71f a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.33" ;

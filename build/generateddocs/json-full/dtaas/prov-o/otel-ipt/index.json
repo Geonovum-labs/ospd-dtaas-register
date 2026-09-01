@@ -18,8 +18,7 @@
     "ipt"
   ],
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.custom-api-ipt",
-    "geonovum.dtaas.prov-o.opentelemetry-mapping-rml"
+    "geonovum.dtaas.ogcapi.processes.custom-api-ipt"
   ],
   "resources": [
     {
