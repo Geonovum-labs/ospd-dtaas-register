@@ -6,6 +6,7 @@ transforms:
       mediaTypes:
         - application/json
     outputs:
-      mediaTypes:
-        - text/turtle
+      mediaTypes: [ text/turtle ]
+      profiles:
+        - bblocks://geonovum.dtaas.prov-o.otel-ipt
     ref: examples/otel-prov.rml.ttl

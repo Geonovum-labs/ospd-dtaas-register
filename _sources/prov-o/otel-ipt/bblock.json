@@ -9,7 +9,6 @@
   "maturity": "development",
   "tags": ["opentelemetry", "otlp", "provenance", "ogc api processes", "ipt"],
   "dependsOn": [
-    "bblocks://geonovum.dtaas.prov-o.opentelemetry-mapping-rml",
     "bblocks://geonovum.dtaas.ogcapi.processes.custom-api-ipt"
   ],
   "resources": [
