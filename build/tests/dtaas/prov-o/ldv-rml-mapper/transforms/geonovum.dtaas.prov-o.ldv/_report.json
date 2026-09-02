@@ -1,16 +1,16 @@
 {
-  "title": "Validation report for geonovum.dtaas.prov-o.otel-ipt - Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
-  "bblockName": "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
-  "bblockId": "geonovum.dtaas.prov-o.otel-ipt",
-  "generated": "2026-09-02T09:40:14.424886+00:00",
+  "title": "Validation report for geonovum.dtaas.prov-o.ldv - LDV target schema",
+  "bblockName": "LDV target schema",
+  "bblockId": "geonovum.dtaas.prov-o.ldv",
+  "generated": "2026-09-02T09:40:14.130076+00:00",
   "result": false,
   "items": [
     {
       "source": {
         "type": "TRANSFORM_OUTPUT",
         "requireFail": false,
-        "filename": "build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl",
-        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl",
+        "filename": "build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/example_1_1.ldv-to-prov-o-rml.ttl",
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/example_1_1.ldv-to-prov-o-rml.ttl",
         "language": {
           "id": "ttl",
           "defaultExtension": "ttl",
@@ -24,7 +24,7 @@
             "ttl"
           ]
         },
-        "transformId": "otlp-to-prov-o-rml"
+        "transformId": "ldv-to-prov-o-rml"
       },
       "result": false,
       "sections": [

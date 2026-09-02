@@ -1,0 +1,6 @@
+Validation report for geonovum.dtaas.prov-o.ldv-rml-mapper - LDV RML Mapper
+Generated 2026-09-02T09:40:12.893378+00:00
+=== Files ===
+Using ../../opentelemetry/trace/examples/localoutlier-trace.json from examples
+=== End Files ===
+

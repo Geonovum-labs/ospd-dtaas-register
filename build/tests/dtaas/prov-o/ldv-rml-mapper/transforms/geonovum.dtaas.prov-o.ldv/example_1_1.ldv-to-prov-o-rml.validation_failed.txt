@@ -1,5 +1,5 @@
-Validation report for geonovum.dtaas.prov-o.otel-ipt - Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace
-Generated 2026-09-02T09:40:14.424667+00:00
+Validation report for geonovum.dtaas.prov-o.ldv - LDV target schema
+Generated 2026-09-02T09:40:14.129815+00:00
 === Unknown errors ===
 
 ** Validation error **

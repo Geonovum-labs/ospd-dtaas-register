@@ -8,23 +8,35 @@ register for various examples of building blocks.
 
 ## Building Blocks
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema` — Localoutlier process input schema
-
-**Type:** schema
-
-Input schema for the localoutlier process
-
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
 
 **Type:** schema
 
 Output schema for the localoutlier process
 
+### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema` — Localoutlier process input schema
+
+**Type:** schema
+
+Input schema for the localoutlier process
+
 ### `geonovum.dtaas.opentelemetry.trace` — OpenTelemetry trace with DTaaS provenance attributes
 
 **Type:** schema
 
 OTLP JSON trace shape used to record OGC API Processes provenance.
+
+### `geonovum.dtaas.prov-o.ldv` — LDV target schema
+
+**Type:** model
+
+target Prov-o schema for LDV
+
+### `geonovum.dtaas.prov-o.ldv-rml-mapper` — LDV RML Mapper
+
+**Type:** schema
+
+OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
 
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription` — Localoutlier process input description
 

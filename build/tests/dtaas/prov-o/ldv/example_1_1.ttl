@@ -1,0 +1,249 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> rdfs:label "Dataproduct" .
+
+<http://localhost:5000/collections/knmi_meetstations/queryables?f=json> rdfs:label "Dataset" .
+
+<http://trace.example.com/span/f2773d02c278c008> rdfs:label "LocalOutlierFactor" ;
+    prov:endedAtTime "1787910165607410083"^^xsd:string ;
+    prov:startedAtTime "1787910165430949248"^^xsd:string ;
+    prov:wasGeneratedBy <http://trace.example.com/trace/14e2af11847bde8d76f65f7c6e8d86e0> .
+
+<http://trace.example.com/usage/2011> rdfs:label 2011 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/203> rdfs:label 203 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/204> rdfs:label 204 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/205> rdfs:label 205 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/206> rdfs:label 206 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/207> rdfs:label 207 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/208> rdfs:label 208 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/209> rdfs:label 209 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/210> rdfs:label 210 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/211> rdfs:label 211 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/212> rdfs:label 212 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/213> rdfs:label 213 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/214> rdfs:label 214 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/215> rdfs:label 215 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/216> rdfs:label 216 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/218> rdfs:label 218 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/225> rdfs:label 225 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/229> rdfs:label 229 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/233> rdfs:label 233 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/235> rdfs:label 235 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/236> rdfs:label 236 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/237> rdfs:label 237 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/238> rdfs:label 238 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/239> rdfs:label 239 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/240> rdfs:label 240 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/242> rdfs:label 242 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/248> rdfs:label 248 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/249> rdfs:label 249 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/251> rdfs:label 251 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/252> rdfs:label 252 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/257> rdfs:label 257 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/258> rdfs:label 258 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/260> rdfs:label 260 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/265> rdfs:label 265 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/267> rdfs:label 267 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/269> rdfs:label 269 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/270> rdfs:label 270 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/273> rdfs:label 273 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/275> rdfs:label 275 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/277> rdfs:label 277 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/278> rdfs:label 278 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/279> rdfs:label 279 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/280> rdfs:label 280 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/283> rdfs:label 283 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/285> rdfs:label 285 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/286> rdfs:label 286 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/290> rdfs:label 290 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/308> rdfs:label 308 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/310> rdfs:label 310 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/311> rdfs:label 311 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/312> rdfs:label 312 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/313> rdfs:label 313 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/315> rdfs:label 315 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/316> rdfs:label 316 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/317> rdfs:label 317 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/319> rdfs:label 319 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/320> rdfs:label 320 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/321> rdfs:label 321 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/323> rdfs:label 323 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/324> rdfs:label 324 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/330> rdfs:label 330 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/331> rdfs:label 331 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/340> rdfs:label 340 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/343> rdfs:label 343 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/344> rdfs:label 344 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/348> rdfs:label 348 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/350> rdfs:label 350 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/356> rdfs:label 356 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/370> rdfs:label 370 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/375> rdfs:label 375 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/377> rdfs:label 377 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/380> rdfs:label 380 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/391> rdfs:label 391 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/392> rdfs:label 392 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/871> rdfs:label 871 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/873> rdfs:label 873 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/usage/990> rdfs:label 990 ;
+    rdfs:comment "de qualified usage relatie naar het object" .
+
+<http://trace.example.com/trace/14e2af11847bde8d76f65f7c6e8d86e0> rdfs:label "14e2af11847bde8d76f65f7c6e8d86e0" ;
+    rdfs:comment "Trace" .
+
+<https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> rdfs:label <https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> .
+

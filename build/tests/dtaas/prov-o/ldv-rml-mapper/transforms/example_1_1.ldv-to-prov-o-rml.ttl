@@ -1,0 +1,576 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://trace.example.com/entity/data-object/2011> rdfs:label "2011"^^xsd:string ;
+    dcterms:identifier 2011 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/203> rdfs:label "203"^^xsd:string ;
+    dcterms:identifier 203 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/204> rdfs:label "204"^^xsd:string ;
+    dcterms:identifier 204 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/205> rdfs:label "205"^^xsd:string ;
+    dcterms:identifier 205 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/206> rdfs:label "206"^^xsd:string ;
+    dcterms:identifier 206 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/207> rdfs:label "207"^^xsd:string ;
+    dcterms:identifier 207 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/208> rdfs:label "208"^^xsd:string ;
+    dcterms:identifier 208 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/209> rdfs:label "209"^^xsd:string ;
+    dcterms:identifier 209 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/210> rdfs:label "210"^^xsd:string ;
+    dcterms:identifier 210 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/211> rdfs:label "211"^^xsd:string ;
+    dcterms:identifier 211 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/212> rdfs:label "212"^^xsd:string ;
+    dcterms:identifier 212 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/213> rdfs:label "213"^^xsd:string ;
+    dcterms:identifier 213 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/214> rdfs:label "214"^^xsd:string ;
+    dcterms:identifier 214 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/215> rdfs:label "215"^^xsd:string ;
+    dcterms:identifier 215 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/216> rdfs:label "216"^^xsd:string ;
+    dcterms:identifier 216 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/218> rdfs:label "218"^^xsd:string ;
+    dcterms:identifier 218 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/225> rdfs:label "225"^^xsd:string ;
+    dcterms:identifier 225 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/229> rdfs:label "229"^^xsd:string ;
+    dcterms:identifier 229 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/233> rdfs:label "233"^^xsd:string ;
+    dcterms:identifier 233 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/235> rdfs:label "235"^^xsd:string ;
+    dcterms:identifier 235 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/236> rdfs:label "236"^^xsd:string ;
+    dcterms:identifier 236 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/237> rdfs:label "237"^^xsd:string ;
+    dcterms:identifier 237 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/238> rdfs:label "238"^^xsd:string ;
+    dcterms:identifier 238 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/239> rdfs:label "239"^^xsd:string ;
+    dcterms:identifier 239 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/240> rdfs:label "240"^^xsd:string ;
+    dcterms:identifier 240 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/242> rdfs:label "242"^^xsd:string ;
+    dcterms:identifier 242 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/248> rdfs:label "248"^^xsd:string ;
+    dcterms:identifier 248 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/249> rdfs:label "249"^^xsd:string ;
+    dcterms:identifier 249 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/251> rdfs:label "251"^^xsd:string ;
+    dcterms:identifier 251 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/252> rdfs:label "252"^^xsd:string ;
+    dcterms:identifier 252 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/257> rdfs:label "257"^^xsd:string ;
+    dcterms:identifier 257 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/258> rdfs:label "258"^^xsd:string ;
+    dcterms:identifier 258 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/260> rdfs:label "260"^^xsd:string ;
+    dcterms:identifier 260 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/265> rdfs:label "265"^^xsd:string ;
+    dcterms:identifier 265 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/267> rdfs:label "267"^^xsd:string ;
+    dcterms:identifier 267 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/269> rdfs:label "269"^^xsd:string ;
+    dcterms:identifier 269 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/270> rdfs:label "270"^^xsd:string ;
+    dcterms:identifier 270 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/273> rdfs:label "273"^^xsd:string ;
+    dcterms:identifier 273 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/275> rdfs:label "275"^^xsd:string ;
+    dcterms:identifier 275 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/277> rdfs:label "277"^^xsd:string ;
+    dcterms:identifier 277 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/278> rdfs:label "278"^^xsd:string ;
+    dcterms:identifier 278 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/279> rdfs:label "279"^^xsd:string ;
+    dcterms:identifier 279 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/280> rdfs:label "280"^^xsd:string ;
+    dcterms:identifier 280 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/283> rdfs:label "283"^^xsd:string ;
+    dcterms:identifier 283 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/285> rdfs:label "285"^^xsd:string ;
+    dcterms:identifier 285 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/286> rdfs:label "286"^^xsd:string ;
+    dcterms:identifier 286 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/290> rdfs:label "290"^^xsd:string ;
+    dcterms:identifier 290 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/308> rdfs:label "308"^^xsd:string ;
+    dcterms:identifier 308 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/310> rdfs:label "310"^^xsd:string ;
+    dcterms:identifier 310 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/311> rdfs:label "311"^^xsd:string ;
+    dcterms:identifier 311 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/312> rdfs:label "312"^^xsd:string ;
+    dcterms:identifier 312 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/313> rdfs:label "313"^^xsd:string ;
+    dcterms:identifier 313 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/315> rdfs:label "315"^^xsd:string ;
+    dcterms:identifier 315 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/316> rdfs:label "316"^^xsd:string ;
+    dcterms:identifier 316 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/317> rdfs:label "317"^^xsd:string ;
+    dcterms:identifier 317 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/319> rdfs:label "319"^^xsd:string ;
+    dcterms:identifier 319 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/320> rdfs:label "320"^^xsd:string ;
+    dcterms:identifier 320 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/321> rdfs:label "321"^^xsd:string ;
+    dcterms:identifier 321 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/323> rdfs:label "323"^^xsd:string ;
+    dcterms:identifier 323 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/324> rdfs:label "324"^^xsd:string ;
+    dcterms:identifier 324 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/330> rdfs:label "330"^^xsd:string ;
+    dcterms:identifier 330 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/331> rdfs:label "331"^^xsd:string ;
+    dcterms:identifier 331 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/340> rdfs:label "340"^^xsd:string ;
+    dcterms:identifier 340 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/343> rdfs:label "343"^^xsd:string ;
+    dcterms:identifier 343 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/344> rdfs:label "344"^^xsd:string ;
+    dcterms:identifier 344 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/348> rdfs:label "348"^^xsd:string ;
+    dcterms:identifier 348 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/350> rdfs:label "350"^^xsd:string ;
+    dcterms:identifier 350 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/356> rdfs:label "356"^^xsd:string ;
+    dcterms:identifier 356 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/370> rdfs:label "370"^^xsd:string ;
+    dcterms:identifier 370 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/375> rdfs:label "375"^^xsd:string ;
+    dcterms:identifier 375 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/377> rdfs:label "377"^^xsd:string ;
+    dcterms:identifier 377 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/380> rdfs:label "380"^^xsd:string ;
+    dcterms:identifier 380 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/391> rdfs:label "391"^^xsd:string ;
+    dcterms:identifier 391 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/392> rdfs:label "392"^^xsd:string ;
+    dcterms:identifier 392 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/871> rdfs:label "871"^^xsd:string ;
+    dcterms:identifier 871 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/873> rdfs:label "873"^^xsd:string ;
+    dcterms:identifier 873 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/entity/data-object/990> rdfs:label "990"^^xsd:string ;
+    dcterms:identifier 990 ;
+    rdfs:comment "Data object gebruikt tijdens de verwerking" .
+
+<http://trace.example.com/span/f2773d02c278c008> rdfs:label "LocalOutlierFactor"^^xsd:string ;
+    prov:endedAtTime 1787910165607410083 ;
+    prov:qualifiedAssociation <http://trace.example.com/association/processing-activity/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> ;
+    prov:qualifiedUsage <http://trace.example.com/usage/data-product/http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor>,
+        <http://trace.example.com/usage/dataset/http://localhost:5000/collections/knmi_meetstations/queryables?f=json> ;
+    prov:startedAtTime 1787910165430949248 ;
+    prov:wasGeneratedBy <http://trace.example.com/trace/14e2af11847bde8d76f65f7c6e8d86e0> .
+
+<http://trace.example.com/usage/data-object/2011> rdfs:label "2011"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/203> rdfs:label "203"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/204> rdfs:label "204"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/205> rdfs:label "205"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/206> rdfs:label "206"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/207> rdfs:label "207"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/208> rdfs:label "208"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/209> rdfs:label "209"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/210> rdfs:label "210"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/211> rdfs:label "211"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/212> rdfs:label "212"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/213> rdfs:label "213"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/214> rdfs:label "214"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/215> rdfs:label "215"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/216> rdfs:label "216"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/218> rdfs:label "218"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/225> rdfs:label "225"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/229> rdfs:label "229"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/233> rdfs:label "233"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/235> rdfs:label "235"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/236> rdfs:label "236"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/237> rdfs:label "237"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/238> rdfs:label "238"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/239> rdfs:label "239"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/240> rdfs:label "240"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/242> rdfs:label "242"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/248> rdfs:label "248"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/249> rdfs:label "249"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/251> rdfs:label "251"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/252> rdfs:label "252"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/257> rdfs:label "257"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/258> rdfs:label "258"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/260> rdfs:label "260"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/265> rdfs:label "265"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/267> rdfs:label "267"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/269> rdfs:label "269"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/270> rdfs:label "270"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/273> rdfs:label "273"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/275> rdfs:label "275"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/277> rdfs:label "277"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/278> rdfs:label "278"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/279> rdfs:label "279"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/280> rdfs:label "280"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/283> rdfs:label "283"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/285> rdfs:label "285"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/286> rdfs:label "286"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/290> rdfs:label "290"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/308> rdfs:label "308"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/310> rdfs:label "310"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/311> rdfs:label "311"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/312> rdfs:label "312"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/313> rdfs:label "313"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/315> rdfs:label "315"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/316> rdfs:label "316"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/317> rdfs:label "317"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/319> rdfs:label "319"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/320> rdfs:label "320"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/321> rdfs:label "321"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/323> rdfs:label "323"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/324> rdfs:label "324"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/330> rdfs:label "330"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/331> rdfs:label "331"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/340> rdfs:label "340"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/343> rdfs:label "343"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/344> rdfs:label "344"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/348> rdfs:label "348"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/350> rdfs:label "350"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/356> rdfs:label "356"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/370> rdfs:label "370"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/375> rdfs:label "375"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/377> rdfs:label "377"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/380> rdfs:label "380"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/391> rdfs:label "391"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/392> rdfs:label "392"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/871> rdfs:label "871"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/873> rdfs:label "873"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/usage/data-object/990> rdfs:label "990"^^xsd:string ;
+    rdfs:comment "Qualified usage van een individueel data object" .
+
+<http://trace.example.com/agent/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> rdfs:label <https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> ;
+    dcterms:source <https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> ;
+    rdfs:comment "De geregistreerde verwerkingsactiviteit" .
+
+<http://trace.example.com/association/processing-activity/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> rdfs:comment "Qualified association met de geregistreerde verwerkingsactiviteit" ;
+    prov:agent <http://trace.example.com/agent/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> .
+
+<http://trace.example.com/entity/data-product/http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> rdfs:label "Data product" ;
+    dcterms:source <http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> ;
+    rdfs:seeAlso <http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> .
+
+<http://trace.example.com/entity/dataset/http://localhost:5000/collections/knmi_meetstations/queryables?f=json> rdfs:label "Dataset" ;
+    dcterms:source <http://localhost:5000/collections/knmi_meetstations/queryables?f=json> ;
+    rdfs:seeAlso <http://localhost:5000/collections/knmi_meetstations/queryables?f=json> .
+
+<http://trace.example.com/trace/14e2af11847bde8d76f65f7c6e8d86e0> rdfs:label "14e2af11847bde8d76f65f7c6e8d86e0"^^xsd:string ;
+    rdfs:comment "Trace" .
+
+<http://trace.example.com/usage/data-product/http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> rdfs:comment "Qualified usage van het data product" ;
+    prov:entity <http://trace.example.com/entity/data-product/http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> .
+
+<http://trace.example.com/usage/dataset/http://localhost:5000/collections/knmi_meetstations/queryables?f=json> rdfs:comment "Qualified usage van de dataset" ;
+    prov:entity <http://trace.example.com/entity/dataset/http://localhost:5000/collections/knmi_meetstations/queryables?f=json> .
+

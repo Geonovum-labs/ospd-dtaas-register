@@ -194,12 +194,12 @@
   "name": "Building Blocks - OSPD / DTaaS block collection",
   "abstract": "OSPD / DTaaS block collection\n",
   "description": "register for various examples of building blocks.\n",
-  "modified": "2026-09-01T10:21:48.517839",
+  "modified": "2026-09-02T09:40:05.437406",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"447ae31f978ca3b124bfcbcf5473c7aadddb56af",
-      "shortCommitId": "\"447ae3",
-      "date": "2026-08-26T14:44:03+00:00\""
+      "commitId": "\"2cf420b0b83234f694264ce9f4e8b4c81e7b978d",
+      "shortCommitId": "\"2cf420",
+      "date": "2026-09-02T07:19:47+00:00\""
     }
   },
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
@@ -269,6 +269,74 @@
   "skos:prefLabel": "Building Blocks - OSPD / DTaaS block collection",
   "hasConcepts": [
     {
+      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+      "name": "Localoutlier process output schema",
+      "abstract": "Output schema for the localoutlier process",
+      "status": "under-development",
+      "dateTimeAddition": "2025-12-17T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-examples",
+      "version": "1.0",
+      "dateOfLastChange": "2026-09-02",
+      "maturity": "development",
+      "tags": [
+        "examples",
+        "ogc api",
+        "ogc api processes"
+      ],
+      "shaclShapes": null,
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml",
+      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/resolvedProperties.json",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
+        }
+      },
+      "@id": "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Localoutlier process output schema",
+      "ldContext": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://geonovum-labs.github.io/ospd-dtaas-register/"
+      }
+    },
+    {
       "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
       "name": "Localoutlier process input schema",
       "abstract": "Input schema for the localoutlier process",
@@ -277,7 +345,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-01",
+      "dateOfLastChange": "2026-09-02",
       "maturity": "development",
       "tags": [
         "examples",
@@ -333,74 +401,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Localoutlier process input schema",
-      "openAPIDocument": null,
-      "ontology": null,
-      "rdfData": [],
-      "dependsOn": null,
-      "isProfileOf": null,
-      "skos:topConceptOf": {
-        "@id": "https://geonovum-labs.github.io/ospd-dtaas-register/"
-      }
-    },
-    {
-      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-      "name": "Localoutlier process output schema",
-      "abstract": "Output schema for the localoutlier process",
-      "status": "under-development",
-      "dateTimeAddition": "2025-12-17T00:00:00Z",
-      "itemClass": "schema",
-      "register": "ogc-building-block-examples",
-      "version": "1.0",
-      "dateOfLastChange": "2026-09-01",
-      "maturity": "development",
-      "tags": [
-        "examples",
-        "ogc api",
-        "ogc api processes"
-      ],
-      "shaclShapes": null,
-      "schema": [
-        {
-          "prof:hasArtifact": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/yaml",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        },
-        {
-          "prof:hasArtifact": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/schema.yaml",
-      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/resolvedProperties.json",
-      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/schemas/localoutlier/outputSchema/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/schemas/localoutlier/outputSchema/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
-        }
-      },
-      "@id": "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset",
-        "bblocks:BBlock"
-      ],
-      "skos:prefLabel": "Localoutlier process output schema",
-      "ldContext": null,
       "openAPIDocument": null,
       "ontology": null,
       "rdfData": [],
@@ -480,6 +480,162 @@
       }
     },
     {
+      "itemIdentifier": "geonovum.dtaas.prov-o.ldv",
+      "name": "LDV target schema",
+      "abstract": "target Prov-o schema for LDV",
+      "status": "under-development",
+      "itemClass": "model",
+      "register": "geonovum-dtaas-ospd",
+      "dateTimeAddition": "2026-09-01T00:00:00Z",
+      "version": "0.1",
+      "maturity": "development",
+      "tags": [
+        "opentelemetry",
+        "ldv",
+        "provenance"
+      ],
+      "resources": [
+        {
+          "title": "Example LDV Prov-O log",
+          "role": "example",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv/examples/ldv.ttl",
+          "format": "text/turtle"
+        }
+      ],
+      "shaclShapes": null,
+      "dateOfLastChange": "2026-09-01",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/ldv/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/ldv/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.ldv"
+        }
+      },
+      "@id": "bblocks://geonovum.dtaas.prov-o.ldv",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "LDV target schema",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://geonovum-labs.github.io/ospd-dtaas-register/"
+      }
+    },
+    {
+      "itemIdentifier": "geonovum.dtaas.prov-o.ldv-rml-mapper",
+      "name": "LDV RML Mapper",
+      "abstract": "OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.",
+      "status": "under-development",
+      "itemClass": "schema",
+      "register": "geonovum-dtaas-ospd",
+      "dateTimeAddition": "2026-08-28T00:00:00Z",
+      "version": "0.1",
+      "maturity": "development",
+      "tags": [
+        "opentelemetry",
+        "prov-o",
+        "rml",
+        "provenance"
+      ],
+      "dependsOn": [
+        "bblocks://geonovum.dtaas.opentelemetry.trace"
+      ],
+      "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references.",
+      "resources": [
+        {
+          "title": "RML mapping",
+          "role": "mapping",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/examples/ldv-prov.rml.ttl",
+          "format": "text/turtle"
+        }
+      ],
+      "shaclShapes": null,
+      "dateOfLastChange": "2026-08-28",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv-rml-mapper/",
+      "transforms": [
+        {
+          "id": "ldv-to-prov-o-rml",
+          "description": "Convert an OpenTelemetry OTLP JSON trace into PROV-O RDF using the RML transform plugin.",
+          "type": "rml",
+          "inputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "application/json",
+                "label": "JSON",
+                "defaultExtension": "json"
+              }
+            ]
+          },
+          "outputs": {
+            "mediaTypes": [
+              {
+                "mimeType": "text/turtle",
+                "label": "RDF/Turtle",
+                "defaultExtension": "ttl"
+              }
+            ],
+            "profiles": [
+              "bblocks://geonovum.dtaas.prov-o.ldv"
+            ]
+          },
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/examples/ldv-prov.rml.ttl",
+          "code": "@prefix rr:      <http://www.w3.org/ns/r2rml#> .\r\n@prefix rml:     <http://semweb.mmlab.be/ns/rml#> .\r\n@prefix ql:      <http://semweb.mmlab.be/ns/ql#> .\r\n@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .\r\n@prefix prov:    <http://www.w3.org/ns/prov#> .\r\n@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .\r\n@prefix dcterms: <http://purl.org/dc/terms/> .\r\n\r\n@base <http://trace.example.com/mapping/> .\r\n\r\n\r\n#################################################################\r\n# 1. TRACE\r\n#################################################################\r\n\r\n<#TraceMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/trace/{traceId}\" ;\r\n        rr:class prov:Activity ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:label ;\r\n        rr:objectMap [\r\n            rml:reference \"traceId\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:comment ;\r\n        rr:objectMap [\r\n            rr:constant \"Trace\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] .\r\n\r\n\r\n#################################################################\r\n# 2. SPAN\r\n#\r\n# The OpenTelemetry timestamps are nanoseconds since the Unix\r\n# epoch, not lexical xsd:dateTime values. They are therefore\r\n# represented as xsd:integer.\r\n#################################################################\r\n\r\n<#SpanMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/span/{spanId}\" ;\r\n        rr:class prov:Activity ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:label ;\r\n        rr:objectMap [\r\n            rml:reference \"name\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:startedAtTime ;\r\n        rr:objectMap [\r\n            rml:reference \"startTimeUnixNano\" ;\r\n            rr:datatype xsd:integer\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:endedAtTime ;\r\n        rr:objectMap [\r\n            rml:reference \"endTimeUnixNano\" ;\r\n            rr:datatype xsd:integer\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:wasGeneratedBy ;\r\n        rr:objectMap [\r\n            rr:parentTriplesMap <#TraceMapping> ;\r\n            rr:joinCondition [\r\n                rr:child \"traceId\" ;\r\n                rr:parent \"traceId\"\r\n            ]\r\n        ]\r\n    ] ;\r\n\r\n    # Link the span to its processing-activity association.\r\n    #\r\n    # This parent TriplesMap has a different logical source.\r\n    # No joinCondition is used because the original nested\r\n    # attribute record does not contain spanId.\r\n    #\r\n    # This works as intended when the input contains one span.\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:qualifiedAssociation ;\r\n        rr:objectMap [\r\n            rr:parentTriplesMap <#ProcessingActivityAssociationMapping>\r\n        ]\r\n    ] ;\r\n\r\n    # Link the span to every data-object usage generated from\r\n    # dpl.objects.data_object_id.\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:qualifiedUsage ;\r\n        rr:objectMap [\r\n            rr:parentTriplesMap <#DataObjectUsageMapping>\r\n        ]\r\n    ] ;\r\n\r\n    # Link the span to the data-product usage.\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:qualifiedUsage ;\r\n        rr:objectMap [\r\n            rr:parentTriplesMap <#DataProductUsageMapping>\r\n        ]\r\n    ] ;\r\n\r\n    # Link the span to the dataset usage.\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:qualifiedUsage ;\r\n        rr:objectMap [\r\n            rr:parentTriplesMap <#DatasetUsageMapping>\r\n        ]\r\n    ] .\r\n\r\n\r\n#################################################################\r\n# 3. PROCESSING ACTIVITY AS PROV AGENT\r\n#################################################################\r\n\r\n<#ProcessingActivityAgentMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.processing_activity_id')]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/agent/{value.stringValue}\" ;\r\n        rr:class prov:Agent ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:label ;\r\n        rr:objectMap [\r\n            rml:reference \"value.stringValue\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:comment ;\r\n        rr:objectMap [\r\n            rr:constant \"De geregistreerde verwerkingsactiviteit\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate dcterms:source ;\r\n        rr:objectMap [\r\n            rml:reference \"value.stringValue\" ;\r\n            rr:termType rr:IRI\r\n        ]\r\n    ] .\r\n\r\n\r\n#################################################################\r\n# 4. QUALIFIED ASSOCIATION WITH PROCESSING ACTIVITY\r\n#################################################################\r\n\r\n<#ProcessingActivityAssociationMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.processing_activity_id')]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/association/processing-activity/{value.stringValue}\" ;\r\n        rr:class prov:Association ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:comment ;\r\n        rr:objectMap [\r\n            rr:constant \"Qualified association met de geregistreerde verwerkingsactiviteit\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:agent ;\r\n        rr:objectMap [\r\n            rr:parentTriplesMap <#ProcessingActivityAgentMapping> ;\r\n            rr:joinCondition [\r\n                rr:child \"value.stringValue\" ;\r\n                rr:parent \"value.stringValue\"\r\n            ]\r\n        ]\r\n    ] .\r\n\r\n\r\n#################################################################\r\n# 5. INDIVIDUAL DATA OBJECTS\r\n#\r\n# One prov:Entity is created for every intValue in the array.\r\n#################################################################\r\n\r\n<#DataObjectEntityMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.data_object_id')].value.arrayValue.values[*]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/entity/data-object/{intValue}\" ;\r\n        rr:class prov:Entity ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:label ;\r\n        rr:objectMap [\r\n            rml:reference \"intValue\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:comment ;\r\n        rr:objectMap [\r\n            rr:constant \"Data object gebruikt tijdens de verwerking\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate dcterms:identifier ;\r\n        rr:objectMap [\r\n            rml:reference \"intValue\" ;\r\n            rr:datatype xsd:integer\r\n        ]\r\n    ] .\r\n\r\n\r\n\r\n################################################################################\r\n# USAGE MAP\r\n################################################################################\r\n\r\n<#UsageMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.data_object_id')].value.arrayValue.values[*]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/usage/data-object/{intValue}\" ;\r\n        rr:class prov:Usage\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:label ;\r\n        rr:objectMap [\r\n            rml:reference \"intValue\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:comment ;\r\n        rr:objectMap [\r\n            rr:constant \"Qualified usage van een individueel data object\"\r\n        ]\r\n    ] .\r\n\r\n\r\n#################################################################\r\n# 7. DATA PRODUCT\r\n#################################################################\r\n\r\n<#DataProductEntityMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataproduct_id')]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/entity/data-product/{value.stringValue}\" ;\r\n        rr:class prov:Entity ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:label ;\r\n        rr:objectMap [\r\n            rr:constant \"Data product\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:seeAlso ;\r\n        rr:objectMap [\r\n            rml:reference \"value.stringValue\" ;\r\n            rr:termType rr:IRI\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate dcterms:source ;\r\n        rr:objectMap [\r\n            rml:reference \"value.stringValue\" ;\r\n            rr:termType rr:IRI\r\n        ]\r\n    ] .\r\n\r\n\r\n<#DataProductUsageMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataproduct_id')]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/usage/data-product/{value.stringValue}\" ;\r\n        rr:class prov:Usage ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:comment ;\r\n        rr:objectMap [\r\n            rr:constant \"Qualified usage van het data product\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:entity ;\r\n        rr:objectMap [\r\n            rr:parentTriplesMap <#DataProductEntityMapping> ;\r\n            rr:joinCondition [\r\n                rr:child \"value.stringValue\" ;\r\n                rr:parent \"value.stringValue\"\r\n            ]\r\n        ]\r\n    ] .\r\n\r\n\r\n#################################################################\r\n# 8. DATASET\r\n#################################################################\r\n\r\n<#DatasetEntityMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataset_id')]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/entity/dataset/{value.stringValue}\" ;\r\n        rr:class prov:Entity ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:label ;\r\n        rr:objectMap [\r\n            rr:constant \"Dataset\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:seeAlso ;\r\n        rr:objectMap [\r\n            rml:reference \"value.stringValue\" ;\r\n            rr:termType rr:IRI\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate dcterms:source ;\r\n        rr:objectMap [\r\n            rml:reference \"value.stringValue\" ;\r\n            rr:termType rr:IRI\r\n        ]\r\n    ] .\r\n\r\n\r\n<#DatasetUsageMapping>\r\n    a rr:TriplesMap ;\r\n\r\n    rml:logicalSource [\r\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\r\n        rml:referenceFormulation ql:JSONPath ;\r\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataset_id')]\"\r\n    ] ;\r\n\r\n    rr:subjectMap [\r\n        rr:template \"http://trace.example.com/usage/dataset/{value.stringValue}\" ;\r\n        rr:class prov:Usage ;\r\n        rr:termType rr:IRI\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate rdfs:comment ;\r\n        rr:objectMap [\r\n            rr:constant \"Qualified usage van de dataset\" ;\r\n            rr:datatype xsd:string\r\n        ]\r\n    ] ;\r\n\r\n    rr:predicateObjectMap [\r\n        rr:predicate prov:entity ;\r\n        rr:objectMap [\r\n            rr:parentTriplesMap <#DatasetEntityMapping> ;\r\n            rr:joinCondition [\r\n                rr:child \"value.stringValue\" ;\r\n                rr:parent \"value.stringValue\"\r\n            ]\r\n        ]\r\n    ] ."
+        }
+      ],
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/prov-o/ldv-rml-mapper/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/prov-o/ldv-rml-mapper/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.prov-o.ldv-rml-mapper"
+        }
+      },
+      "@id": "bblocks://geonovum.dtaas.prov-o.ldv-rml-mapper",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "LDV RML Mapper",
+      "ldContext": null,
+      "schema": null,
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "skos:topConceptOf": {
+        "@id": "https://geonovum-labs.github.io/ospd-dtaas-register/"
+      }
+    },
+    {
       "itemIdentifier": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
       "name": "Localoutlier process input description",
       "abstract": "Input description for the localoutlier process",
@@ -488,7 +644,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-01",
+      "dateOfLastChange": "2026-09-02",
       "maturity": "development",
       "tags": [
         "examples",
@@ -497,8 +653,8 @@
       ],
       "shaclShapes": null,
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
-        "bblocks://ogc.api.processes.v1.schemas.inputDescription"
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema"
       ],
       "schema": [
         {
@@ -564,7 +720,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-01",
+      "dateOfLastChange": "2026-09-02",
       "maturity": "development",
       "tags": [
         "examples",
@@ -640,7 +796,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-01",
+      "dateOfLastChange": "2026-09-02",
       "maturity": "development",
       "tags": [
         "examples",
@@ -715,7 +871,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-01",
+      "dateOfLastChange": "2026-09-02",
       "maturity": "development",
       "tags": [
         "examples",
@@ -793,7 +949,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-01",
+      "dateOfLastChange": "2026-09-02",
       "maturity": "development",
       "tags": [
         "examples",
@@ -868,7 +1024,7 @@
       "itemClass": "api",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-01",
+      "dateOfLastChange": "2026-09-02",
       "maturity": "development",
       "tags": [
         "examples",
@@ -887,23 +1043,23 @@
       },
       "shaclShapes": null,
       "dependsOn": [
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
-        "bblocks://ogc.api.processes.v1.paths.JobList",
-        "bblocks://ogc.api.processes.v1.responses.ServerError",
-        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
-        "bblocks://ogc.api.processes.v1.paths.LandingPage",
-        "bblocks://ogc.api.processes.v1.parameters.jobId",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
         "bblocks://ogc.api.processes.v1.schemas.outputDescription",
-        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-        "bblocks://ogc.api.processes.v1.paths.Conformance",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
+        "bblocks://ogc.api.processes.v1.parameters.jobId",
+        "bblocks://ogc.api.processes.v1.responses.ServerError",
+        "bblocks://ogc.api.processes.v1.paths.JobList",
+        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
+        "bblocks://ogc.api.processes.v1.paths.LandingPage",
         "bblocks://ogc.api.processes.v1.paths.ProcessList",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
+        "bblocks://ogc.api.processes.v1.schemas.execute",
         "bblocks://ogc.api.processes.v1.api",
         "bblocks://ogc.api.processes.v1.responses.NotFound",
-        "bblocks://ogc.api.processes.v1.schemas.execute",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions"
+        "bblocks://ogc.api.processes.v1.paths.Conformance"
       ],
       "sourceOpenAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/openapi.yaml",
       "openAPIDocument": {
@@ -955,11 +1111,11 @@
       "dateTimeAddition": "2026-08-07T00:00:00Z",
       "version": "0.1",
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
+        "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
         "bblocks://ogc.osc.api-profiles.processes.ipt.execute",
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
         "bblocks://ogc.osc.api-profiles.processes.ipt.results"
       ],
       "extensionPoints": {
@@ -1170,7 +1326,7 @@
             ]
           },
           "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/opentelemetry-mapping-rml/examples/otel-prov.rml.ttl",
-          "code": "@prefix rr: <http://www.w3.org/ns/r2rml#> .\n@prefix rml: <http://semweb.mmlab.be/ns/rml#> .\n@prefix ql: <http://semweb.mmlab.be/ns/ql#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@base <http://example.com/ns#> .\n\n<#TraceMapping> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"http://trace.example.com/trace/{traceId}\" ;\n    rr:class prov:Activity\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdfs:label ;\n    rr:objectMap [ rml:reference \"traceId\" ]\n  ] .\n\n<#SpanMapping> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"http://trace.example.com/span/{spanId}\" ;\n    rr:class prov:Activity\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdfs:label ;\n    rr:objectMap [ rml:reference \"name\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:wasGeneratedBy ;\n    rr:objectMap [\n      rr:parentTriplesMap <#TraceMapping> ;\n      rr:joinCondition [ rr:child \"traceId\" ; rr:parent \"traceId\" ]\n    ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:qualifiedUsage ;\n    rr:objectMap [\n      rr:parentTriplesMap <#ObjectUsageMapping> ;\n      rr:joinCondition [\n        rr:child \"http://trace.example.com/span/{spanId}\" ;\n        rr:parent \"http://trace.example.com/span/{spanId}\"\n      ]\n    ]\n  ] .\n\n<#ObjectUsageMapping> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[2].value.arrayValue.values[*]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"http://trace.example.com/use/{intValue}\" ;\n    rr:class prov:Usage\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdfs:label ;\n    rr:objectMap [ rml:reference \"intValue\" ]\n  ] .\n"
+          "code": "@prefix rr: <http://www.w3.org/ns/r2rml#> .\n@prefix rml: <http://semweb.mmlab.be/ns/rml#> .\n@prefix ql: <http://semweb.mmlab.be/ns/ql#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ex: <https://example.org/terms/> .\n@base <http://example.com/ns#> .\n\n<#ResultMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:constant \"http://example.org/result/localoutlier_simple\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate dcterms:description ;\n    rr:objectMap [ rr:constant \"Example IPT provenance output for a Local Outlier Factor process after the OTLP-to-PROV mapping.\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate ex:process ;\n    rr:objectMap [ rr:parentTriplesMap <#ProcessMap> ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate ex:provenance ;\n    rr:objectMap [ rr:parentTriplesMap <#ProvenanceMap> ]\n  ] .\n\n<#ProcessMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:constant \"localoutlier_simple\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"https://example.org/processes/localoutlier_simple\" ]\n  ] .\n\n<#ProvenanceMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:constant \"http://example.org/provenance/localoutlier_simple\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:activity ;\n    rr:objectMap [ rr:parentTriplesMap <#ActivityMap> ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:used ;\n    rr:objectMap [ rr:parentTriplesMap <#DataProductMap> ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:used ;\n    rr:objectMap [ rr:parentTriplesMap <#InputValueMap> ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:wasAssociatedWith ;\n    rr:objectMap [ rr:parentTriplesMap <#AgentMap> ]\n  ] .\n\n<#ActivityMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"{attributes[0].value.stringValue}\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"http://www.w3.org/ns/prov#Activity\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdfs:label ;\n    rr:objectMap [ rr:template \"{name}\" ]\n  ] .\n\n<#DataProductMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"{attributes[1].value.stringValue}\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"http://www.w3.org/ns/prov#Entity\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:role ;\n    rr:objectMap [ rr:constant \"dataObject\" ]\n  ] .\n\n<#InputValueMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0].attributes[2].value.arrayValue.values[*]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"http://example.org/used/{intValue}\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"http://www.w3.org/ns/prov#Entity\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:role ;\n    rr:objectMap [ rr:constant \"input\" ]\n  ] .\n\n<#AgentMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"{resource.attributes[0].value.stringValue}\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"http://www.w3.org/ns/prov#SoftwareAgent\" ]\n  ] .\n"
         }
       ],
       "documentation": {
@@ -1207,13 +1363,19 @@
   ],
   "skos:hasTopConcept": [
     {
-      "@id": "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema"
-    },
-    {
       "@id": "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema"
     },
     {
+      "@id": "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema"
+    },
+    {
       "@id": "bblocks://geonovum.dtaas.opentelemetry.trace"
+    },
+    {
+      "@id": "bblocks://geonovum.dtaas.prov-o.ldv"
+    },
+    {
+      "@id": "bblocks://geonovum.dtaas.prov-o.ldv-rml-mapper"
     },
     {
       "@id": "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription"

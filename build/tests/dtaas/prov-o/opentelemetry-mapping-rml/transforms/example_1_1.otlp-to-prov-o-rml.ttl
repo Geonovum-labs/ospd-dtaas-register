@@ -1,162 +1,329 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://example.org/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://trace.example.com/span/f2773d02c278c008> rdfs:label "LocalOutlierFactor" ;
-    prov:wasGeneratedBy <http://trace.example.com/trace/14e2af11847bde8d76f65f7c6e8d86e0> .
+<http://example.org/result/localoutlier_simple> dcterms:description "Example IPT provenance output for a Local Outlier Factor process after the OTLP-to-PROV mapping." ;
+    ns1:process "localoutlier_simple" ;
+    ns1:provenance <http://example.org/provenance/localoutlier_simple> .
+
+<http://example.org/provenance/localoutlier_simple> prov:activity <> ;
+    prov:used <>,
+        <http://example.org/used/2011>,
+        <http://example.org/used/203>,
+        <http://example.org/used/204>,
+        <http://example.org/used/205>,
+        <http://example.org/used/206>,
+        <http://example.org/used/207>,
+        <http://example.org/used/208>,
+        <http://example.org/used/209>,
+        <http://example.org/used/210>,
+        <http://example.org/used/211>,
+        <http://example.org/used/212>,
+        <http://example.org/used/213>,
+        <http://example.org/used/214>,
+        <http://example.org/used/215>,
+        <http://example.org/used/216>,
+        <http://example.org/used/218>,
+        <http://example.org/used/225>,
+        <http://example.org/used/229>,
+        <http://example.org/used/233>,
+        <http://example.org/used/235>,
+        <http://example.org/used/236>,
+        <http://example.org/used/237>,
+        <http://example.org/used/238>,
+        <http://example.org/used/239>,
+        <http://example.org/used/240>,
+        <http://example.org/used/242>,
+        <http://example.org/used/248>,
+        <http://example.org/used/249>,
+        <http://example.org/used/251>,
+        <http://example.org/used/252>,
+        <http://example.org/used/257>,
+        <http://example.org/used/258>,
+        <http://example.org/used/260>,
+        <http://example.org/used/265>,
+        <http://example.org/used/267>,
+        <http://example.org/used/269>,
+        <http://example.org/used/270>,
+        <http://example.org/used/273>,
+        <http://example.org/used/275>,
+        <http://example.org/used/277>,
+        <http://example.org/used/278>,
+        <http://example.org/used/279>,
+        <http://example.org/used/280>,
+        <http://example.org/used/283>,
+        <http://example.org/used/285>,
+        <http://example.org/used/286>,
+        <http://example.org/used/290>,
+        <http://example.org/used/308>,
+        <http://example.org/used/310>,
+        <http://example.org/used/311>,
+        <http://example.org/used/312>,
+        <http://example.org/used/313>,
+        <http://example.org/used/315>,
+        <http://example.org/used/316>,
+        <http://example.org/used/317>,
+        <http://example.org/used/319>,
+        <http://example.org/used/320>,
+        <http://example.org/used/321>,
+        <http://example.org/used/323>,
+        <http://example.org/used/324>,
+        <http://example.org/used/330>,
+        <http://example.org/used/331>,
+        <http://example.org/used/340>,
+        <http://example.org/used/343>,
+        <http://example.org/used/344>,
+        <http://example.org/used/348>,
+        <http://example.org/used/350>,
+        <http://example.org/used/356>,
+        <http://example.org/used/370>,
+        <http://example.org/used/375>,
+        <http://example.org/used/377>,
+        <http://example.org/used/380>,
+        <http://example.org/used/391>,
+        <http://example.org/used/392>,
+        <http://example.org/used/871>,
+        <http://example.org/used/873>,
+        <http://example.org/used/990> ;
+    prov:wasAssociatedWith <> .
+
+<http://example.org/used/2011> a prov:Entity ;
+    prov:role "input" .
+
+<http://example.org/used/203> a prov:Entity ;
+    prov:role "input" .
+
+<http://example.org/used/204> a prov:Entity ;
+    prov:role "input" .
+
+<http://example.org/used/205> a prov:Entity ;
+    prov:role "input" .
+
+<http://example.org/used/206> a prov:Entity ;
+    prov:role "input" .
+
+<http://example.org/used/207> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/2011> rdfs:label "2011" .
+<http://example.org/used/208> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/203> rdfs:label "203" .
+<http://example.org/used/209> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/204> rdfs:label "204" .
+<http://example.org/used/210> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/205> rdfs:label "205" .
+<http://example.org/used/211> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/206> rdfs:label "206" .
+<http://example.org/used/212> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/207> rdfs:label "207" .
+<http://example.org/used/213> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/208> rdfs:label "208" .
+<http://example.org/used/214> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/209> rdfs:label "209" .
+<http://example.org/used/215> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/210> rdfs:label "210" .
+<http://example.org/used/216> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/211> rdfs:label "211" .
+<http://example.org/used/218> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/212> rdfs:label "212" .
+<http://example.org/used/225> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/213> rdfs:label "213" .
+<http://example.org/used/229> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/214> rdfs:label "214" .
+<http://example.org/used/233> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/215> rdfs:label "215" .
+<http://example.org/used/235> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/216> rdfs:label "216" .
+<http://example.org/used/236> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/218> rdfs:label "218" .
+<http://example.org/used/237> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/225> rdfs:label "225" .
+<http://example.org/used/238> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/229> rdfs:label "229" .
+<http://example.org/used/239> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/233> rdfs:label "233" .
+<http://example.org/used/240> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/235> rdfs:label "235" .
+<http://example.org/used/242> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/236> rdfs:label "236" .
+<http://example.org/used/248> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/237> rdfs:label "237" .
+<http://example.org/used/249> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/238> rdfs:label "238" .
+<http://example.org/used/251> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/239> rdfs:label "239" .
+<http://example.org/used/252> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/240> rdfs:label "240" .
+<http://example.org/used/257> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/242> rdfs:label "242" .
+<http://example.org/used/258> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/248> rdfs:label "248" .
+<http://example.org/used/260> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/249> rdfs:label "249" .
+<http://example.org/used/265> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/251> rdfs:label "251" .
+<http://example.org/used/267> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/252> rdfs:label "252" .
+<http://example.org/used/269> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/257> rdfs:label "257" .
+<http://example.org/used/270> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/258> rdfs:label "258" .
+<http://example.org/used/273> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/260> rdfs:label "260" .
+<http://example.org/used/275> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/265> rdfs:label "265" .
+<http://example.org/used/277> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/267> rdfs:label "267" .
+<http://example.org/used/278> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/269> rdfs:label "269" .
+<http://example.org/used/279> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/270> rdfs:label "270" .
+<http://example.org/used/280> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/273> rdfs:label "273" .
+<http://example.org/used/283> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/275> rdfs:label "275" .
+<http://example.org/used/285> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/277> rdfs:label "277" .
+<http://example.org/used/286> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/278> rdfs:label "278" .
+<http://example.org/used/290> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/279> rdfs:label "279" .
+<http://example.org/used/308> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/280> rdfs:label "280" .
+<http://example.org/used/310> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/283> rdfs:label "283" .
+<http://example.org/used/311> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/285> rdfs:label "285" .
+<http://example.org/used/312> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/286> rdfs:label "286" .
+<http://example.org/used/313> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/290> rdfs:label "290" .
+<http://example.org/used/315> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/308> rdfs:label "308" .
+<http://example.org/used/316> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/310> rdfs:label "310" .
+<http://example.org/used/317> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/311> rdfs:label "311" .
+<http://example.org/used/319> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/312> rdfs:label "312" .
+<http://example.org/used/320> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/313> rdfs:label "313" .
+<http://example.org/used/321> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/315> rdfs:label "315" .
+<http://example.org/used/323> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/316> rdfs:label "316" .
+<http://example.org/used/324> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/317> rdfs:label "317" .
+<http://example.org/used/330> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/319> rdfs:label "319" .
+<http://example.org/used/331> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/320> rdfs:label "320" .
+<http://example.org/used/340> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/321> rdfs:label "321" .
+<http://example.org/used/343> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/323> rdfs:label "323" .
+<http://example.org/used/344> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/324> rdfs:label "324" .
+<http://example.org/used/348> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/330> rdfs:label "330" .
+<http://example.org/used/350> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/331> rdfs:label "331" .
+<http://example.org/used/356> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/340> rdfs:label "340" .
+<http://example.org/used/370> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/343> rdfs:label "343" .
+<http://example.org/used/375> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/344> rdfs:label "344" .
+<http://example.org/used/377> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/348> rdfs:label "348" .
+<http://example.org/used/380> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/350> rdfs:label "350" .
+<http://example.org/used/391> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/356> rdfs:label "356" .
+<http://example.org/used/392> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/370> rdfs:label "370" .
+<http://example.org/used/871> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/375> rdfs:label "375" .
+<http://example.org/used/873> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/377> rdfs:label "377" .
+<http://example.org/used/990> a prov:Entity ;
+    prov:role "input" .
 
-<http://trace.example.com/use/380> rdfs:label "380" .
+"localoutlier_simple" a <https://example.org/processes/localoutlier_simple> .
 
-<http://trace.example.com/use/391> rdfs:label "391" .
-
-<http://trace.example.com/use/392> rdfs:label "392" .
-
-<http://trace.example.com/use/871> rdfs:label "871" .
-
-<http://trace.example.com/use/873> rdfs:label "873" .
-
-<http://trace.example.com/use/990> rdfs:label "990" .
-
-<http://trace.example.com/trace/14e2af11847bde8d76f65f7c6e8d86e0> rdfs:label "14e2af11847bde8d76f65f7c6e8d86e0" .
+<> a prov:Activity,
+        prov:Entity,
+        prov:SoftwareAgent ;
+    rdfs:label <LocalOutlierFactor> ;
+    prov:role "dataObject" .
 
