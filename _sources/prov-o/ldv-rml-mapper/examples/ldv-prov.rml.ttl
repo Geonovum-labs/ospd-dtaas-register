@@ -1,0 +1,465 @@
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+@prefix rml:     <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:      <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@base <http://trace.example.com/mapping/> .
+
+
+#################################################################
+# 1. TRACE
+#################################################################
+
+<#TraceMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/trace/{traceId}" ;
+        rr:class prov:Activity ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "traceId" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment ;
+        rr:objectMap [
+            rr:constant "Trace" ;
+            rr:datatype xsd:string
+        ]
+    ] .
+
+
+#################################################################
+# 2. SPAN
+#
+# The OpenTelemetry timestamps are nanoseconds since the Unix
+# epoch, not lexical xsd:dateTime values. They are therefore
+# represented as xsd:integer.
+#################################################################
+
+<#SpanMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/span/{spanId}" ;
+        rr:class prov:Activity ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "name" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate prov:startedAtTime ;
+        rr:objectMap [
+            rml:reference "startTimeUnixNano" ;
+            rr:datatype xsd:integer
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate prov:endedAtTime ;
+        rr:objectMap [
+            rml:reference "endTimeUnixNano" ;
+            rr:datatype xsd:integer
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate prov:wasGeneratedBy ;
+        rr:objectMap [
+            rr:parentTriplesMap <#TraceMapping> ;
+            rr:joinCondition [
+                rr:child "traceId" ;
+                rr:parent "traceId"
+            ]
+        ]
+    ] ;
+
+    # Link the span to its processing-activity association.
+    #
+    # This parent TriplesMap has a different logical source.
+    # No joinCondition is used because the original nested
+    # attribute record does not contain spanId.
+    #
+    # This works as intended when the input contains one span.
+    rr:predicateObjectMap [
+        rr:predicate prov:qualifiedAssociation ;
+        rr:objectMap [
+            rr:parentTriplesMap <#ProcessingActivityAssociationMapping>
+        ]
+    ] ;
+
+    # Link the span to every data-object usage generated from
+    # dpl.objects.data_object_id.
+    rr:predicateObjectMap [
+        rr:predicate prov:qualifiedUsage ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DataObjectUsageMapping>
+        ]
+    ] ;
+
+    # Link the span to the data-product usage.
+    rr:predicateObjectMap [
+        rr:predicate prov:qualifiedUsage ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DataProductUsageMapping>
+        ]
+    ] ;
+
+    # Link the span to the dataset usage.
+    rr:predicateObjectMap [
+        rr:predicate prov:qualifiedUsage ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DatasetUsageMapping>
+        ]
+    ] .
+
+
+#################################################################
+# 3. PROCESSING ACTIVITY AS PROV AGENT
+#################################################################
+
+<#ProcessingActivityAgentMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.processing_activity_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/agent/{value.stringValue}" ;
+        rr:class prov:Agent ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment ;
+        rr:objectMap [
+            rr:constant "De geregistreerde verwerkingsactiviteit" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate dcterms:source ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+
+#################################################################
+# 4. QUALIFIED ASSOCIATION WITH PROCESSING ACTIVITY
+#################################################################
+
+<#ProcessingActivityAssociationMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.processing_activity_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/association/processing-activity/{value.stringValue}" ;
+        rr:class prov:Association ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment ;
+        rr:objectMap [
+            rr:constant "Qualified association met de geregistreerde verwerkingsactiviteit" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate prov:agent ;
+        rr:objectMap [
+            rr:parentTriplesMap <#ProcessingActivityAgentMapping> ;
+            rr:joinCondition [
+                rr:child "value.stringValue" ;
+                rr:parent "value.stringValue"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# 5. INDIVIDUAL DATA OBJECTS
+#
+# One prov:Entity is created for every intValue in the array.
+#################################################################
+
+<#DataObjectEntityMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.data_object_id')].value.arrayValue.values[*]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/entity/data-object/{intValue}" ;
+        rr:class prov:Entity ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "intValue" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment ;
+        rr:objectMap [
+            rr:constant "Data object gebruikt tijdens de verwerking" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate dcterms:identifier ;
+        rr:objectMap [
+            rml:reference "intValue" ;
+            rr:datatype xsd:integer
+        ]
+    ] .
+
+
+
+################################################################################
+# USAGE MAP
+################################################################################
+
+<#UsageMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.data_object_id')].value.arrayValue.values[*]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/usage/data-object/{intValue}" ;
+        rr:class prov:Usage
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "intValue" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment ;
+        rr:objectMap [
+            rr:constant "Qualified usage van een individueel data object"
+        ]
+    ] .
+
+
+#################################################################
+# 7. DATA PRODUCT
+#################################################################
+
+<#DataProductEntityMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataproduct_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/entity/data-product/{value.stringValue}" ;
+        rr:class prov:Entity ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rr:constant "Data product" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:seeAlso ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate dcterms:source ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+
+<#DataProductUsageMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataproduct_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/usage/data-product/{value.stringValue}" ;
+        rr:class prov:Usage ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment ;
+        rr:objectMap [
+            rr:constant "Qualified usage van het data product" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate prov:entity ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DataProductEntityMapping> ;
+            rr:joinCondition [
+                rr:child "value.stringValue" ;
+                rr:parent "value.stringValue"
+            ]
+        ]
+    ] .
+
+
+#################################################################
+# 8. DATASET
+#################################################################
+
+<#DatasetEntityMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataset_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/entity/dataset/{value.stringValue}" ;
+        rr:class prov:Entity ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rr:constant "Dataset" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:seeAlso ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:termType rr:IRI
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate dcterms:source ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+
+<#DatasetUsageMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataset_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/usage/dataset/{value.stringValue}" ;
+        rr:class prov:Usage ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:comment ;
+        rr:objectMap [
+            rr:constant "Qualified usage van de dataset" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate prov:entity ;
+        rr:objectMap [
+            rr:parentTriplesMap <#DatasetEntityMapping> ;
+            rr:joinCondition [
+                rr:child "value.stringValue" ;
+                rr:parent "value.stringValue"
+            ]
+        ]
+    ] .

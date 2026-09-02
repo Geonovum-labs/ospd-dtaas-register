@@ -1,68 +1,139 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://example.org/terms/> .
 @base <http://example.com/ns#> .
 
-<#TraceMapping> a rr:TriplesMap ;
+<#ResultMap> a rr:TriplesMap ;
   rml:logicalSource [
     rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
     rml:referenceFormulation ql:JSONPath ;
     rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[0]"
   ] ;
   rr:subjectMap [
-    rr:template "http://trace.example.com/trace/{traceId}" ;
-    rr:class prov:Activity
+    rr:constant "http://example.org/result/localoutlier_simple"
   ] ;
   rr:predicateObjectMap [
-    rr:predicate rdfs:label ;
-    rr:objectMap [ rml:reference "traceId" ]
+    rr:predicate dcterms:description ;
+    rr:objectMap [ rr:constant "Example IPT provenance output for a Local Outlier Factor process after the OTLP-to-PROV mapping." ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:process ;
+    rr:objectMap [ rr:parentTriplesMap <#ProcessMap> ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate ex:provenance ;
+    rr:objectMap [ rr:parentTriplesMap <#ProvenanceMap> ]
   ] .
 
-<#SpanMapping> a rr:TriplesMap ;
+<#ProcessMap> a rr:TriplesMap ;
   rml:logicalSource [
     rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
     rml:referenceFormulation ql:JSONPath ;
-    rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*]"
+    rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[0]"
   ] ;
   rr:subjectMap [
-    rr:template "http://trace.example.com/span/{spanId}" ;
-    rr:class prov:Activity
+    rr:constant "localoutlier_simple"
   ] ;
   rr:predicateObjectMap [
-    rr:predicate rdfs:label ;
-    rr:objectMap [ rml:reference "name" ]
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate prov:wasGeneratedBy ;
-    rr:objectMap [
-      rr:parentTriplesMap <#TraceMapping> ;
-      rr:joinCondition [ rr:child "traceId" ; rr:parent "traceId" ]
-    ]
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate prov:qualifiedUsage ;
-    rr:objectMap [
-      rr:parentTriplesMap <#ObjectUsageMapping> ;
-      rr:joinCondition [
-        rr:child "http://trace.example.com/span/{spanId}" ;
-        rr:parent "http://trace.example.com/span/{spanId}"
-      ]
-    ]
+    rr:predicate rdf:type ;
+    rr:objectMap [ rr:constant "https://example.org/processes/localoutlier_simple" ]
   ] .
 
-<#ObjectUsageMapping> a rr:TriplesMap ;
+<#ProvenanceMap> a rr:TriplesMap ;
   rml:logicalSource [
     rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
     rml:referenceFormulation ql:JSONPath ;
-    rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[2].value.arrayValue.values[*]"
+    rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[0]"
   ] ;
   rr:subjectMap [
-    rr:template "http://trace.example.com/use/{intValue}" ;
-    rr:class prov:Usage
+    rr:constant "http://example.org/provenance/localoutlier_simple"
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate prov:activity ;
+    rr:objectMap [ rr:parentTriplesMap <#ActivityMap> ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate prov:used ;
+    rr:objectMap [ rr:parentTriplesMap <#DataProductMap> ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate prov:used ;
+    rr:objectMap [ rr:parentTriplesMap <#InputValueMap> ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate prov:wasAssociatedWith ;
+    rr:objectMap [ rr:parentTriplesMap <#AgentMap> ]
+  ] .
+
+<#ActivityMap> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[0]"
+  ] ;
+  rr:subjectMap [
+    rr:template "{attributes[0].value.stringValue}"
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdf:type ;
+    rr:objectMap [ rr:constant "http://www.w3.org/ns/prov#Activity" ]
   ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
-    rr:objectMap [ rml:reference "intValue" ]
+    rr:objectMap [ rr:template "{name}" ]
+  ] .
+
+<#DataProductMap> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[0]"
+  ] ;
+  rr:subjectMap [
+    rr:template "{attributes[1].value.stringValue}"
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdf:type ;
+    rr:objectMap [ rr:constant "http://www.w3.org/ns/prov#Entity" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate prov:role ;
+    rr:objectMap [ rr:constant "dataObject" ]
+  ] .
+
+<#InputValueMap> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[0].attributes[2].value.arrayValue.values[*]"
+  ] ;
+  rr:subjectMap [
+    rr:template "http://example.org/used/{intValue}"
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdf:type ;
+    rr:objectMap [ rr:constant "http://www.w3.org/ns/prov#Entity" ]
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate prov:role ;
+    rr:objectMap [ rr:constant "input" ]
+  ] .
+
+<#AgentMap> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.resourceSpans[*]"
+  ] ;
+  rr:subjectMap [
+    rr:template "{resource.attributes[0].value.stringValue}"
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdf:type ;
+    rr:objectMap [ rr:constant "http://www.w3.org/ns/prov#SoftwareAgent" ]
   ] .

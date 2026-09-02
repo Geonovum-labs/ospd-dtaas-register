@@ -1,0 +1,12 @@
+transforms:
+  - id: ldv-to-prov-o-rml
+    description: Convert an OpenTelemetry OTLP JSON trace into PROV-O RDF using the RML transform plugin.
+    type: rml
+    inputs:
+      mediaTypes:
+        - application/json
+    outputs:
+      mediaTypes: [ text/turtle ]
+      profiles:
+        - bblocks://geonovum.dtaas.prov-o.ldv
+    ref: examples/ldv-prov.rml.ttl

@@ -1,0 +1,6 @@
+examples:
+  - title: LDV PROV-O Schema
+    content: LDV PROV-O schema 
+    snippets:
+      - language: ttl
+        ref: examples/ldv.ttl

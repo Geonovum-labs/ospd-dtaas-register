@@ -1,0 +1,20 @@
+{
+  "name": "LDV target schema",
+  "abstract": "target Prov-o schema for LDV",
+  "status": "under-development",
+  "itemClass": "model",
+  "register": "geonovum-dtaas-ospd",
+  "dateTimeAddition": "2026-09-01T00:00:00Z",
+  "version": "0.1",
+  "maturity": "development",
+  "tags": ["opentelemetry", "ldv", "provenance"],
+  
+  "resources": [
+    {
+      "title": "Example LDV Prov-O log",
+      "role": "example",
+      "ref": "examples/ldv.ttl",
+      "format": "text/turtle"
+    }
+  ]
+}
