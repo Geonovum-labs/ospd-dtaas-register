@@ -2,12 +2,12 @@
   "name": "OSPD / DTaaS block collection",
   "abstract": "OSPD / DTaaS block collection\n",
   "description": "register for various examples of building blocks.\n",
-  "modified": "2026-09-02T09:40:05.437406",
+  "modified": "2026-09-04T11:27:35.085167",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"2cf420b0b83234f694264ce9f4e8b4c81e7b978d",
-      "shortCommitId": "\"2cf420",
-      "date": "2026-09-02T07:19:47+00:00\""
+      "commitId": "\"865a527f37dc271186cb8dd7d0386365bf1486d3",
+      "shortCommitId": "\"865a52",
+      "date": "2026-09-03T16:12:25+00:00\""
     }
   },
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
@@ -31,7 +31,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-02",
+      "dateOfLastChange": "2025-12-17",
       "maturity": "development",
       "tags": [
         "examples",
@@ -72,7 +72,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-02",
+      "dateOfLastChange": "2025-12-17",
       "maturity": "development",
       "tags": [
         "examples",
@@ -278,7 +278,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-02",
+      "dateOfLastChange": "2025-12-17",
       "maturity": "development",
       "tags": [
         "examples",
@@ -287,8 +287,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://ogc.api.processes.v1.schemas.inputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema"
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
+        "bblocks://ogc.api.processes.v1.schemas.inputDescription"
       ],
       "schema": {
         "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/inputDescription/schema.yaml",
@@ -324,7 +324,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-02",
+      "dateOfLastChange": "2025-12-17",
       "maturity": "development",
       "tags": [
         "examples",
@@ -370,7 +370,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-02",
+      "dateOfLastChange": "2025-12-17",
       "maturity": "development",
       "tags": [
         "examples",
@@ -415,7 +415,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-02",
+      "dateOfLastChange": "2025-12-17",
       "maturity": "development",
       "tags": [
         "examples",
@@ -424,8 +424,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://ogc.api.processes.v1.schemas.process",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription",
+        "bblocks://ogc.api.processes.v1.schemas.process",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription"
       ],
       "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/schemas/localoutlier/processDescription/context.jsonld",
@@ -463,7 +463,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-02",
+      "dateOfLastChange": "2025-12-17",
       "maturity": "development",
       "tags": [
         "examples",
@@ -508,7 +508,7 @@
       "itemClass": "api",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-09-02",
+      "dateOfLastChange": "2025-12-17",
       "maturity": "development",
       "tags": [
         "examples",
@@ -527,23 +527,23 @@
       },
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
+        "bblocks://ogc.api.processes.v1.paths.LandingPage",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
+        "bblocks://ogc.api.processes.v1.paths.ProcessList",
+        "bblocks://ogc.api.processes.v1.paths.Conformance",
+        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
+        "bblocks://ogc.api.processes.v1.responses.ServerError",
         "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
         "bblocks://ogc.api.processes.v1.schemas.inputDescription",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
         "bblocks://ogc.api.processes.v1.schemas.outputDescription",
         "bblocks://ogc.api.processes.v1.parameters.jobId",
-        "bblocks://ogc.api.processes.v1.responses.ServerError",
-        "bblocks://ogc.api.processes.v1.paths.JobList",
-        "bblocks://ogc.api.processes.v1.responses.ExecuteAsync",
-        "bblocks://ogc.api.processes.v1.paths.LandingPage",
-        "bblocks://ogc.api.processes.v1.paths.ProcessList",
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
-        "bblocks://ogc.api.processes.v1.schemas.execute",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
         "bblocks://ogc.api.processes.v1.api",
         "bblocks://ogc.api.processes.v1.responses.NotFound",
-        "bblocks://ogc.api.processes.v1.paths.Conformance"
+        "bblocks://ogc.api.processes.v1.schemas.execute",
+        "bblocks://ogc.api.processes.v1.paths.JobList",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions"
       ],
       "sourceOpenAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api/openapi.yaml",
       "openAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/custom-api/openapi.yaml",
@@ -575,10 +575,10 @@
       "dateTimeAddition": "2026-08-07T00:00:00Z",
       "version": "0.1",
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
         "bblocks://geonovum.dtaas.ogcapi.processes.custom-api",
         "bblocks://ogc.osc.api-profiles.processes.ipt.execute",
+        "bblocks://ogc.api.processes.v1.schemas.outputDescription",
+        "bblocks://geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
         "bblocks://ogc.api.processes.v1.schemas.inputDescription",
         "bblocks://ogc.osc.api-profiles.processes.ipt.results"
       ],
@@ -590,7 +590,11 @@
         }
       },
       "description": "The custom API uses the IPT result schema for provenance-bearing process results. The returned result contains a qualified value whose value is a PROV activity or entity.",
-      "shaclShapes": {},
+      "shaclShapes": {
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+        ]
+      },
       "dateOfLastChange": "2026-08-07",
       "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api-ipt/",
       "validationPassed": true,
@@ -638,7 +642,11 @@
           "format": "application/json"
         }
       ],
-      "shaclShapes": {},
+      "shaclShapes": {
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+        ]
+      },
       "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/otel-ipt/context.jsonld",
       "dateOfLastChange": "2026-08-31",
       "schema": {
@@ -683,8 +691,8 @@
         "provenance"
       ],
       "dependsOn": [
-        "bblocks://geonovum.dtaas.prov-o.otel-ipt",
-        "bblocks://geonovum.dtaas.opentelemetry.trace"
+        "bblocks://geonovum.dtaas.opentelemetry.trace",
+        "bblocks://geonovum.dtaas.prov-o.otel-ipt"
       ],
       "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references.",
       "resources": [
@@ -695,7 +703,11 @@
           "format": "text/turtle"
         }
       ],
-      "shaclShapes": {},
+      "shaclShapes": {
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+        ]
+      },
       "dateOfLastChange": "2026-08-28",
       "schema": {
         "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.yaml",

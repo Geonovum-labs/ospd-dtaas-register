@@ -1,5 +1,5 @@
 Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription - Localoutlier process description
-Generated 2026-09-02T09:40:13.594113+00:00
+Generated 2026-09-04T11:27:41.635353+00:00
 === Files ===
 Using examples/localoutlier.json from examples
 JSON-LD context is present - uplifting

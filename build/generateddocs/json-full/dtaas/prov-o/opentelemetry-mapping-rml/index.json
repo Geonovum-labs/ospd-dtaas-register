@@ -17,8 +17,8 @@
     "provenance"
   ],
   "dependsOn": [
-    "geonovum.dtaas.prov-o.otel-ipt",
-    "geonovum.dtaas.opentelemetry.trace"
+    "geonovum.dtaas.opentelemetry.trace",
+    "geonovum.dtaas.prov-o.otel-ipt"
   ],
   "description": "# Mapping from OpenTelemetry (LDV profile) to PROV-O (RML based)\n\nThis building block performs the transform from Opentelemetry to PROV-O using a (experimental) RML Transformer.\n\n",
   "resources": [
@@ -29,7 +29,11 @@
       "format": "text/turtle"
     }
   ],
-  "shaclShapes": {},
+  "shaclShapes": {
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ]
+  },
   "dateOfLastChange": "2026-08-28",
   "schema": {
     "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/prov-o/opentelemetry-mapping-rml/schema.yaml",
@@ -86,7 +90,7 @@
               "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl",
               "profilesValidation": {
                 "geonovum.dtaas.prov-o.otel-ipt": {
-                  "result": false,
+                  "result": true,
                   "report": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/geonovum.dtaas.prov-o.otel-ipt/_report.json"
                 }
               }

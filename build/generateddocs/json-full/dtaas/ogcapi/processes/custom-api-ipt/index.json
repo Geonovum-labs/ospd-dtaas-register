@@ -10,10 +10,10 @@
   "dateTimeAddition": "2026-08-07T00:00:00Z",
   "version": "0.1",
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-    "ogc.api.processes.v1.schemas.outputDescription",
     "geonovum.dtaas.ogcapi.processes.custom-api",
     "ogc.osc.api-profiles.processes.ipt.execute",
+    "ogc.api.processes.v1.schemas.outputDescription",
+    "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
     "ogc.api.processes.v1.schemas.inputDescription",
     "ogc.osc.api-profiles.processes.ipt.results"
   ],
@@ -25,7 +25,11 @@
     }
   },
   "description": "The custom API uses the IPT result schema for provenance-bearing process results. The returned result contains a qualified value whose value is a PROV activity or entity.",
-  "shaclShapes": {},
+  "shaclShapes": {
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ]
+  },
   "dateOfLastChange": "2026-08-07",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api-ipt/",
   "validationPassed": true,

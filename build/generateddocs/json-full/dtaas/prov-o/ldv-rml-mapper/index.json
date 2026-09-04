@@ -79,7 +79,7 @@
               "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/example_1_1.ldv-to-prov-o-rml.ttl",
               "profilesValidation": {
                 "geonovum.dtaas.prov-o.ldv": {
-                  "result": false,
+                  "result": true,
                   "report": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/geonovum.dtaas.prov-o.ldv/_report.json"
                 }
               }

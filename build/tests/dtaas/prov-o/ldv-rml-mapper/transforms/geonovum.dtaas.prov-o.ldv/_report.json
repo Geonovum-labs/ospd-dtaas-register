@@ -2,8 +2,8 @@
   "title": "Validation report for geonovum.dtaas.prov-o.ldv - LDV target schema",
   "bblockName": "LDV target schema",
   "bblockId": "geonovum.dtaas.prov-o.ldv",
-  "generated": "2026-09-02T09:40:14.130076+00:00",
-  "result": false,
+  "generated": "2026-09-04T11:27:42.471962+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -11,31 +11,18 @@
         "requireFail": false,
         "filename": "build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/example_1_1.ldv-to-prov-o-rml.ttl",
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/example_1_1.ldv-to-prov-o-rml.ttl",
-        "language": {
-          "id": "ttl",
-          "defaultExtension": "ttl",
-          "label": "RDF/Turtle",
-          "mimeType": "text/turtle",
-          "aliases": [
-            "turtle",
-            "rdf/turtle"
-          ],
-          "extensions": [
-            "ttl"
-          ]
-        },
+        "language": "text/turtle",
         "transformId": "ldv-to-prov-o-rml"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
-          "name": "UNKNOWN",
-          "title": "Unknown errors",
+          "name": "FILES",
+          "title": "Files",
           "entries": [
             {
-              "exception": "TypeError",
-              "isError": true,
-              "message": "Traceback (most recent call last):\n,  File \"/src/ogc/bblocks/validate.py\", line 383, in validate_transform_output\n    validator.validate(\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 352, in validate\n    graph = self._load_graph(filename, output_filename, report,\n,  File \"/src/ogc/bblocks/validation/rdf.py\", line 299, in _load_graph\n    rdf_format = NATIVE_RDF_LANGS.get(file_format,\n,TypeError: unhashable type: 'dict'\n"
+              "isError": false,
+              "message": "Using example_1_1.ldv-to-prov-o-rml.ttl from transform outputs"
             }
           ]
         }
@@ -45,7 +32,7 @@
   "globalErrors": {},
   "counts": {
     "total": 1,
-    "passed": 0,
-    "failed": 1
+    "passed": 1,
+    "failed": 0
   }
 }
