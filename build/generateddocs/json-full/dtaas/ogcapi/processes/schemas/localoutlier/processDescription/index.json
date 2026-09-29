@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.api.processes.v1.schemas.process",
     "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
+    "ogc.api.processes.v1.schemas.process",
     "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription"
   ],
   "license": {

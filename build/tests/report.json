@@ -1,16 +1,16 @@
 {
   "summary": {
     "total": 15,
-    "passed": 15,
-    "failed": 0,
-    "result": true
+    "passed": 14,
+    "failed": 1,
+    "result": false
   },
   "bblocks": {
     "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema": {
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema - Localoutlier process output schema",
       "bblockName": "Localoutlier process output schema",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema",
-      "generated": "2026-09-29T11:41:26.375331+00:00",
+      "generated": "2026-09-29T16:05:24.358993+00:00",
       "result": true,
       "items": [
         {
@@ -61,7 +61,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema - Localoutlier process input schema",
       "bblockName": "Localoutlier process input schema",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema",
-      "generated": "2026-09-29T11:41:26.386387+00:00",
+      "generated": "2026-09-29T16:05:24.371573+00:00",
       "result": true,
       "items": [
         {
@@ -131,7 +131,7 @@
       "title": "Validation report for geonovum.dtaas.opentelemetry.trace - OpenTelemetry trace with DTaaS provenance attributes",
       "bblockName": "OpenTelemetry trace with DTaaS provenance attributes",
       "bblockId": "geonovum.dtaas.opentelemetry.trace",
-      "generated": "2026-09-29T11:41:26.398174+00:00",
+      "generated": "2026-09-29T16:05:24.384467+00:00",
       "result": true,
       "items": [
         {
@@ -182,7 +182,7 @@
       "title": "Validation report for geonovum.dtaas.prov-o.ldv - LDV target schema",
       "bblockName": "LDV target schema",
       "bblockId": "geonovum.dtaas.prov-o.ldv",
-      "generated": "2026-09-29T11:41:26.424983+00:00",
+      "generated": "2026-09-29T16:05:24.411143+00:00",
       "result": true,
       "items": [
         {
@@ -229,7 +229,7 @@
       "title": "Validation report for geonovum.dtaas.prov-o.ldv-rml-mapper - LDV RML Mapper",
       "bblockName": "LDV RML Mapper",
       "bblockId": "geonovum.dtaas.prov-o.ldv-rml-mapper",
-      "generated": "2026-09-29T11:41:26.428980+00:00",
+      "generated": "2026-09-29T16:05:24.416636+00:00",
       "result": true,
       "items": [
         {
@@ -268,7 +268,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription - Localoutlier process input description",
       "bblockName": "Localoutlier process input description",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription",
-      "generated": "2026-09-29T11:41:26.743150+00:00",
+      "generated": "2026-09-29T16:05:24.544014+00:00",
       "result": true,
       "items": [
         {
@@ -338,7 +338,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription - Localoutlier process output description",
       "bblockName": "Localoutlier process output description",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription",
-      "generated": "2026-09-29T11:41:27.058689+00:00",
+      "generated": "2026-09-29T16:05:24.665871+00:00",
       "result": true,
       "items": [
         {
@@ -408,8 +408,8 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.validate_point_cloud - Validate Point Cloud process",
       "bblockName": "Validate Point Cloud process",
       "bblockId": "geonovum.dtaas.ogcapi.processes.validate_point_cloud",
-      "generated": "2026-09-29T11:41:27.066637+00:00",
-      "result": true,
+      "generated": "2026-09-29T16:05:24.734510+00:00",
+      "result": false,
       "items": [
         {
           "source": {
@@ -442,20 +442,77 @@
               ]
             }
           ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.json",
+            "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/metadata.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 13,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": false,
+                  "exception": "ValidationError",
+                  "errorMessage": "'rim:RegisterItem' was expected",
+                  "isError": true,
+                  "message": "ValidationError: 'rim:RegisterItem' was expected\n\nFailed validating 'const' in schema['allOf'][0]['properties']['type']:\n    {'const': 'rim:RegisterItem', 'x-jsonld-id': '@type'}\n\nOn instance['type']:\n    'apkg:ApplicationPackage'"
+                }
+              ]
+            }
+          ]
         }
       ],
       "globalErrors": {},
       "counts": {
-        "total": 1,
+        "total": 2,
         "passed": 1,
-        "failed": 0
+        "failed": 1
       }
     },
     "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions": {
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions - Example OGC API Processes instance input descriptions",
       "bblockName": "Example OGC API Processes instance input descriptions",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-      "generated": "2026-09-29T11:41:27.363530+00:00",
+      "generated": "2026-09-29T16:05:24.869793+00:00",
       "result": true,
       "items": [
         {
@@ -525,7 +582,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription - Localoutlier process description",
       "bblockName": "Localoutlier process description",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription",
-      "generated": "2026-09-29T11:41:27.661798+00:00",
+      "generated": "2026-09-29T16:05:24.983095+00:00",
       "result": true,
       "items": [
         {
@@ -595,7 +652,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions - Example OGC API Processes instance output descriptions",
       "bblockName": "Example OGC API Processes instance output descriptions",
       "bblockId": "geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions",
-      "generated": "2026-09-29T11:41:27.973777+00:00",
+      "generated": "2026-09-29T16:05:25.134094+00:00",
       "result": true,
       "items": [
         {
@@ -665,7 +722,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.custom-api - Demo OGC API processes instance - LOF",
       "bblockName": "Demo OGC API processes instance - LOF",
       "bblockId": "geonovum.dtaas.ogcapi.processes.custom-api",
-      "generated": "2026-09-29T11:41:27.979088+00:00",
+      "generated": "2026-09-29T16:05:25.140818+00:00",
       "result": true,
       "items": [
         {
@@ -752,7 +809,7 @@
       "title": "Validation report for geonovum.dtaas.ogcapi.processes.custom-api-ipt - IPT profile of Geonovum custom API processes",
       "bblockName": "IPT profile of Geonovum custom API processes",
       "bblockId": "geonovum.dtaas.ogcapi.processes.custom-api-ipt",
-      "generated": "2026-09-29T11:41:28.195388+00:00",
+      "generated": "2026-09-29T16:05:25.283795+00:00",
       "result": true,
       "items": [
         {
@@ -791,7 +848,7 @@
       "title": "Validation report for geonovum.dtaas.prov-o.otel-ipt - Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
       "bblockName": "Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace",
       "bblockId": "geonovum.dtaas.prov-o.otel-ipt",
-      "generated": "2026-09-29T11:41:28.835284+00:00",
+      "generated": "2026-09-29T16:05:26.057307+00:00",
       "result": true,
       "items": [
         {
@@ -865,43 +922,42 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl",
                   "focusNodes": {
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedRevision>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#Activity-shape>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-used>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-wasStartedBy>": {
+                    "<https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>": {
                       "nodes": []
                     },
-                    "<https://www.ogc.org/rules/prov/#End-shape>": {
+                    "<https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>": {
                       "nodes": []
                     },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedStart>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>": {
+                    "<https://www.ogc.org/rules/prov/#EmptyCollection-shape>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedRevision>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#Entity-shape>": {
+                      "nodes": [
+                        "<file:///github/workspace/203>",
+                        "<file:///github/workspace/204>",
+                        "<file:///github/workspace/2011>",
+                        "<http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor>"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-wasInformedBy>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#Bundle-shape>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-hadPrimarySource>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/prov/#prop-qualifiedUsage>": {
@@ -910,134 +966,135 @@
                     "<https://www.ogc.org/rules/prov/#Start-shape>": {
                       "nodes": []
                     },
-                    "<https://www.ogc.org/rules/prov/#prop-hadRole>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-activity>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-wasRevisionOf>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-generated>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#Generation-shape>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#Collection-shape>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-hadUsage>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#Entity-shape>": {
-                      "nodes": [
-                        "<file:///github/workspace/204>",
-                        "<file:///github/workspace/203>",
-                        "<file:///github/workspace/2011>",
-                        "<http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor>"
-                      ]
-                    },
-                    "<https://www.ogc.org/rules/prov/#Invalidation-shape>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-wasAttributedTo>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-atLocation>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-alternateOf>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-invalidated>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedEnd>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-hadMember>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-hadPlan>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-hadPrimarySource>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-agent>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#Bundle-shape>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-wasInformedBy>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#Plan-shape>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#prop-specializationOf>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/prov/#Usage-shape>": {
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>": {
                       "nodes": []
                     },
-                    "<https://www.ogc.org/rules/prov/#prop-hadGeneration>": {
-                      "nodes": []
-                    },
                     "<https://www.ogc.org/rules/prov/#prop-hadActivity>": {
                       "nodes": []
                     },
-                    "<https://www.ogc.org/rules/prov/#prop-wasEndedBy>": {
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-wasStartedBy>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-hadPlan>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#Activity-shape>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>": {
                       "nodes": []
                     },
-                    "<https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>": {
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-hadRole>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#Collection-shape>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/prov/#prop-influencer>": {
                       "nodes": []
                     },
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-alternateOf>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#End-shape>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>": {
                       "nodes": []
                     },
-                    "<https://www.ogc.org/rules/prov/#EmptyCollection-shape>": {
+                    "<https://www.ogc.org/rules/prov/#prop-hadMember>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#Usage-shape>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedEnd>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#Plan-shape>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-wasAttributedTo>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-wasRevisionOf>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-invalidated>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#Generation-shape>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/prov/#prop-entity>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedStart>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-hadGeneration>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-hadUsage>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-agent>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-specializationOf>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-atLocation>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-generated>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#Invalidation-shape>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-wasEndedBy>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-used>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/prov/#prop-activity>": {
+                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*\n - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: <file:///github/workspace/204>,<file:///github/workspace/203>,<file:///github/workspace/2011>,<http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor>\n - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*\n - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:\n - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: <file:///github/workspace/203>,<file:///github/workspace/204>,<file:///github/workspace/2011>,<http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor>\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*\n"
                 }
               ]
             }
@@ -1055,7 +1112,7 @@
       "title": "Validation report for geonovum.dtaas.prov-o.opentelemetry-mapping-rml - OpenTelemetry to PROV-O mapping (RML plugin)",
       "bblockName": "OpenTelemetry to PROV-O mapping (RML plugin)",
       "bblockId": "geonovum.dtaas.prov-o.opentelemetry-mapping-rml",
-      "generated": "2026-09-29T11:41:28.996605+00:00",
+      "generated": "2026-09-29T16:05:26.106237+00:00",
       "result": true,
       "items": [
         {

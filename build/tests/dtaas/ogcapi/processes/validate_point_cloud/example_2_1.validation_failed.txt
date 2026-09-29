@@ -1,0 +1,21 @@
+Validation report for geonovum.dtaas.ogcapi.processes.validate_point_cloud - Validate Point Cloud process
+Generated 2026-09-29T16:05:24.734446+00:00
+=== Files ===
+Using examples/metadata.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_2_1.jsonld created
+Output Turtle example_2_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'rim:RegisterItem' was expected
+
+Failed validating 'const' in schema['allOf'][0]['properties']['type']:
+    {'const': 'rim:RegisterItem', 'x-jsonld-id': '@type'}
+
+On instance['type']:
+    'apkg:ApplicationPackage'
+=== End JSON Schema ===
+

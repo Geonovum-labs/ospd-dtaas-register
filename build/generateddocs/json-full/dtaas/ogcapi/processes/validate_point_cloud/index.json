@@ -24,8 +24,16 @@
   "license": {
     "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
   },
+  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/context.jsonld",
+  "schema": {
+    "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/schema.yaml",
+    "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/schema.json"
+  },
+  "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/schema.yaml",
+  "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/context.jsonld",
+  "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/resolvedProperties.json",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/",
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/validate_point_cloud/",
   "examples": [
     {
@@ -40,9 +48,34 @@
           "code": "@prefix apkg: <http://w3id.org/apkg/terms#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix schema: <https://schema.org/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix ex: <https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1#> .\n\nex:validate_point_cloud a apkg:ApplicationPackage ;\n    dct:identifier \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\" ;\n    dct:title \"Validate Point Cloud\" ;\n    dct:description \"Check that the selected point clouds are ready to use.\" ;\n    dct:issued \"2025-12-17\"^^xsd:date ;\n    dct:modified \"2025-12-17\"^^xsd:date .\n    \nex:validatePointCloudProcess a apkg:Process ;\n    dct:type \"CommandLineTool\" ;\n    apkg:hasInput ex:point_clouds ;\n    apkg:hasOutput ex:validation_report .\n\nex:point_clouds a apkg:Parameter ;\n    dct:identifier \"point_clouds\" ;\n    dct:type \"object\" ;\n    apkg:label \"point_clouds\" .\n\nex:validation_report a apkg:Parameter ;\n    dct:identifier \"validation_report\" ;\n    dct:type \"object\" ;\n    apkg:label \"validation_report\" .\n"
         }
       ]
+    },
+    {
+      "title": "Metadata description of Validate Point Cloud process in json",
+      "content": "A process description using the APKG metadata profiles",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/examples/metadata.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.json",
+          "sizeBytes": 743,
+          "code": " {\n  \"id\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"type\": \"apkg:ApplicationPackage\",\n\n  \"dct:identifier\":   \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"dct:title\":        \"Validate Point Cloud\",\n  \"dct:description\":  \"Check that the selected point clouds are ready to use.\",\n  \"dct:issued\":       \"2025-12-17\",\n  \"dct:modified\":     \"2025-12-17\",\n\n  \"apkg:hasInput\":  [ \"point_clouds\" ],\n  \"apkg:hasOutput\": [ \"validation_report\" ],\n\n  \"apkg:processes\": [\n    {\n      \"type\": \"apkg:Process\",\n      \"dct:type\": \"CommandLineTool\",\n      \"apkg:hasInput\":  [ \"point_clouds\" ],\n      \"apkg:hasOutput\": [ \"validation_report\" ]\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.jsonld",
+          "sizeBytes": 900,
+          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/context.jsonld\",\n  \"id\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"type\": \"apkg:ApplicationPackage\",\n  \"dct:identifier\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"dct:title\": \"Validate Point Cloud\",\n  \"dct:description\": \"Check that the selected point clouds are ready to use.\",\n  \"dct:issued\": \"2025-12-17\",\n  \"dct:modified\": \"2025-12-17\",\n  \"apkg:hasInput\": [\n    \"point_clouds\"\n  ],\n  \"apkg:hasOutput\": [\n    \"validation_report\"\n  ],\n  \"apkg:processes\": [\n    {\n      \"type\": \"apkg:Process\",\n      \"dct:type\": \"CommandLineTool\",\n      \"apkg:hasInput\": [\n        \"point_clouds\"\n      ],\n      \"apkg:hasOutput\": [\n        \"validation_report\"\n      ]\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.ttl",
+          "sizeBytes": 755,
+          "code": "@prefix apkg: <http://w3id.org/apkg/terms#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n\n<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1> a apkg:ApplicationPackage ;\n    dct:description \"Check that the selected point clouds are ready to use.\" ;\n    dct:identifier \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\" ;\n    dct:issued \"2025-12-17\" ;\n    dct:modified \"2025-12-17\" ;\n    dct:title \"Validate Point Cloud\" ;\n    apkg:hasInput \"point_clouds\" ;\n    apkg:hasOutput \"validation_report\" ;\n    apkg:processes [ a apkg:Process ;\n            dct:type \"CommandLineTool\" ;\n            apkg:hasInput \"point_clouds\" ;\n            apkg:hasOutput \"validation_report\" ] .\n\n"
+        }
+      ]
     }
   ],
-  "annotatedSchema": null,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\nallOf:\n- $ref: https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml\n- properties:\n    dct:identifier:\n      type: string\n      format: uri\n      x-jsonld-id: http://purl.org/dc/terms/identifier\n    dct:title:\n      type: string\n      x-jsonld-id: http://purl.org/dc/terms/title\n    dct:description:\n      type: string\n      x-jsonld-id: http://purl.org/dc/terms/description\n    dct:issued:\n      type: string\n      format: date\n      x-jsonld-id: http://purl.org/dc/terms/issued\n    dct:modified:\n      type: string\n      format: date\n      x-jsonld-id: http://purl.org/dc/terms/modified\n    apkg:hasInput:\n      type: array\n      items:\n        type: string\n      x-jsonld-id: http://w3id.org/apkg/terms#hasInput\n    apkg:hasOutput:\n      type: array\n      items:\n        type: string\n      x-jsonld-id: http://w3id.org/apkg/terms#hasOutput\n  required:\n  - dct:identifier\n  - dct:title\n  - dct:issued\nadditionalProperties: true\nx-jsonld-extra-terms:\n  id: '@id'\n  type: '@type'\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  dct: http://purl.org/dc/terms/\n  skos: http://www.w3.org/2004/02/skos/core#\n  prov: http://www.w3.org/ns/prov#\n  apkg: http://w3id.org/apkg/terms#\n  xsd: http://www.w3.org/2001/XMLSchema#\n  schema: https://schema.org/\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/validate_point_cloud"
 }

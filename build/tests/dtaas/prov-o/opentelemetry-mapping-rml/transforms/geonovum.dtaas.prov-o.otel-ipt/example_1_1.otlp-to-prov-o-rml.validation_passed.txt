@@ -1,5 +1,5 @@
 Validation report for geonovum.dtaas.prov-o.otel-ipt - Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace
-Generated 2026-09-29T11:41:30.320623+00:00
+Generated 2026-09-29T16:05:27.452159+00:00
 === Files ===
 Using example_1_1.otlp-to-prov-o-rml.ttl from transform outputs
 === End Files ===
@@ -12,61 +12,61 @@ Validation result for https://ogcincubator.github.io/cross-domain-model/_sources
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: <file:///github/workspace/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl>
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*
- - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: <http://example.org/used/218>,<http://example.org/used/370>,<http://example.org/used/249>,<http://example.org/used/873>,<http://example.org/used/205>,<file:///github/workspace/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl>,<http://example.org/used/2011>,<http://example.org/used/265>,<http://example.org/used/280>,<http://example.org/used/248>,<http://example.org/used/391>,<http://example.org/used/233>,<http://example.org/used/285>,<http://example.org/used/324>,<http://example.org/used/331>,<http://example.org/used/225>,<http://example.org/used/377>,<http://example.org/used/251>,<http://example.org/used/207>,<http://example.org/used/313>,<http://example.org/used/275>,<http://example.org/used/279>,<http://example.org/used/203>,<http://example.org/used/308>,<http://example.org/used/380>,<http://example.org/used/278>,<http://example.org/used/258>,<http://example.org/used/236>,<http://example.org/used/375>,<http://example.org/used/350>,<http://example.org/used/204>,<http://example.org/used/238>,<http://example.org/used/240>,<http://example.org/used/216>,<http://example.org/used/273>,<http://example.org/used/277>,<http://example.org/used/213>,<http://example.org/used/206>,<http://example.org/used/269>,<http://example.org/used/211>,<http://example.org/used/321>,<http://example.org/used/392>,<http://example.org/used/209>,<http://example.org/used/229>,<http://example.org/used/237>,<http://example.org/used/311>,<http://example.org/used/235>,<http://example.org/used/270>,<http://example.org/used/208>,<http://example.org/used/239>,<http://example.org/used/316>,<http://example.org/used/283>,<http://example.org/used/317>,<http://example.org/used/286>,<http://example.org/used/323>,<http://example.org/used/356>,<http://example.org/used/340>,<http://example.org/used/214>,<http://example.org/used/320>,<http://example.org/used/343>,<http://example.org/used/215>,<http://example.org/used/871>,<http://example.org/used/330>,<http://example.org/used/290>,<http://example.org/used/252>,<http://example.org/used/260>,<http://example.org/used/242>,<http://example.org/used/310>,<http://example.org/used/210>,<http://example.org/used/267>,<http://example.org/used/315>,<http://example.org/used/344>,<http://example.org/used/212>,<http://example.org/used/348>,<http://example.org/used/312>,<http://example.org/used/990>,<http://example.org/used/319>,<http://example.org/used/257>
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*
  - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: <http://example.org/used/204>,<http://example.org/used/392>,<http://example.org/used/225>,<http://example.org/used/211>,<http://example.org/used/313>,<http://example.org/used/257>,<http://example.org/used/377>,<http://example.org/used/286>,<http://example.org/used/285>,<http://example.org/used/212>,<http://example.org/used/340>,<http://example.org/used/258>,<http://example.org/used/215>,<http://example.org/used/324>,<http://example.org/used/331>,<http://example.org/used/210>,<http://example.org/used/239>,<http://example.org/used/248>,<http://example.org/used/279>,<http://example.org/used/308>,<http://example.org/used/310>,<http://example.org/used/251>,<http://example.org/used/206>,<http://example.org/used/321>,<http://example.org/used/375>,<http://example.org/used/240>,<http://example.org/used/391>,<http://example.org/used/319>,<http://example.org/used/317>,<http://example.org/used/315>,<http://example.org/used/229>,<http://example.org/used/316>,<http://example.org/used/238>,<http://example.org/used/871>,<http://example.org/used/312>,<http://example.org/used/380>,<http://example.org/used/209>,<http://example.org/used/277>,<http://example.org/used/344>,<http://example.org/used/203>,<http://example.org/used/242>,<http://example.org/used/280>,<http://example.org/used/237>,<file:///github/workspace/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl>,<http://example.org/used/275>,<http://example.org/used/370>,<http://example.org/used/252>,<http://example.org/used/990>,<http://example.org/used/283>,<http://example.org/used/343>,<http://example.org/used/2011>,<http://example.org/used/265>,<http://example.org/used/348>,<http://example.org/used/267>,<http://example.org/used/213>,<http://example.org/used/311>,<http://example.org/used/236>,<http://example.org/used/249>,<http://example.org/used/269>,<http://example.org/used/205>,<http://example.org/used/270>,<http://example.org/used/278>,<http://example.org/used/330>,<http://example.org/used/290>,<http://example.org/used/323>,<http://example.org/used/207>,<http://example.org/used/260>,<http://example.org/used/214>,<http://example.org/used/273>,<http://example.org/used/350>,<http://example.org/used/320>,<http://example.org/used/218>,<http://example.org/used/873>,<http://example.org/used/356>,<http://example.org/used/233>,<http://example.org/used/235>,<http://example.org/used/216>,<http://example.org/used/208>
- - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*
- - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: <file:///github/workspace/build/tests/dtaas/prov-o/opentelemetry-mapping-rml/transforms/example_1_1.otlp-to-prov-o-rml.ttl>
+ - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*
- - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*
- - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*
  - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*
+ - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*
 
 === End SHACL ===
 

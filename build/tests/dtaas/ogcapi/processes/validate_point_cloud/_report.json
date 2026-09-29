@@ -2,8 +2,8 @@
   "title": "Validation report for geonovum.dtaas.ogcapi.processes.validate_point_cloud - Validate Point Cloud process",
   "bblockName": "Validate Point Cloud process",
   "bblockId": "geonovum.dtaas.ogcapi.processes.validate_point_cloud",
-  "generated": "2026-09-29T11:41:27.066637+00:00",
-  "result": true,
+  "generated": "2026-09-29T16:05:24.734510+00:00",
+  "result": false,
   "items": [
     {
       "source": {
@@ -36,12 +36,69 @@
           ]
         }
       ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.json",
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/metadata.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_2_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_2_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_2_1.ttl",
+              "size": 13,
+              "isError": false,
+              "message": "Output Turtle example_2_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'rim:RegisterItem' was expected",
+              "isError": true,
+              "message": "ValidationError: 'rim:RegisterItem' was expected\n\nFailed validating 'const' in schema['allOf'][0]['properties']['type']:\n    {'const': 'rim:RegisterItem', 'x-jsonld-id': '@type'}\n\nOn instance['type']:\n    'apkg:ApplicationPackage'"
+            }
+          ]
+        }
+      ]
     }
   ],
   "globalErrors": {},
   "counts": {
-    "total": 1,
+    "total": 2,
     "passed": 1,
-    "failed": 0
+    "failed": 1
   }
 }
