@@ -1,0 +1,48 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.validate_point_cloud",
+  "name": "Validate Point Cloud process",
+  "abstract": "Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-12-17T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "version": "1.0",
+  "dateOfLastChange": "2026-09-29",
+  "maturity": "development",
+  "tags": [
+    "examples",
+    "ogc api",
+    "ogc api processes",
+    "point cloud"
+  ],
+  "dependsOn": [
+    "ogc.model.registered-item.rim.registered-item"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
+  "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/validate_point_cloud/",
+  "examples": [
+    {
+      "title": "Metadata description of Validate Point Cloud process",
+      "content": "A process description using the APKG metadata profiles",
+      "snippets": [
+        {
+          "language": "ttl",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/examples/metadata.ttl",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_1_1.ttl",
+          "sizeBytes": 1088,
+          "code": "@prefix apkg: <http://w3id.org/apkg/terms#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix schema: <https://schema.org/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n@prefix ex: <https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1#> .\n\nex:validate_point_cloud a apkg:ApplicationPackage ;\n    dct:identifier \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\" ;\n    dct:title \"Validate Point Cloud\" ;\n    dct:description \"Check that the selected point clouds are ready to use.\" ;\n    dct:issued \"2025-12-17\"^^xsd:date ;\n    dct:modified \"2025-12-17\"^^xsd:date .\n    \nex:validatePointCloudProcess a apkg:Process ;\n    dct:type \"CommandLineTool\" ;\n    apkg:hasInput ex:point_clouds ;\n    apkg:hasOutput ex:validation_report .\n\nex:point_clouds a apkg:Parameter ;\n    dct:identifier \"point_clouds\" ;\n    dct:type \"object\" ;\n    apkg:label \"point_clouds\" .\n\nex:validation_report a apkg:Parameter ;\n    dct:identifier \"validation_report\" ;\n    dct:type \"object\" ;\n    apkg:label \"validation_report\" .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/ogcapi/processes/validate_point_cloud"
+}

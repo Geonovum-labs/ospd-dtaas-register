@@ -24,6 +24,9 @@
     }
   ],
   "shaclShapes": {},
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
   "dateOfLastChange": "2026-09-01",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv/",
   "validationPassed": true,

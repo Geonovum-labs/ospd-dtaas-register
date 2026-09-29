@@ -10,11 +10,11 @@
   "dateTimeAddition": "2026-08-07T00:00:00Z",
   "version": "0.1",
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.custom-api",
+    "ogc.api.processes.v1.schemas.inputDescription",
     "ogc.osc.api-profiles.processes.ipt.execute",
     "ogc.api.processes.v1.schemas.outputDescription",
+    "geonovum.dtaas.ogcapi.processes.custom-api",
     "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-    "ogc.api.processes.v1.schemas.inputDescription",
     "ogc.osc.api-profiles.processes.ipt.results"
   ],
   "extensionPoints": {
@@ -30,7 +30,12 @@
       "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
     ]
   },
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
   "dateOfLastChange": "2026-08-07",
+  "sourceOpenAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/openapi.yaml",
+  "openAPIDocument": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/custom-api-ipt/openapi.yaml",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/custom-api-ipt/",
   "validationPassed": true,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/custom-api-ipt/",

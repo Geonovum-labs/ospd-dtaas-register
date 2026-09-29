@@ -29,6 +29,9 @@
     }
   ],
   "shaclShapes": {},
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
   "dateOfLastChange": "2026-08-28",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/",
   "validationPassed": true,

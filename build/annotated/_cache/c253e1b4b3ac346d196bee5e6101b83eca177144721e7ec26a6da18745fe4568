@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="https://ogcincubator.github.io/bblocks-viewer/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registered Item Model</title>
+  <meta name="description" content="A base RDF and SHACL model for register items, register item classes and register
+governance metadata, aligned with ISO 19135:2026 (*Geographic information — Registration
+and register governance*). Sub-registers profile this model rather than inventing their own." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Registered Item Model" />
+  <meta property="og:description" content="A base RDF and SHACL model for register items, register item classes and register
+governance metadata, aligned with ISO 19135:2026 (*Geographic information — Registration
+and register governance*). Sub-registers profile this model rather than inventing their own." />
+  <meta property="og:url" content="https://nielshoffmann.github.io/registered-item-model/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Registered Item Model" />
+  <meta name="twitter:description" content="A base RDF and SHACL model for register items, register item classes and register
+governance metadata, aligned with ISO 19135:2026 (*Geographic information — Registration
+and register governance*). Sub-registers profile this model rather than inventing their own." />
+  <script src="https://nielshoffmann.github.io/registered-item-model/config.js"></script>
+  <script type="module" crossorigin src="https://ogcincubator.github.io/bblocks-viewer/assets/index.js"></script>
+  <link rel="stylesheet" href="https://ogcincubator.github.io/bblocks-viewer/assets/index.css">
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>

@@ -50,6 +50,12 @@ Input description for the localoutlier process
 
 Output description for the localoutlier process
 
+### `geonovum.dtaas.ogcapi.processes.validate_point_cloud` — Validate Point Cloud process
+
+**Type:** schema
+
+Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.
+
 ### `geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions` — Example OGC API Processes instance input descriptions
 
 **Type:** schema

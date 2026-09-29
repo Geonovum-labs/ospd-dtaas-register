@@ -17,6 +17,9 @@
     "ogc api processes"
   ],
   "shaclShapes": {},
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
   "dateOfLastChange": "2026-08-26",
   "schema": {
     "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.yaml",

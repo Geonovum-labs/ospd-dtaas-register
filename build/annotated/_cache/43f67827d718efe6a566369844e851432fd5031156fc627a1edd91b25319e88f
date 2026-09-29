@@ -4,7 +4,15 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="https://ogcincubator.github.io/bblocks-viewer/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OGC Location Building Blocks</title>
+  <title>Open Science Workflows Building Blocks</title>
+  <meta name="description" content="Building Blocks for FAIR Open Science - profiles of OGC API Processes and various metadata standards to support open, transparent, interoperable and reproducible scientific workflows.." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Open Science Workflows Building Blocks" />
+  <meta property="og:description" content="Building Blocks for FAIR Open Science - profiles of OGC API Processes and various metadata standards to support open, transparent, interoperable and reproducible scientific workflows.." />
+  <meta property="og:url" content="https://ogcincubator.github.io/bblocks-openscience/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Open Science Workflows Building Blocks" />
+  <meta name="twitter:description" content="Building Blocks for FAIR Open Science - profiles of OGC API Processes and various metadata standards to support open, transparent, interoperable and reproducible scientific workflows.." />
   <script src="https://ogcincubator.github.io/bblocks-openscience/config.js"></script>
   <script type="module" crossorigin src="https://ogcincubator.github.io/bblocks-viewer/assets/index.js"></script>
   <link rel="stylesheet" href="https://ogcincubator.github.io/bblocks-viewer/assets/index.css">
