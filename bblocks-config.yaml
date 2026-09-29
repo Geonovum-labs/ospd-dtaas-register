@@ -19,6 +19,7 @@ imports:
   # - https://opengeospatial.github.io/ogcapi-sosa/build/register.json
   - https://ogcincubator.github.io/bblocks-ogcapi-processes
   - https://ogcincubator.github.io/bblocks-openscience/
+  - https://nielshoffmann.github.io/registered-item-model
 
 plugins:
   transforms:

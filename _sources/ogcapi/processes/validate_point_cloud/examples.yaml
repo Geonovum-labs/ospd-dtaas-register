@@ -1,0 +1,6 @@
+examples:
+  - title: Metadata description of Validate Point Cloud process
+    content: A process description using the APKG metadata profiles
+    snippets:
+      - language: ttl
+        ref: examples/metadata.ttl
