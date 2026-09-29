@@ -4,3 +4,9 @@ examples:
     snippets:
       - language: ttl
         ref: examples/metadata.ttl
+
+  - title: Metadata description of Validate Point Cloud process in json
+    content: A process description using the APKG metadata profiles
+    snippets:
+      - language: json
+        ref: examples/metadata.json

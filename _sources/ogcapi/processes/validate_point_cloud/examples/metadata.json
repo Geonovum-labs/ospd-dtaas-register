@@ -1,0 +1,22 @@
+ {
+  "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
+  "type": "apkg:ApplicationPackage",
+
+  "dct:identifier":   "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
+  "dct:title":        "Validate Point Cloud",
+  "dct:description":  "Check that the selected point clouds are ready to use.",
+  "dct:issued":       "2025-12-17",
+  "dct:modified":     "2025-12-17",
+
+  "apkg:hasInput":  [ "point_clouds" ],
+  "apkg:hasOutput": [ "validation_report" ],
+
+  "apkg:processes": [
+    {
+      "type": "apkg:Process",
+      "dct:type": "CommandLineTool",
+      "apkg:hasInput":  [ "point_clouds" ],
+      "apkg:hasOutput": [ "validation_report" ]
+    }
+  ]
+}
