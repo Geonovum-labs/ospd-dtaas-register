@@ -1,0 +1,48 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+allOf:
+- $ref: https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml
+- properties:
+    dct:identifier:
+      type: string
+      format: uri
+      x-jsonld-id: http://purl.org/dc/terms/identifier
+    dct:title:
+      type: string
+      x-jsonld-id: http://purl.org/dc/terms/title
+    dct:description:
+      type: string
+      x-jsonld-id: http://purl.org/dc/terms/description
+    dct:issued:
+      type: string
+      format: date
+      x-jsonld-id: http://purl.org/dc/terms/issued
+    dct:modified:
+      type: string
+      format: date
+      x-jsonld-id: http://purl.org/dc/terms/modified
+    apkg:hasInput:
+      type: array
+      items:
+        type: string
+      x-jsonld-id: http://w3id.org/apkg/terms#hasInput
+    apkg:hasOutput:
+      type: array
+      items:
+        type: string
+      x-jsonld-id: http://w3id.org/apkg/terms#hasOutput
+  required:
+  - dct:identifier
+  - dct:title
+  - dct:issued
+additionalProperties: true
+x-jsonld-extra-terms:
+  id: '@id'
+  type: '@type'
+x-jsonld-prefixes:
+  rim: https://w3id.org/ogc/rim/
+  dct: http://purl.org/dc/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  prov: http://www.w3.org/ns/prov#
+  apkg: http://w3id.org/apkg/terms#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  schema: https://schema.org/

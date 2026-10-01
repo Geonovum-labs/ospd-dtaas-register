@@ -6,16 +6,16 @@
   "abstract": "Profile of Geonovum's custom OGC API Processes for IPT (Integrity Provenance Trust) aspects.",
   "status": "under-development",
   "itemClass": "api",
-  "register": "ogc-incubator",
+  "register": "ospd-dtaas-register",
   "dateTimeAddition": "2026-08-07T00:00:00Z",
   "version": "0.1",
   "dependsOn": [
     "ogc.osc.api-profiles.processes.ipt.execute",
-    "geonovum.dtaas.ogcapi.processes.custom-api",
+    "ogc.api.processes.v1.schemas.inputDescription",
     "ogc.osc.api-profiles.processes.ipt.results",
+    "geonovum.dtaas.ogcapi.processes.custom-api",
     "ogc.api.processes.v1.schemas.outputDescription",
-    "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions",
-    "ogc.api.processes.v1.schemas.inputDescription"
+    "geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions"
   ],
   "extensionPoints": {
     "baseBuildingBlock": "geonovum.dtaas.ogcapi.processes.custom-api",

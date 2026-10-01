@@ -1,6 +1,6 @@
 {
   "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
-  "type": "apkg:ApplicationPackage",
+  "type": "rim:RegisterItem",
   "dct:identifier": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
   "dct:title": "Validate Point Cloud",
   "dct:description": "Check that the selected point clouds are ready to use.",

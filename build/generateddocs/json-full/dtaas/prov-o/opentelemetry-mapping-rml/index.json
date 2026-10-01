@@ -17,8 +17,8 @@
     "provenance"
   ],
   "dependsOn": [
-    "geonovum.dtaas.prov-o.otel-ipt",
-    "geonovum.dtaas.opentelemetry.trace"
+    "geonovum.dtaas.opentelemetry.trace",
+    "geonovum.dtaas.prov-o.otel-ipt"
   ],
   "description": "# Mapping from OpenTelemetry (LDV profile) to PROV-O (RML based)\n\nThis building block performs the transform from Opentelemetry to PROV-O using a (experimental) RML Transformer.\n\n",
   "resources": [

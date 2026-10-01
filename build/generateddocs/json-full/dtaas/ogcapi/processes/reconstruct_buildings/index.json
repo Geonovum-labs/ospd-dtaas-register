@@ -1,0 +1,49 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.reconstruct_buildings",
+  "name": "Reconstruct Buildings process",
+  "abstract": "Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ospd-dtaas-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-10-01",
+  "maturity": "development",
+  "tags": [
+    "examples",
+    "ogc api",
+    "ogc api processes",
+    "reconstruct buildings"
+  ],
+  "dependsOn": [
+    "ogc.model.registered-item.register-item-classes.geoprocessing",
+    "ogc.model.registered-item.rim.registered-item"
+  ],
+  "shaclShapes": {
+    "ogc.model.registered-item.register-item-classes.geoprocessing": [
+      "https://nielshoffmann.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ]
+  },
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
+  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/reconstruct_buildings/context.jsonld",
+  "schema": {
+    "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/reconstruct_buildings/schema.yaml",
+    "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/reconstruct_buildings/schema.json"
+  },
+  "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/reconstruct_buildings/schema.yaml",
+  "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/reconstruct_buildings/context.jsonld",
+  "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/reconstruct_buildings/resolvedProperties.json",
+  "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/reconstruct_buildings/",
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\nallOf:\n- $ref: https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml\n- properties:\n    dct:identifier:\n      type: string\n      format: uri\n      x-jsonld-id: http://purl.org/dc/terms/identifier\n    dct:title:\n      type: string\n      x-jsonld-id: http://purl.org/dc/terms/title\n    dct:description:\n      type: string\n      x-jsonld-id: http://purl.org/dc/terms/description\n    dct:issued:\n      type: string\n      format: date\n      x-jsonld-id: http://purl.org/dc/terms/issued\n    dct:modified:\n      type: string\n      format: date\n      x-jsonld-id: http://purl.org/dc/terms/modified\n    apkg:hasInput:\n      type: array\n      items:\n        type: string\n      x-jsonld-id: http://w3id.org/apkg/terms#hasInput\n    apkg:hasOutput:\n      type: array\n      items:\n        type: string\n      x-jsonld-id: http://w3id.org/apkg/terms#hasOutput\n  required:\n  - dct:identifier\n  - dct:title\n  - dct:issued\nadditionalProperties: true\nx-jsonld-extra-terms:\n  id: '@id'\n  type: '@type'\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  dct: http://purl.org/dc/terms/\n  skos: http://www.w3.org/2004/02/skos/core#\n  prov: http://www.w3.org/ns/prov#\n  apkg: http://w3id.org/apkg/terms#\n  xsd: http://www.w3.org/2001/XMLSchema#\n  schema: https://schema.org/\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/ogcapi/processes/reconstruct_buildings"
+}

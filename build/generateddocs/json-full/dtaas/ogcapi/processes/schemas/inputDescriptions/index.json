@@ -7,9 +7,9 @@
   "status": "under-development",
   "dateTimeAddition": "2025-12-17T00:00:00Z",
   "itemClass": "schema",
-  "register": "ogc-building-block-examples",
+  "register": "ospd-dtaas-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-09-29",
+  "dateOfLastChange": "2026-10-01",
   "maturity": "development",
   "tags": [
     "examples",

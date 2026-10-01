@@ -1,7 +1,7 @@
 
 # Validate Point Cloud process (Schema)
 
-`geonovum.dtaas.ogcapi.processes.validate_point_cloud` *v1.0*
+`geonovum.dtaas.ogcapi.processes.validate_point_cloud` *v0.1*
 
 Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.
 
@@ -50,7 +50,7 @@ A process description using the APKG metadata profiles
 ```json
  {
   "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
-  "type": "apkg:ApplicationPackage",
+  "type": "rim:RegisterItem",
 
   "dct:identifier":   "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
   "dct:title":        "Validate Point Cloud",
@@ -78,7 +78,7 @@ A process description using the APKG metadata profiles
 {
   "@context": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/context.jsonld",
   "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
-  "type": "apkg:ApplicationPackage",
+  "type": "rim:RegisterItem",
   "dct:identifier": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
   "dct:title": "Validate Point Cloud",
   "dct:description": "Check that the selected point clouds are ready to use.",
@@ -109,8 +109,9 @@ A process description using the APKG metadata profiles
 ```ttl
 @prefix apkg: <http://w3id.org/apkg/terms#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
 
-<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1> a apkg:ApplicationPackage ;
+<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1> a rim:RegisterItem ;
     dct:description "Check that the selected point clouds are ready to use." ;
     dct:identifier "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1" ;
     dct:issued "2025-12-17" ;

@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for geonovum.dtaas.ogcapi.processes.reconstruct_buildings - Reconstruct Buildings process",
+  "bblockName": "Reconstruct Buildings process",
+  "bblockId": "geonovum.dtaas.ogcapi.processes.reconstruct_buildings",
+  "generated": "2026-10-01T13:36:35.555873+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

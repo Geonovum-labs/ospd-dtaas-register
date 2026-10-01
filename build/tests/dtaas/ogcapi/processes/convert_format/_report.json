@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for geonovum.dtaas.ogcapi.processes.convert_format - Convert Format process",
+  "bblockName": "Convert Format process",
+  "bblockId": "geonovum.dtaas.ogcapi.processes.convert_format",
+  "generated": "2026-10-01T13:36:35.412020+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

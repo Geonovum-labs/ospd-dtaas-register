@@ -1,0 +1,10 @@
+path	@id	schema
+/id	@id	https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml
+/type	@type	https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml
+/dct:identifier	http://purl.org/dc/terms/identifier	/github/workspace/build/annotated/dtaas/ogcapi/processes/convert_format/schema.yaml
+/dct:title	http://purl.org/dc/terms/title	/github/workspace/build/annotated/dtaas/ogcapi/processes/convert_format/schema.yaml
+/dct:description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/dtaas/ogcapi/processes/convert_format/schema.yaml
+/dct:issued	http://purl.org/dc/terms/issued	/github/workspace/build/annotated/dtaas/ogcapi/processes/convert_format/schema.yaml
+/dct:modified	http://purl.org/dc/terms/modified	/github/workspace/build/annotated/dtaas/ogcapi/processes/convert_format/schema.yaml
+/apkg:hasInput	http://w3id.org/apkg/terms#hasInput	/github/workspace/build/annotated/dtaas/ogcapi/processes/convert_format/schema.yaml
+/apkg:hasOutput	http://w3id.org/apkg/terms#hasOutput	/github/workspace/build/annotated/dtaas/ogcapi/processes/convert_format/schema.yaml

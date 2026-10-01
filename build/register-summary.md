@@ -8,17 +8,17 @@ register for various examples of building blocks.
 
 ## Building Blocks
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
-
-**Type:** schema
-
-Output schema for the localoutlier process
-
 ### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema` — Localoutlier process input schema
 
 **Type:** schema
 
 Input schema for the localoutlier process
+
+### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
+
+**Type:** schema
+
+Output schema for the localoutlier process
 
 ### `geonovum.dtaas.opentelemetry.trace` — OpenTelemetry trace with DTaaS provenance attributes
 
@@ -49,6 +49,18 @@ Input description for the localoutlier process
 **Type:** schema
 
 Output description for the localoutlier process
+
+### `geonovum.dtaas.ogcapi.processes.convert_format` — Convert Format process
+
+**Type:** schema
+
+Process to convert point cloud data between supported formats using the application package Convert Format.
+
+### `geonovum.dtaas.ogcapi.processes.reconstruct_buildings` — Reconstruct Buildings process
+
+**Type:** schema
+
+Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.
 
 ### `geonovum.dtaas.ogcapi.processes.validate_point_cloud` — Validate Point Cloud process
 

@@ -4,12 +4,13 @@
   "itemIdentifier": "geonovum.dtaas.ogcapi.processes.validate_point_cloud",
   "name": "Validate Point Cloud process",
   "abstract": "Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.",
+  "highlighted": true,
   "status": "under-development",
-  "dateTimeAddition": "2025-12-17T00:00:00Z",
+  "dateTimeAddition": "2026-10-01T00:00:00Z",
   "itemClass": "schema",
-  "register": "ogc-building-block-examples",
-  "version": "1.0",
-  "dateOfLastChange": "2026-09-29",
+  "register": "ospd-dtaas-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-10-01",
   "maturity": "development",
   "tags": [
     "examples",
@@ -18,9 +19,17 @@
     "point cloud"
   ],
   "dependsOn": [
+    "ogc.model.registered-item.register-item-classes.geoprocessing",
     "ogc.model.registered-item.rim.registered-item"
   ],
-  "shaclShapes": {},
+  "shaclShapes": {
+    "ogc.model.registered-item.register-item-classes.geoprocessing": [
+      "https://nielshoffmann.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ]
+  },
   "license": {
     "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
   },
@@ -33,7 +42,7 @@
   "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/context.jsonld",
   "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/resolvedProperties.json",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/validate_point_cloud/",
   "examples": [
     {
@@ -57,20 +66,20 @@
           "language": "json",
           "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/validate_point_cloud/examples/metadata.json",
           "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.json",
-          "sizeBytes": 743,
-          "code": " {\n  \"id\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"type\": \"apkg:ApplicationPackage\",\n\n  \"dct:identifier\":   \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"dct:title\":        \"Validate Point Cloud\",\n  \"dct:description\":  \"Check that the selected point clouds are ready to use.\",\n  \"dct:issued\":       \"2025-12-17\",\n  \"dct:modified\":     \"2025-12-17\",\n\n  \"apkg:hasInput\":  [ \"point_clouds\" ],\n  \"apkg:hasOutput\": [ \"validation_report\" ],\n\n  \"apkg:processes\": [\n    {\n      \"type\": \"apkg:Process\",\n      \"dct:type\": \"CommandLineTool\",\n      \"apkg:hasInput\":  [ \"point_clouds\" ],\n      \"apkg:hasOutput\": [ \"validation_report\" ]\n    }\n  ]\n}\n"
+          "sizeBytes": 736,
+          "code": " {\n  \"id\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"type\": \"rim:RegisterItem\",\n\n  \"dct:identifier\":   \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"dct:title\":        \"Validate Point Cloud\",\n  \"dct:description\":  \"Check that the selected point clouds are ready to use.\",\n  \"dct:issued\":       \"2025-12-17\",\n  \"dct:modified\":     \"2025-12-17\",\n\n  \"apkg:hasInput\":  [ \"point_clouds\" ],\n  \"apkg:hasOutput\": [ \"validation_report\" ],\n\n  \"apkg:processes\": [\n    {\n      \"type\": \"apkg:Process\",\n      \"dct:type\": \"CommandLineTool\",\n      \"apkg:hasInput\":  [ \"point_clouds\" ],\n      \"apkg:hasOutput\": [ \"validation_report\" ]\n    }\n  ]\n}\n"
         },
         {
           "language": "jsonld",
           "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.jsonld",
-          "sizeBytes": 900,
-          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/context.jsonld\",\n  \"id\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"type\": \"apkg:ApplicationPackage\",\n  \"dct:identifier\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"dct:title\": \"Validate Point Cloud\",\n  \"dct:description\": \"Check that the selected point clouds are ready to use.\",\n  \"dct:issued\": \"2025-12-17\",\n  \"dct:modified\": \"2025-12-17\",\n  \"apkg:hasInput\": [\n    \"point_clouds\"\n  ],\n  \"apkg:hasOutput\": [\n    \"validation_report\"\n  ],\n  \"apkg:processes\": [\n    {\n      \"type\": \"apkg:Process\",\n      \"dct:type\": \"CommandLineTool\",\n      \"apkg:hasInput\": [\n        \"point_clouds\"\n      ],\n      \"apkg:hasOutput\": [\n        \"validation_report\"\n      ]\n    }\n  ]\n}"
+          "sizeBytes": 893,
+          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/validate_point_cloud/context.jsonld\",\n  \"id\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"type\": \"rim:RegisterItem\",\n  \"dct:identifier\": \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\",\n  \"dct:title\": \"Validate Point Cloud\",\n  \"dct:description\": \"Check that the selected point clouds are ready to use.\",\n  \"dct:issued\": \"2025-12-17\",\n  \"dct:modified\": \"2025-12-17\",\n  \"apkg:hasInput\": [\n    \"point_clouds\"\n  ],\n  \"apkg:hasOutput\": [\n    \"validation_report\"\n  ],\n  \"apkg:processes\": [\n    {\n      \"type\": \"apkg:Process\",\n      \"dct:type\": \"CommandLineTool\",\n      \"apkg:hasInput\": [\n        \"point_clouds\"\n      ],\n      \"apkg:hasOutput\": [\n        \"validation_report\"\n      ]\n    }\n  ]\n}"
         },
         {
           "language": "ttl",
           "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/validate_point_cloud/example_2_1.ttl",
-          "sizeBytes": 755,
-          "code": "@prefix apkg: <http://w3id.org/apkg/terms#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n\n<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1> a apkg:ApplicationPackage ;\n    dct:description \"Check that the selected point clouds are ready to use.\" ;\n    dct:identifier \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\" ;\n    dct:issued \"2025-12-17\" ;\n    dct:modified \"2025-12-17\" ;\n    dct:title \"Validate Point Cloud\" ;\n    apkg:hasInput \"point_clouds\" ;\n    apkg:hasOutput \"validation_report\" ;\n    apkg:processes [ a apkg:Process ;\n            dct:type \"CommandLineTool\" ;\n            apkg:hasInput \"point_clouds\" ;\n            apkg:hasOutput \"validation_report\" ] .\n\n"
+          "sizeBytes": 791,
+          "code": "@prefix apkg: <http://w3id.org/apkg/terms#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n\n<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1> a rim:RegisterItem ;\n    dct:description \"Check that the selected point clouds are ready to use.\" ;\n    dct:identifier \"https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1\" ;\n    dct:issued \"2025-12-17\" ;\n    dct:modified \"2025-12-17\" ;\n    dct:title \"Validate Point Cloud\" ;\n    apkg:hasInput \"point_clouds\" ;\n    apkg:hasOutput \"validation_report\" ;\n    apkg:processes [ a apkg:Process ;\n            dct:type \"CommandLineTool\" ;\n            apkg:hasInput \"point_clouds\" ;\n            apkg:hasOutput \"validation_report\" ] .\n\n"
         }
       ]
     }
