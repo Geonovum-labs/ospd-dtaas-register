@@ -1,0 +1,27 @@
+@prefix apkg: <http://w3id.org/apkg/terms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:convert_format:v1#> .
+
+ex:convert_format a apkg:ApplicationPackage ;
+    dct:identifier "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:convert_format:v1" ;
+    dct:title "Convert Format" ;
+    dct:description "Convert point cloud data between supported formats." ;
+    dct:issued "2025-12-17"^^xsd:date ;
+    dct:modified "2025-12-17"^^xsd:date .
+    
+ex:convertFormatProcess a apkg:Process ;
+    dct:type "CommandLineTool" ;
+    apkg:hasInput ex:point_clouds ;
+    apkg:hasOutput ex:converted_point_clouds .
+
+ex:point_clouds a apkg:Parameter ;
+    dct:identifier "point_clouds" ;
+    dct:type "object" ;
+    apkg:label "point_clouds" .
+
+ex:converted_point_clouds a apkg:Parameter ;
+    dct:identifier "converted_point_clouds" ;
+    dct:type "object" ;
+    apkg:label "converted_point_clouds" .

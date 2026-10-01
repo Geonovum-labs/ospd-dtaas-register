@@ -3,7 +3,7 @@
   "abstract": "target Prov-o schema for LDV",
   "status": "under-development",
   "itemClass": "model",
-  "register": "geonovum-dtaas-ospd",
+  "register": "ospd-dtaas-register",
   "dateTimeAddition": "2026-09-01T00:00:00Z",
   "version": "0.1",
   "maturity": "development",

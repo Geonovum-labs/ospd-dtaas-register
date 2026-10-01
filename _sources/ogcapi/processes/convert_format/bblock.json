@@ -1,6 +1,6 @@
 {
-    "name": "Validate Point Cloud process", 
-    "abstract": "Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.", 
+    "name": "Convert Format process", 
+    "abstract": "Process to convert point cloud data between supported formats using the application package Convert Format.", 
     "highlighted": true,
     "status": "under-development", 
     "dateTimeAddition": "2026-10-01T00:00:00Z", 
@@ -12,7 +12,7 @@
     "tags": [   "examples",   
                 "ogc api",   
                 "ogc api processes",   
-                "point cloud" ],
+                "convert format" ],
     "dependsOn": [ "bblocks://ogc.model.registered-item.register-item-classes.geoprocessing",
     "bblocks://ogc.model.registered-item.rim.registered-item"]
 }

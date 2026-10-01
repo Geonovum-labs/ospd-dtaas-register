@@ -1,0 +1,34 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+
+# Schema for Convert Format process
+# Extends the registered-item schema to include application package metadata
+
+allOf:
+  - $ref: "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/schema.yaml"
+  - properties:
+      "dct:identifier":
+        type: string
+        format: uri
+      "dct:title":
+        type: string
+      "dct:description":
+        type: string
+      "dct:issued":
+        type: string
+        format: date
+      "dct:modified":
+        type: string
+        format: date
+      "apkg:hasInput":
+        type: array
+        items:
+          type: string
+      "apkg:hasOutput":
+        type: array
+        items:
+          type: string
+    required:
+      - "dct:identifier"
+      - "dct:title"
+      - "dct:issued"
+additionalProperties: true

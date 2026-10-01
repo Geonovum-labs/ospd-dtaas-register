@@ -1,6 +1,6 @@
 {
-    "name": "Validate Point Cloud process", 
-    "abstract": "Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.", 
+    "name": "Reconstruct Buildings process", 
+    "abstract": "Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.", 
     "highlighted": true,
     "status": "under-development", 
     "dateTimeAddition": "2026-10-01T00:00:00Z", 
@@ -12,7 +12,7 @@
     "tags": [   "examples",   
                 "ogc api",   
                 "ogc api processes",   
-                "point cloud" ],
+                "reconstruct buildings" ],
     "dependsOn": [ "bblocks://ogc.model.registered-item.register-item-classes.geoprocessing",
     "bblocks://ogc.model.registered-item.rim.registered-item"]
 }
