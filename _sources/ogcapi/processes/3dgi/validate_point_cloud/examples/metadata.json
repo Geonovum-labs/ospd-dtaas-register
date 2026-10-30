@@ -1,0 +1,15 @@
+{
+  "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
+  "type": "https://w3id.org/ogc/rim/activity-type/ActivityType",
+  "objectIdentifier": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1",
+  "itemClass": "https://w3id.org/ogc/rim/activity-type/activityTypeItemClass",
+  "validityStatus": "valid",
+  "publicationStatus": "published",
+
+  "title": "Validate Point Cloud",
+  "description": "Check that the selected point clouds are ready to use.",
+
+  "usedEntityType": "https://example.org/def/PointCloud",
+  "generatedEntityType": "https://example.org/def/PointCloudValidationReport",
+  "associatedAgentType": "http://www.w3.org/ns/prov#SoftwareAgent"
+}

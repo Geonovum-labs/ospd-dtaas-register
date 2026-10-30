@@ -1,6 +1,0 @@
-examples:
-  - title: OTLP to PROV-O RML transform input
-    content: An OTLP trace transformed into PROV-O RDF using the RML plugin.
-    snippets:
-      - language: json
-        ref: ../../opentelemetry/trace/examples/localoutlier-trace.json

@@ -1,0 +1,13 @@
+{
+  "name": "Opentelemetry trace from Localoutlier Factor OGC API Process",
+  "abstract": "Opentelemetry trace from Localoutlier Factor OGC API Process (geonovum.dtaas.ogcapi.processes.ldv.localoutlier)",
+  "description": "The generated Opentelemetry trace can be mapped to the corresponding Activity Type profile using the RML Mapper. This block holds the generated OpenTelemetry Trace. The geonovum.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml block demonstrates the transform to the corresponding Activity Type Profile",
+  "status": "under-development",
+  "itemClass": "api",
+  "register": "ospd-dtaas-register",
+  "dateTimeAddition": "2026-08-07T00:00:00Z",
+  "version": "0.1",
+  "dependsOn": [
+    "bblocks://geonovum.dtaas.ogcapi.processes.ldv.localoutlier"
+  ]
+}

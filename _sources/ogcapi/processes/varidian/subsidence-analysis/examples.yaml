@@ -1,0 +1,6 @@
+examples:
+  - title: Deltares Atlantis - Subsidence Analysis
+    content: A registry entry conforming to the geoprocessing activity type.
+    snippets:
+      - language: json
+        ref: examples/subsidence.json

@@ -1,0 +1,17 @@
+{
+    "name": "Reconstruct Buildings process", 
+    "abstract": "Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.", 
+    "highlighted": true,
+    "status": "under-development", 
+    "dateTimeAddition": "2026-10-01T00:00:00Z", 
+    "itemClass": "schema", 
+    "register": "ospd-dtaas-register", 
+    "version": "0.1", 
+    "dateOfLastChange": "2026-10-01", 
+    "maturity": "development", 
+    "tags": [   "examples",   
+                "ogc api",   
+                "ogc api processes",   
+                "reconstruct buildings" ],
+    "dependsOn": [ "bblocks://ogc.register.activity-types"]
+}

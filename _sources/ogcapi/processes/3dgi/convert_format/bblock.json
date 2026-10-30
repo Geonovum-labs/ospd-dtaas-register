@@ -1,0 +1,17 @@
+{
+    "name": "Convert Format process", 
+    "abstract": "Process to convert point cloud data between supported formats using the application package Convert Format.", 
+    "highlighted": false,
+    "status": "under-development", 
+    "dateTimeAddition": "2026-10-01T00:00:00Z", 
+    "itemClass": "schema", 
+    "register": "ospd-dtaas-register", 
+    "version": "0.1", 
+    "dateOfLastChange": "2026-10-01", 
+    "maturity": "development", 
+    "tags": [   "examples",   
+                "ogc api",   
+                "ogc api processes",   
+                "convert format" ],
+    "dependsOn": [ "bblocks://ogc.register.activity-types"]
+}

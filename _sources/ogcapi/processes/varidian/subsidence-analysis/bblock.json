@@ -1,0 +1,20 @@
+{
+    "name": "Subsidence Analysis",
+    "abstract": "A registered geoprocessing activity type for performing settlement calculations for urban development using the Deltares Atlantis calculation module.",
+    "status": "under-development",
+    "highlighted": true,
+    "itemClass": "schema",
+    "dateTimeAddition": "2026-10-30T00:00:00Z",
+    "register": "ospd-dtaas-register", 
+    "version": "0.1", 
+    "dateOfLastChange": "2026-10-01", 
+    "maturity": "development", 
+    "tags": [   "examples",   
+                "ogc api",   
+                "ogc api processes",   
+                "subsidence analysis",
+                "varidian" ],
+    "dependsOn": [
+        "ogc.register.schemas.geoprocessing-activity-types-schema"
+  ]
+}
