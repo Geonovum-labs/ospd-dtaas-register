@@ -1,0 +1,63 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema",
+  "name": "Localoutlier process input schema",
+  "abstract": "Input schema for the localoutlier process",
+  "status": "under-development",
+  "dateTimeAddition": "2025-12-17T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "version": "1.0",
+  "dateOfLastChange": "2026-10-30",
+  "maturity": "development",
+  "tags": [
+    "examples",
+    "ogc api",
+    "ogc api processes"
+  ],
+  "shaclShapes": {},
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
+  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/context.jsonld",
+  "schema": {
+    "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/schema.yaml",
+    "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/schema.json"
+  },
+  "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/schema.yaml",
+  "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/context.jsonld",
+  "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/resolvedProperties.json",
+  "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/",
+  "examples": [
+    {
+      "title": "Localoutlier input values",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/examples/localoutlier.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/example_1_1.json",
+          "sizeBytes": 131,
+          "code": "{\n  \"dataset\": \"https://example.org/data/points.geojson\",\n  \"n_neighbors\": 5,\n  \"leaf_size\": 30,\n  \"output_column\": \"abnormality\"\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/example_1_1.jsonld",
+          "sizeBytes": 291,
+          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/context.jsonld\",\n  \"dataset\": \"https://example.org/data/points.geojson\",\n  \"n_neighbors\": 5,\n  \"leaf_size\": 30,\n  \"output_column\": \"abnormality\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputSchema/example_1_1.ttl",
+          "sizeBytes": 84,
+          "code": "@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] xsd:integer 5,\n        30 .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "type: object\nrequired:\n- dataset\nproperties:\n  dataset:\n    type: string\n    format: url\n  n_neighbors:\n    oneOf:\n    - type: integer\n    default: 20\n    x-jsonld-id: http://www.w3.org/2001/XMLSchema#integer\n  leaf_size:\n    oneOf:\n    - type: integer\n    default: 30\n    x-jsonld-id: http://www.w3.org/2001/XMLSchema#integer\n  output_column:\n    oneOf:\n    - type: string\n    default: abnormality\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-10-30'\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/ogcapi/processes/ldv/schemas/localoutlier/inputSchema"
+}

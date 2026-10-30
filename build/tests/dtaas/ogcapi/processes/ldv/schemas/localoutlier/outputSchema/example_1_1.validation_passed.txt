@@ -1,0 +1,10 @@
+Validation report for geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema - Localoutlier process output schema
+Generated 2026-10-30T13:27:50.814330+00:00
+=== Files ===
+Using examples/localoutlier.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

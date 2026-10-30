@@ -1,0 +1,6 @@
+$ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml
+  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-08-28'

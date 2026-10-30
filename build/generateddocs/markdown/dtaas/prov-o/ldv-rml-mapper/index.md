@@ -313,6 +313,10 @@ An OTLP trace transformed into PROV-O RDF using the RML plugin.
 }
 ```
 
+## Sources
+
+* [Onderzoek logboek dataverwerkingen voor (geo) objecten](https://docs.geostandaarden.nl/ldv/logboek-dataverwerkingen-voor-objecten/)
+* [Logboek dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/)
 
 # For developers
 

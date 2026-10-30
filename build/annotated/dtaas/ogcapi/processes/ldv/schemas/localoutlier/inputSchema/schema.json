@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "required": [
+    "dataset"
+  ],
+  "properties": {
+    "dataset": {
+      "type": "string",
+      "format": "url"
+    },
+    "n_neighbors": {
+      "oneOf": [
+        {
+          "type": "integer"
+        }
+      ],
+      "default": 20,
+      "x-jsonld-id": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "leaf_size": {
+      "oneOf": [
+        {
+          "type": "integer"
+        }
+      ],
+      "default": 30,
+      "x-jsonld-id": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "output_column": {
+      "oneOf": [
+        {
+          "type": "string"
+        }
+      ],
+      "default": "abnormality"
+    }
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema",
+    "register": "https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json",
+    "version": "1.0",
+    "dateOfLastChange": "2026-10-30"
+  }
+}

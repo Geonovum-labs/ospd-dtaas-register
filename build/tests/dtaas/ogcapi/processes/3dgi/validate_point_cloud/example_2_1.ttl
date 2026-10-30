@@ -1,0 +1,17 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1> a acttype:ActivityType ;
+    dct:description "Check that the selected point clouds are ready to use." ;
+    dct:title "Validate Point Cloud" ;
+    acttype:associatedAgentType prov:SoftwareAgent ;
+    acttype:generatedEntityType <https://example.org/def/PointCloudValidationReport> ;
+    acttype:usedEntityType <https://example.org/def/PointCloud> ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:validate_point_cloud:v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+

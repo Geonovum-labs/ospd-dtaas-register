@@ -1,0 +1,13 @@
+{
+  "anyOf": [
+    {
+      "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputDescription/schema.json"
+    }
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions",
+    "register": "https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json",
+    "version": "1.0",
+    "dateOfLastChange": "2026-10-30"
+  }
+}

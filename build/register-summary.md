@@ -8,13 +8,13 @@ register for various examples of building blocks.
 
 ## Building Blocks
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema` — Localoutlier process input schema
+### `geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema` — Localoutlier process input schema
 
 **Type:** schema
 
 Input schema for the localoutlier process
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputSchema` — Localoutlier process output schema
+### `geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema` — Localoutlier process output schema
 
 **Type:** schema
 
@@ -38,73 +38,73 @@ target Prov-o schema for LDV
 
 OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputDescription` — Localoutlier process input description
+### `geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputDescription` — Localoutlier process input description
 
 **Type:** schema
 
 Input description for the localoutlier process
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.outputDescription` — Localoutlier process output description
+### `geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription` — Localoutlier process output description
 
 **Type:** schema
 
 Output description for the localoutlier process
 
-### `geonovum.dtaas.ogcapi.processes.convert_format` — Convert Format process
-
-**Type:** schema
-
-Process to convert point cloud data between supported formats using the application package Convert Format.
-
-### `geonovum.dtaas.ogcapi.processes.reconstruct_buildings` — Reconstruct Buildings process
-
-**Type:** schema
-
-Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.
-
-### `geonovum.dtaas.ogcapi.processes.validate_point_cloud` — Validate Point Cloud process
-
-**Type:** schema
-
-Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.
-
-### `geonovum.dtaas.ogcapi.processes.schemas.inputDescriptions` — Example OGC API Processes instance input descriptions
+### `geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions` — Example OGC API Processes instance input descriptions
 
 **Type:** schema
 
 Collection of input descriptions
 
-### `geonovum.dtaas.ogcapi.processes.schemas.localoutlier.processDescription` — Localoutlier process description
+### `geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription` — Localoutlier process description
 
 **Type:** schema
 
 Process description for the localoutlier process
 
-### `geonovum.dtaas.ogcapi.processes.schemas.outputDescriptions` — Example OGC API Processes instance output descriptions
+### `geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions` — Example OGC API Processes instance output descriptions
 
 **Type:** schema
 
 Collection of output descriptions
 
-### `geonovum.dtaas.ogcapi.processes.custom-api` — Demo OGC API processes instance - LOF
+### `geonovum.dtaas.ogcapi.processes.3dgi.convert_format` — Convert Format process
+
+**Type:** schema
+
+Process to convert point cloud data between supported formats using the application package Convert Format.
+
+### `geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings` — Reconstruct Buildings process
+
+**Type:** schema
+
+Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.
+
+### `geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud` — Validate Point Cloud process
+
+**Type:** schema
+
+Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.
+
+### `geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis` — Subsidence Analysis
+
+**Type:** schema
+
+A registered geoprocessing activity type for performing settlement calculations for urban development using the Deltares Atlantis calculation module.
+
+### `geonovum.dtaas.ogcapi.processes.ldv.localoutlier` — Demo OGC API processes instance - LOF
 
 **Type:** api
 
 An example of an OGC API Processes implementation using building blocks - Local Outlier Factor
 
-### `geonovum.dtaas.ogcapi.processes.custom-api-ipt` — IPT profile of Geonovum custom API processes
+### `geonovum.dtaas.ogcapi.processes.ldv.localoutlier-ipt` — Opentelemetry trace from Localoutlier Factor OGC API Process
 
 **Type:** api
 
-Profile of Geonovum's custom OGC API Processes for IPT (Integrity Provenance Trust) aspects.
+Opentelemetry trace from Localoutlier Factor OGC API Process (geonovum.dtaas.ogcapi.processes.ldv.localoutlier)
 
-### `geonovum.dtaas.prov-o.otel-ipt` — Local Outlier Factor OGC API Process with IPT provenance attributes from OpenTelemetry trace
-
-**Type:** schema
-
-OTLP JSON trace transformed to IPT Provenenance from OGC API Processes.
-
-### `geonovum.dtaas.prov-o.opentelemetry-mapping-rml` — OpenTelemetry to PROV-O mapping (RML plugin)
+### `geonovum.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml` — OpenTelemetry to PROV-O mapping (RML plugin)
 
 **Type:** schema
 

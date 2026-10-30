@@ -1,0 +1,55 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.3dgi.convert_format",
+  "name": "Convert Format process",
+  "abstract": "Process to convert point cloud data between supported formats using the application package Convert Format.",
+  "highlighted": false,
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-01T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ospd-dtaas-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-10-30",
+  "maturity": "development",
+  "tags": [
+    "examples",
+    "ogc api",
+    "ogc api processes",
+    "convert format"
+  ],
+  "dependsOn": [
+    "ogc.register.activity-types",
+    "ogc.register.schemas.geoprocessing-activity-types-schema"
+  ],
+  "shaclShapes": {
+    "ogc.register.activity-types": [
+      "https://geonovum-labs.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ],
+    "ogc.register.geoprocessing-activity-types": [
+      "https://geonovum-labs.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
+    ]
+  },
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
+  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/context.jsonld",
+  "schema": {
+    "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/schema.yaml",
+    "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/schema.json"
+  },
+  "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/schema.yaml",
+  "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/context.jsonld",
+  "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/resolvedProperties.json",
+  "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/",
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\nallOf:\n- $ref: https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.yaml\n- properties:\n    dct:identifier:\n      type: string\n      format: uri\n      x-jsonld-id: http://purl.org/dc/terms/identifier\n    dct:title:\n      type: string\n      x-jsonld-id: http://purl.org/dc/terms/title\n    dct:description:\n      type: string\n      x-jsonld-id: http://purl.org/dc/terms/description\n    dct:issued:\n      type: string\n      format: date\n      x-jsonld-id: http://purl.org/dc/terms/issued\n    dct:modified:\n      type: string\n      format: date\n      x-jsonld-id: http://purl.org/dc/terms/modified\n    apkg:hasInput:\n      type: array\n      items:\n        type: string\n      x-jsonld-id: http://w3id.org/apkg/terms#hasInput\n    apkg:hasOutput:\n      type: array\n      items:\n        type: string\n      x-jsonld-id: http://w3id.org/apkg/terms#hasOutput\n  required:\n  - dct:identifier\n  - dct:title\n  - dct:issued\nadditionalProperties: true\nx-jsonld-extra-terms:\n  Register: https://w3id.org/ogc/rim/Register\n  RegisterSystem: https://w3id.org/ogc/rim/RegisterSystem\n  RegisterSpecification: https://w3id.org/ogc/rim/RegisterSpecification\n  RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass\n  RegisterItem: https://w3id.org/ogc/rim/RegisterItem\n  RegisterAction: https://w3id.org/ogc/rim/RegisterAction\n  Concept: https://w3id.org/ogc/rim/Concept\n  ConceptVersion: https://w3id.org/ogc/rim/ConceptVersion\n  ConceptSystem: https://w3id.org/ogc/rim/ConceptSystem\n  Commitment: https://w3id.org/ogc/rim/Commitment\n  Agent: http://www.w3.org/ns/prov#Agent\n  Organization: http://www.w3.org/ns/prov#Organization\n  Person: http://www.w3.org/ns/prov#Person\n  label: http://www.w3.org/2000/01/rdf-schema#label\n  prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel\n  definition: http://www.w3.org/2004/02/skos/core#definition\n  inScheme:\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#inScheme\n    x-jsonld-type: '@id'\n  runsOn:\n    x-jsonld-id: https://w3id.org/ogc/rim/runsOn\n    x-jsonld-type: '@id'\n  hasSpecification:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasSpecification\n    x-jsonld-type: '@id'\n  definesSubstantiveChange: https://w3id.org/ogc/rim/definesSubstantiveChange\n  registerOwner:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerOwner\n    x-jsonld-type: '@id'\n  registerManager:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerManager\n    x-jsonld-type: '@id'\n  controlBody:\n    x-jsonld-id: https://w3id.org/ogc/rim/controlBody\n    x-jsonld-type: '@id'\n  registerSystemManager:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerSystemManager\n    x-jsonld-type: '@id'\n  registerUser:\n    x-jsonld-id: https://w3id.org/ogc/rim/registerUser\n    x-jsonld-type: '@id'\n  hasCommitment:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasCommitment\n    x-jsonld-type: '@id'\n  commitmentCategory:\n    x-jsonld-id: https://w3id.org/ogc/rim/commitmentCategory\n    x-jsonld-type: '@vocab'\n  access: https://w3id.org/ogc/rim/accessCommitment\n  persistence: https://w3id.org/ogc/rim/persistenceCommitment\n  transparency: https://w3id.org/ogc/rim/transparencyCommitment\n  definedIn:\n    x-jsonld-id: https://w3id.org/ogc/rim/definedIn\n    x-jsonld-type: '@id'\n  validatedBy:\n    x-jsonld-id: https://w3id.org/ogc/rim/validatedBy\n    x-jsonld-type: '@id'\n  versionOf:\n    x-jsonld-id: https://w3id.org/ogc/rim/versionOf\n    x-jsonld-type: '@id'\n  version: https://w3id.org/ogc/rim/version\n  valid: https://w3id.org/ogc/rim/valid\n  invalid: https://w3id.org/ogc/rim/invalid\n  published: https://w3id.org/ogc/rim/published\n  unpublished: https://w3id.org/ogc/rim/unpublished\n  appliesTo:\n    x-jsonld-id: https://w3id.org/ogc/rim/appliesTo\n    x-jsonld-type: '@id'\n  proposer:\n    x-jsonld-id: https://w3id.org/ogc/rim/proposer\n    x-jsonld-type: '@id'\n  actionType:\n    x-jsonld-id: https://w3id.org/ogc/rim/actionType\n    x-jsonld-type: '@vocab'\n  addition: https://w3id.org/ogc/rim/additionAction\n  publish: https://w3id.org/ogc/rim/publishAction\n  unpublish: https://w3id.org/ogc/rim/unpublishAction\n  invalidation: https://w3id.org/ogc/rim/invalidationAction\n  supersession: https://w3id.org/ogc/rim/supersessionAction\n  redaction: https://w3id.org/ogc/rim/redactionAction\n  deletion: https://w3id.org/ogc/rim/deletionAction\n  changeClassification:\n    x-jsonld-id: https://w3id.org/ogc/rim/changeClassification\n    x-jsonld-type: '@vocab'\n  substantive: https://w3id.org/ogc/rim/substantiveChange\n  clarifying: https://w3id.org/ogc/rim/clarifyingChange\n  correctional: https://w3id.org/ogc/rim/correctionalChange\n  startedAtTime:\n    x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n  endedAtTime:\n    x-jsonld-id: http://www.w3.org/ns/prov#endedAtTime\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime\n  wasAssociatedWith:\n    x-jsonld-id: http://www.w3.org/ns/prov#wasAssociatedWith\n    x-jsonld-type: '@id'\n  id: '@id'\n  type: '@type'\n  objectIdentifier:\n    x-jsonld-id: https://w3id.org/ogc/rim/objectIdentifier\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI\n  functionalIdentifier:\n    x-jsonld-id: https://w3id.org/ogc/rim/functionalIdentifier\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI\n  itemClass:\n    x-jsonld-id: https://w3id.org/ogc/rim/itemClass\n    x-jsonld-type: '@id'\n  inRegister:\n    x-jsonld-id: https://w3id.org/ogc/rim/inRegister\n    x-jsonld-type: '@id'\n  realizes:\n    x-jsonld-id: https://w3id.org/ogc/rim/realizes\n    x-jsonld-type: '@id'\n  validityStatus:\n    x-jsonld-id: https://w3id.org/ogc/rim/validityStatus\n    x-jsonld-type: '@vocab'\n  publicationStatus:\n    x-jsonld-id: https://w3id.org/ogc/rim/publicationStatus\n    x-jsonld-type: '@vocab'\n  isRedacted:\n    x-jsonld-id: https://w3id.org/ogc/rim/isRedacted\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean\n  isDeleted:\n    x-jsonld-id: https://w3id.org/ogc/rim/isDeleted\n    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean\n  title: http://purl.org/dc/terms/title\n  description: http://purl.org/dc/terms/description\n  relatedItem:\n    x-jsonld-id: https://w3id.org/ogc/rim/relatedItem\n    x-jsonld-type: '@id'\n  supersededBy:\n    x-jsonld-id: https://w3id.org/ogc/rim/supersededBy\n    x-jsonld-type: '@id'\n  supersedes:\n    x-jsonld-id: https://w3id.org/ogc/rim/supersedes\n    x-jsonld-type: '@id'\n  hasAction:\n    x-jsonld-id: https://w3id.org/ogc/rim/hasAction\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  rim: https://w3id.org/ogc/rim/\n  prov: http://www.w3.org/ns/prov#\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  skos: http://www.w3.org/2004/02/skos/core#\n  xsd: http://www.w3.org/2001/XMLSchema#\n  dct: http://purl.org/dc/terms/\n  apkg: http://w3id.org/apkg/terms#\n  schema: https://schema.org/\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.3dgi.convert_format\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-30'\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/ogcapi/processes/3dgi/convert_format"
+}

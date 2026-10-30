@@ -1,0 +1,82 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis",
+  "name": "Subsidence Analysis",
+  "abstract": "A registered geoprocessing activity type for performing settlement calculations for urban development using the Deltares Atlantis calculation module.",
+  "status": "under-development",
+  "highlighted": true,
+  "itemClass": "schema",
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "register": "ospd-dtaas-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-10-30",
+  "maturity": "development",
+  "tags": [
+    "examples",
+    "ogc api",
+    "ogc api processes",
+    "subsidence analysis",
+    "varidian"
+  ],
+  "dependsOn": [
+    "ogc.register.schemas.geoprocessing-activity-types-schema"
+  ],
+  "shaclShapes": {
+    "ogc.register.geoprocessing-activity-types": [
+      "https://geonovum-labs.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
+    ],
+    "ogc.register.activity-types": [
+      "https://geonovum-labs.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
+  "schema": {
+    "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/varidian/subsidence-analysis/schema.yaml",
+    "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/varidian/subsidence-analysis/schema.json"
+  },
+  "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/varidian/subsidence-analysis/schema.yaml",
+  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/varidian/subsidence-analysis/context.jsonld",
+  "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/varidian/subsidence-analysis/resolvedProperties.json",
+  "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/varidian/subsidence-analysis/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/varidian/subsidence-analysis/",
+  "examples": [
+    {
+      "title": "Deltares Atlantis - Subsidence Analysis",
+      "content": "A registry entry conforming to the geoprocessing activity type.",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/varidian/subsidence-analysis/examples/subsidence.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/varidian/subsidence-analysis/example_1_1.json",
+          "sizeBytes": 820,
+          "code": "    {\n      \"id\": \"https://registry.playground.planspace.nl/processes/subsidence_subsidence\",\n      \"type\": \"https://w3id.org/ogc/rim/activity-type/ActivityType\",\n      \"objectIdentifier\": \"https://registry.playground.planspace.nl/processes/subsidence_subsidence\",\n      \"itemClass\": \"https://w3id.org/ogc/rim/activity-type/activityTypeItemClass\",\n      \"validityStatus\": \"valid\",\n      \"publicationStatus\": \"published\",\n      \"title\": \"Deltares Atlantis - Subsidence Analysis\",\n      \"description\": \"Performs settlement calculations for urban development using the Deltares Atlantis calculation module.\",\n      \"usedEntityType\": \"https://example.org/def/SurchargeArea\",\n      \"generatedEntityType\": \"https://example.org/def/SubsidenceResult\",\n      \"associatedAgentType\": \"http://www.w3.org/ns/prov#SoftwareAgent\"\n    }"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/varidian/subsidence-analysis/example_1_1.jsonld",
+          "sizeBytes": 920,
+          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/varidian/subsidence-analysis/context.jsonld\",\n  \"id\": \"https://registry.playground.planspace.nl/processes/subsidence_subsidence\",\n  \"type\": \"https://w3id.org/ogc/rim/activity-type/ActivityType\",\n  \"objectIdentifier\": \"https://registry.playground.planspace.nl/processes/subsidence_subsidence\",\n  \"itemClass\": \"https://w3id.org/ogc/rim/activity-type/activityTypeItemClass\",\n  \"validityStatus\": \"valid\",\n  \"publicationStatus\": \"published\",\n  \"title\": \"Deltares Atlantis - Subsidence Analysis\",\n  \"description\": \"Performs settlement calculations for urban development using the Deltares Atlantis calculation module.\",\n  \"usedEntityType\": \"https://example.org/def/SurchargeArea\",\n  \"generatedEntityType\": \"https://example.org/def/SubsidenceResult\",\n  \"associatedAgentType\": \"http://www.w3.org/ns/prov#SoftwareAgent\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/varidian/subsidence-analysis/example_1_1.ttl",
+          "sizeBytes": 970,
+          "code": "@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://registry.playground.planspace.nl/processes/subsidence_subsidence> a acttype:ActivityType ;\n    dct:description \"Performs settlement calculations for urban development using the Deltares Atlantis calculation module.\" ;\n    dct:title \"Deltares Atlantis - Subsidence Analysis\" ;\n    acttype:associatedAgentType prov:SoftwareAgent ;\n    acttype:generatedEntityType <https://example.org/def/SubsidenceResult> ;\n    acttype:usedEntityType <https://example.org/def/SurchargeArea> ;\n    rim:itemClass acttype:activityTypeItemClass ;\n    rim:objectIdentifier \"https://registry.playground.planspace.nl/processes/subsidence_subsidence\"^^xsd:anyURI ;\n    rim:publicationStatus rim:published ;\n    rim:validityStatus rim:valid .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Subsidence Analysis Activity Type\ndescription: 'A profile of the Geoprocessing Activity Type for subsidence analysis\n  activities.\n\n  '\nallOf:\n- $ref: https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.yaml\n- type: object\n  properties:\n    type:\n      const: https://w3id.org/ogc/rim/activity-type/ActivityType\n    itemClass:\n      const: https://w3id.org/ogc/rim/activity-type/activityTypeItemClass\n    usedEntityType:\n      const: https://example.org/def/SurchargeArea\n    generatedEntityType:\n      const: https://example.org/def/SubsidenceResult\n    associatedAgentType:\n      const: http://www.w3.org/ns/prov#SoftwareAgent\n  required:\n  - usedEntityType\n  - generatedEntityType\n  - associatedAgentType\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-10-30'\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/ogcapi/processes/varidian/subsidence-analysis"
+}

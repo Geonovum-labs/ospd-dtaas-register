@@ -1,0 +1,14 @@
+{
+  "@context": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/varidian/subsidence-analysis/context.jsonld",
+  "id": "https://registry.playground.planspace.nl/processes/subsidence_subsidence",
+  "type": "https://w3id.org/ogc/rim/activity-type/ActivityType",
+  "objectIdentifier": "https://registry.playground.planspace.nl/processes/subsidence_subsidence",
+  "itemClass": "https://w3id.org/ogc/rim/activity-type/activityTypeItemClass",
+  "validityStatus": "valid",
+  "publicationStatus": "published",
+  "title": "Deltares Atlantis - Subsidence Analysis",
+  "description": "Performs settlement calculations for urban development using the Deltares Atlantis calculation module.",
+  "usedEntityType": "https://example.org/def/SurchargeArea",
+  "generatedEntityType": "https://example.org/def/SubsidenceResult",
+  "associatedAgentType": "http://www.w3.org/ns/prov#SoftwareAgent"
+}

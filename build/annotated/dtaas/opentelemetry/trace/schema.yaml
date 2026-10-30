@@ -78,3 +78,8 @@ $defs:
             type: string
           boolValue:
             type: boolean
+x-bblocks-metadata:
+  itemIdentifier: geonovum.dtaas.opentelemetry.trace
+  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-08-26'

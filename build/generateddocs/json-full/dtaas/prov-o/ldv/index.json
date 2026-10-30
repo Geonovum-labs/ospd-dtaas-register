@@ -11,9 +11,8 @@
   "version": "0.1",
   "maturity": "development",
   "tags": [
-    "opentelemetry",
     "ldv",
-    "provenance"
+    "rml"
   ],
   "resources": [
     {
@@ -27,7 +26,7 @@
   "license": {
     "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
   },
-  "dateOfLastChange": "2026-09-01",
+  "dateOfLastChange": "2026-10-30",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv/",
   "validationPassed": true,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv/",

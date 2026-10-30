@@ -5,21 +5,31 @@
   "name": "LDV RML Mapper",
   "abstract": "OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.",
   "status": "under-development",
+  "highlighted": true,
   "itemClass": "schema",
   "register": "geonovum-dtaas-ospd",
   "dateTimeAddition": "2026-08-28T00:00:00Z",
   "version": "0.1",
   "maturity": "development",
   "tags": [
-    "opentelemetry",
+    "ldv",
     "prov-o",
-    "rml",
-    "provenance"
+    "rml"
   ],
   "dependsOn": [
     "geonovum.dtaas.opentelemetry.trace"
   ],
-  "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references.",
+  "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references. This is the transform done in scope of the Logboek Dataverwerkingen voor Objectgegevens research project",
+  "sources": [
+    {
+      "title": "Onderzoek logboek dataverwerkingen voor (geo) objecten",
+      "link": "https://docs.geostandaarden.nl/ldv/logboek-dataverwerkingen-voor-objecten/"
+    },
+    {
+      "title": "Logboek dataverwerkingen",
+      "link": "https://logius-standaarden.github.io/logboek-dataverwerkingen/"
+    }
+  ],
   "resources": [
     {
       "title": "RML mapping",
@@ -32,7 +42,7 @@
   "license": {
     "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
   },
-  "dateOfLastChange": "2026-08-28",
+  "dateOfLastChange": "2026-10-30",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/",
   "validationPassed": true,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv-rml-mapper/",

@@ -1,0 +1,68 @@
+
+
+{
+  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription",
+  "name": "Localoutlier process description",
+  "abstract": "Process description for the localoutlier process",
+  "status": "under-development",
+  "dateTimeAddition": "2025-12-17T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "version": "1.0",
+  "dateOfLastChange": "2026-10-30",
+  "maturity": "development",
+  "tags": [
+    "examples",
+    "ogc api",
+    "ogc api processes"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputDescription",
+    "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription",
+    "ogc.api.processes.v1.schemas.process"
+  ],
+  "license": {
+    "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+  },
+  "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/context.jsonld",
+  "schema": {
+    "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/schema.yaml",
+    "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/schema.json"
+  },
+  "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription/schema.yaml",
+  "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription/context.jsonld",
+  "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/resolvedProperties.json",
+  "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/",
+  "examples": [
+    {
+      "title": "Localoutlier process description",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription/examples/localoutlier.json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/example_1_1.json",
+          "sizeBytes": 287,
+          "code": "{\n  \"version\": \"0.1\",\n  \"id\": \"localoutlier\",\n  \"title\": \"Local outlier factor (LOF)\",\n  \"description\": \"The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation.\",\n  \"jobControlOptions\": [\"sync-execute\", \"async-execute\"]\n}"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/example_1_1.jsonld",
+          "sizeBytes": 466,
+          "code": "{\n  \"@context\": \"https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/context.jsonld\",\n  \"version\": \"0.1\",\n  \"id\": \"localoutlier\",\n  \"title\": \"Local outlier factor (LOF)\",\n  \"description\": \"The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation.\",\n  \"jobControlOptions\": [\n    \"sync-execute\",\n    \"async-execute\"\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/example_1_1.ttl",
+          "sizeBytes": 422,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix proc: <https://w3id.org/ogc/api/processes/> .\n\n<file:///github/workspace/localoutlier> dct:description \"The local outlier factor (LOF) algorithm computes a score indicating the degree of abnormality of each input observation.\" ;\n    dct:hasVersion \"0.1\" ;\n    dct:title \"Local outlier factor (LOF)\" ;\n    proc:jobControlOptions \"async-execute\",\n        \"sync-execute\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml\n- properties:\n    inputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputDescription/schema.yaml\n      additionalProperties: false\n    outputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputDescription/schema.yaml\n      additionalProperties: false\nx-jsonld-extra-terms:\n  id: '@id'\n  version: http://purl.org/dc/terms/hasVersion\n  title: http://purl.org/dc/terms/title\n  description: http://purl.org/dc/terms/description\n  jobControlOptions: https://w3id.org/ogc/api/processes/jobControlOptions\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-10-30'\n",
+  "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
+  "gitPath": "_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription"
+}

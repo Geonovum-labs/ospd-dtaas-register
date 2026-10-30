@@ -1,0 +1,157 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+allOf:
+- $ref: https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.yaml
+additionalProperties: true
+x-jsonld-extra-terms:
+  Register: https://w3id.org/ogc/rim/Register
+  RegisterSystem: https://w3id.org/ogc/rim/RegisterSystem
+  RegisterSpecification: https://w3id.org/ogc/rim/RegisterSpecification
+  RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass
+  RegisterItem: https://w3id.org/ogc/rim/RegisterItem
+  RegisterAction: https://w3id.org/ogc/rim/RegisterAction
+  Concept: https://w3id.org/ogc/rim/Concept
+  ConceptVersion: https://w3id.org/ogc/rim/ConceptVersion
+  ConceptSystem: https://w3id.org/ogc/rim/ConceptSystem
+  Commitment: https://w3id.org/ogc/rim/Commitment
+  Agent: http://www.w3.org/ns/prov#Agent
+  Organization: http://www.w3.org/ns/prov#Organization
+  Person: http://www.w3.org/ns/prov#Person
+  label: http://www.w3.org/2000/01/rdf-schema#label
+  prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel
+  definition: http://www.w3.org/2004/02/skos/core#definition
+  inScheme:
+    x-jsonld-id: http://www.w3.org/2004/02/skos/core#inScheme
+    x-jsonld-type: '@id'
+  runsOn:
+    x-jsonld-id: https://w3id.org/ogc/rim/runsOn
+    x-jsonld-type: '@id'
+  hasSpecification:
+    x-jsonld-id: https://w3id.org/ogc/rim/hasSpecification
+    x-jsonld-type: '@id'
+  definesSubstantiveChange: https://w3id.org/ogc/rim/definesSubstantiveChange
+  registerOwner:
+    x-jsonld-id: https://w3id.org/ogc/rim/registerOwner
+    x-jsonld-type: '@id'
+  registerManager:
+    x-jsonld-id: https://w3id.org/ogc/rim/registerManager
+    x-jsonld-type: '@id'
+  controlBody:
+    x-jsonld-id: https://w3id.org/ogc/rim/controlBody
+    x-jsonld-type: '@id'
+  registerSystemManager:
+    x-jsonld-id: https://w3id.org/ogc/rim/registerSystemManager
+    x-jsonld-type: '@id'
+  registerUser:
+    x-jsonld-id: https://w3id.org/ogc/rim/registerUser
+    x-jsonld-type: '@id'
+  hasCommitment:
+    x-jsonld-id: https://w3id.org/ogc/rim/hasCommitment
+    x-jsonld-type: '@id'
+  commitmentCategory:
+    x-jsonld-id: https://w3id.org/ogc/rim/commitmentCategory
+    x-jsonld-type: '@vocab'
+  access: https://w3id.org/ogc/rim/accessCommitment
+  persistence: https://w3id.org/ogc/rim/persistenceCommitment
+  transparency: https://w3id.org/ogc/rim/transparencyCommitment
+  definedIn:
+    x-jsonld-id: https://w3id.org/ogc/rim/definedIn
+    x-jsonld-type: '@id'
+  validatedBy:
+    x-jsonld-id: https://w3id.org/ogc/rim/validatedBy
+    x-jsonld-type: '@id'
+  versionOf:
+    x-jsonld-id: https://w3id.org/ogc/rim/versionOf
+    x-jsonld-type: '@id'
+  version: https://w3id.org/ogc/rim/version
+  valid: https://w3id.org/ogc/rim/valid
+  invalid: https://w3id.org/ogc/rim/invalid
+  published: https://w3id.org/ogc/rim/published
+  unpublished: https://w3id.org/ogc/rim/unpublished
+  appliesTo:
+    x-jsonld-id: https://w3id.org/ogc/rim/appliesTo
+    x-jsonld-type: '@id'
+  proposer:
+    x-jsonld-id: https://w3id.org/ogc/rim/proposer
+    x-jsonld-type: '@id'
+  actionType:
+    x-jsonld-id: https://w3id.org/ogc/rim/actionType
+    x-jsonld-type: '@vocab'
+  addition: https://w3id.org/ogc/rim/additionAction
+  publish: https://w3id.org/ogc/rim/publishAction
+  unpublish: https://w3id.org/ogc/rim/unpublishAction
+  invalidation: https://w3id.org/ogc/rim/invalidationAction
+  supersession: https://w3id.org/ogc/rim/supersessionAction
+  redaction: https://w3id.org/ogc/rim/redactionAction
+  deletion: https://w3id.org/ogc/rim/deletionAction
+  changeClassification:
+    x-jsonld-id: https://w3id.org/ogc/rim/changeClassification
+    x-jsonld-type: '@vocab'
+  substantive: https://w3id.org/ogc/rim/substantiveChange
+  clarifying: https://w3id.org/ogc/rim/clarifyingChange
+  correctional: https://w3id.org/ogc/rim/correctionalChange
+  startedAtTime:
+    x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
+  endedAtTime:
+    x-jsonld-id: http://www.w3.org/ns/prov#endedAtTime
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
+  wasAssociatedWith:
+    x-jsonld-id: http://www.w3.org/ns/prov#wasAssociatedWith
+    x-jsonld-type: '@id'
+  id: '@id'
+  type: '@type'
+  objectIdentifier:
+    x-jsonld-id: https://w3id.org/ogc/rim/objectIdentifier
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  functionalIdentifier:
+    x-jsonld-id: https://w3id.org/ogc/rim/functionalIdentifier
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  itemClass:
+    x-jsonld-id: https://w3id.org/ogc/rim/itemClass
+    x-jsonld-type: '@id'
+  inRegister:
+    x-jsonld-id: https://w3id.org/ogc/rim/inRegister
+    x-jsonld-type: '@id'
+  realizes:
+    x-jsonld-id: https://w3id.org/ogc/rim/realizes
+    x-jsonld-type: '@id'
+  validityStatus:
+    x-jsonld-id: https://w3id.org/ogc/rim/validityStatus
+    x-jsonld-type: '@vocab'
+  publicationStatus:
+    x-jsonld-id: https://w3id.org/ogc/rim/publicationStatus
+    x-jsonld-type: '@vocab'
+  isRedacted:
+    x-jsonld-id: https://w3id.org/ogc/rim/isRedacted
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean
+  isDeleted:
+    x-jsonld-id: https://w3id.org/ogc/rim/isDeleted
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#boolean
+  title: http://purl.org/dc/terms/title
+  description: http://purl.org/dc/terms/description
+  relatedItem:
+    x-jsonld-id: https://w3id.org/ogc/rim/relatedItem
+    x-jsonld-type: '@id'
+  supersededBy:
+    x-jsonld-id: https://w3id.org/ogc/rim/supersededBy
+    x-jsonld-type: '@id'
+  supersedes:
+    x-jsonld-id: https://w3id.org/ogc/rim/supersedes
+    x-jsonld-type: '@id'
+  hasAction:
+    x-jsonld-id: https://w3id.org/ogc/rim/hasAction
+    x-jsonld-type: '@id'
+x-jsonld-prefixes:
+  rim: https://w3id.org/ogc/rim/
+  prov: http://www.w3.org/ns/prov#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  dct: http://purl.org/dc/terms/
+  apkg: http://w3id.org/apkg/terms#
+  schema: https://schema.org/
+x-bblocks-metadata:
+  itemIdentifier: geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud
+  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-10-30'

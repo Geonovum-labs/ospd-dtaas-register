@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Subsidence Analysis Activity Type",
+  "description": "A profile of the Geoprocessing Activity Type for subsidence analysis activities.\n",
+  "allOf": [
+    {
+      "$ref": "https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "https://w3id.org/ogc/rim/activity-type/ActivityType"
+        },
+        "itemClass": {
+          "const": "https://w3id.org/ogc/rim/activity-type/activityTypeItemClass"
+        },
+        "usedEntityType": {
+          "const": "https://example.org/def/SurchargeArea"
+        },
+        "generatedEntityType": {
+          "const": "https://example.org/def/SubsidenceResult"
+        },
+        "associatedAgentType": {
+          "const": "http://www.w3.org/ns/prov#SoftwareAgent"
+        }
+      },
+      "required": [
+        "usedEntityType",
+        "generatedEntityType",
+        "associatedAgentType"
+      ]
+    }
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis",
+    "register": "https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-10-30"
+  }
+}

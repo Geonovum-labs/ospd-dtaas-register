@@ -1,0 +1,32 @@
+{
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.json"
+    },
+    {
+      "properties": {
+        "inputs": {
+          "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputDescription/schema.json",
+          "additionalProperties": false
+        },
+        "outputs": {
+          "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputDescription/schema.json",
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "x-jsonld-extra-terms": {
+    "id": "@id",
+    "version": "http://purl.org/dc/terms/hasVersion",
+    "title": "http://purl.org/dc/terms/title",
+    "description": "http://purl.org/dc/terms/description",
+    "jobControlOptions": "https://w3id.org/ogc/api/processes/jobControlOptions"
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription",
+    "register": "https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json",
+    "version": "1.0",
+    "dateOfLastChange": "2026-10-30"
+  }
+}
