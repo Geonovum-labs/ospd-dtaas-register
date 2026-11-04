@@ -1,5 +1,5 @@
 Validation report for geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema - Localoutlier process input schema
-Generated 2026-10-30T13:27:50.804578+00:00
+Generated 2026-11-04T16:24:43.369502+00:00
 === Files ===
 Using examples/localoutlier.json from examples
 JSON-LD context is present - uplifting

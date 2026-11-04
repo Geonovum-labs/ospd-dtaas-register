@@ -1,5 +1,33 @@
 {
-  "$ref": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "usedEntityType",
+    "generatedEntityType"
+  ],
+  "properties": {
+    "usedEntityType": {
+      "type": "string",
+      "format": "uri",
+      "description": "A type of prov:Entity that activities of this type use (prov:used) \u2014 for example a type of input dataset."
+    },
+    "generatedEntityType": {
+      "type": "string",
+      "format": "uri",
+      "description": "A type of prov:Entity that activities of this type generate (prov:generated) \u2014 for example a type of output product."
+    },
+    "associatedAgentType": {
+      "type": "string",
+      "format": "uri",
+      "description": "A type of prov:Agent (for example prov:Person, prov:SoftwareAgent, or a narrower role-bearing type) that activities of this type are associated with (prov:wasAssociatedWith)."
+    },
+    "informedByActivityType": {
+      "type": "string",
+      "format": "uri",
+      "description": "A type of acttype:ActivityType whose instances typically inform activities of this type (prov:wasInformedBy) \u2014 for example an upstream preparation activity type."
+    }
+  },
+  "unevaluatedProperties": true,
   "x-bblocks-metadata": {
     "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml",
     "register": "https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json",

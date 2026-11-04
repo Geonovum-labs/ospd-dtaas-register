@@ -1,5 +1,5 @@
 Validation report for geonovum.dtaas.ogcapi.processes.ldv.localoutlier-ipt - Opentelemetry trace from Localoutlier Factor OGC API Process
-Generated 2026-10-30T13:27:57.611893+00:00
+Generated 2026-11-04T16:24:50.784011+00:00
 === Files ===
 Using examples/localoutlier-trace.json from examples
 === End Files ===

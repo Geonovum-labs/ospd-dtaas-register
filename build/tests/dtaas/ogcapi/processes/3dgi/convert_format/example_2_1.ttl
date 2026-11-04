@@ -1,0 +1,22 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix apkg: <http://w3id.org/apkg/terms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:convert_format:v1> a acttype:ActivityType ;
+    dct:description "Convert point cloud data between supported formats." ;
+    dct:issued "2026-10-01" ;
+    dct:modified "2026-10-01" ;
+    dct:title "Convert Format" ;
+    apkg:hasInput "point_clouds" ;
+    apkg:hasOutput "converted_point_clouds" ;
+    apkg:processes [ a apkg:Process ;
+            dct:type "CommandLineTool" ;
+            apkg:hasInput "point_clouds" ;
+            apkg:hasOutput "converted_point_clouds" ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:convert_format:v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+

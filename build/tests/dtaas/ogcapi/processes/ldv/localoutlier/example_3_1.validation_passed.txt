@@ -1,5 +1,5 @@
 Validation report for geonovum.dtaas.ogcapi.processes.ldv.localoutlier - Demo OGC API processes instance - LOF
-Generated 2026-10-30T13:27:57.606006+00:00
+Generated 2026-11-04T16:24:50.778038+00:00
 === Files ===
 Using examples/execution-response.json from examples
 === End Files ===

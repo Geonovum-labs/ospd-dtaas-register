@@ -1,0 +1,30 @@
+{
+  "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:convert_format:v1",
+  "type": "https://w3id.org/ogc/rim/activity-type/ActivityType",
+  "objectIdentifier": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:convert_format:v1",
+  "itemClass": "https://w3id.org/ogc/rim/activity-type/activityTypeItemClass",
+  "validityStatus": "valid",
+  "publicationStatus": "published",
+  "title": "Convert Format",
+  "description": "Convert point cloud data between supported formats.",
+  "dct:issued": "2026-10-01",
+  "dct:modified": "2026-10-01",
+  "apkg:hasInput": [
+    "point_clouds"
+  ],
+  "apkg:hasOutput": [
+    "converted_point_clouds"
+  ],
+  "apkg:processes": [
+    {
+      "type": "apkg:Process",
+      "dct:type": "CommandLineTool",
+      "apkg:hasInput": [
+        "point_clouds"
+      ],
+      "apkg:hasOutput": [
+        "converted_point_clouds"
+      ]
+    }
+  ]
+}

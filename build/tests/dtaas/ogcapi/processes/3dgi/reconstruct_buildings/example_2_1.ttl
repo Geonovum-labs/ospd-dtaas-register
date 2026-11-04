@@ -1,0 +1,22 @@
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix apkg: <http://w3id.org/apkg/terms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1> a acttype:ActivityType ;
+    dct:description "Reconstruct 3D building models from point cloud data." ;
+    dct:issued "2026-10-01" ;
+    dct:modified "2026-10-01" ;
+    dct:title "Reconstruct Buildings" ;
+    apkg:hasInput "point_clouds" ;
+    apkg:hasOutput "building_models" ;
+    apkg:processes [ a apkg:Process ;
+            dct:type "CommandLineTool" ;
+            apkg:hasInput "point_clouds" ;
+            apkg:hasOutput "building_models" ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+

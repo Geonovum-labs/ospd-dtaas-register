@@ -3,12 +3,12 @@
   "name": "OSPD / DTaaS block collection",
   "abstract": "OSPD / DTaaS block collection\n",
   "description": "register for various examples of building blocks.\n",
-  "modified": "2026-10-30T13:27:37.364425",
+  "modified": "2026-11-04T16:24:36.412068",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
-      "shortCommitId": "\"862052",
-      "date": "2026-10-26T21:53:11+00:00\""
+      "commitId": "\"c1af50a182c92d7ab055f34158d5605167dfe786",
+      "shortCommitId": "\"c1af50",
+      "date": "2026-11-04T12:47:53+00:00\""
     }
   },
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
@@ -24,7 +24,8 @@
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/register.json",
     "https://ogcincubator.github.io/bblocks-openscience/build/register.json",
-    "https://ogcincubator.github.io/registered-item-model/build/register.json"
+    "https://ogcincubator.github.io/registered-item-model/build/register.json",
+    "https://ogcincubator.github.io/activity-type-register/build/register.json"
   ],
   "bblocks": [
     {
@@ -36,7 +37,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "maturity": "development",
       "tags": [
         "examples",
@@ -82,7 +83,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "maturity": "development",
       "tags": [
         "examples",
@@ -137,7 +138,7 @@
       "license": {
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
       },
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "schema": {
         "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.yaml",
         "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/opentelemetry/trace/schema.json"
@@ -188,7 +189,7 @@
       "license": {
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
       },
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv/",
       "validationPassed": true,
       "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv/",
@@ -249,7 +250,7 @@
       "license": {
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
       },
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/",
       "validationPassed": true,
       "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv-rml-mapper/",
@@ -299,6 +300,189 @@
       }
     },
     {
+      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.3dgi.convert_format",
+      "name": "Convert Format process",
+      "abstract": "Process to convert point cloud data between supported formats using the application package Convert Format.",
+      "highlighted": false,
+      "status": "under-development",
+      "dateTimeAddition": "2026-10-01T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ospd-dtaas-register",
+      "version": "0.1",
+      "dateOfLastChange": "2026-11-04",
+      "maturity": "development",
+      "tags": [
+        "examples",
+        "ogc api",
+        "ogc api processes",
+        "convert format"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.activity-types"
+      ],
+      "shaclShapes": {
+        "ogc.register.activity-types": [
+          "https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+        ],
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+        ],
+        "ogc.rim.core-ontology": [
+          "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+        ]
+      },
+      "license": {
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+      },
+      "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/context.jsonld",
+      "schema": {
+        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/schema.yaml",
+        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/schema.json"
+      },
+      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/schema.yaml",
+      "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/context.jsonld",
+      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/resolvedProperties.json",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/3dgi/convert_format/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/3dgi/convert_format/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/3dgi/convert_format/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.3dgi.convert_format"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings",
+      "name": "Reconstruct Buildings process",
+      "abstract": "Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2026-10-01T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ospd-dtaas-register",
+      "version": "0.1",
+      "dateOfLastChange": "2026-11-04",
+      "maturity": "development",
+      "tags": [
+        "examples",
+        "ogc api",
+        "ogc api processes",
+        "reconstruct buildings"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.activity-types"
+      ],
+      "shaclShapes": {
+        "ogc.register.activity-types": [
+          "https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+        ],
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+        ],
+        "ogc.rim.core-ontology": [
+          "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+        ]
+      },
+      "license": {
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+      },
+      "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/context.jsonld",
+      "schema": {
+        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/schema.yaml",
+        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/schema.json"
+      },
+      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/reconstruct_buildings/schema.yaml",
+      "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/reconstruct_buildings/context.jsonld",
+      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/resolvedProperties.json",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/reconstruct_buildings/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud",
+      "name": "Validate Point Cloud process",
+      "abstract": "Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.",
+      "highlighted": false,
+      "status": "under-development",
+      "dateTimeAddition": "2026-10-01T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ospd-dtaas-register",
+      "version": "0.1",
+      "dateOfLastChange": "2026-11-04",
+      "maturity": "development",
+      "tags": [
+        "examples",
+        "ogc api",
+        "ogc api processes",
+        "point cloud"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.register.activity-types"
+      ],
+      "shaclShapes": {
+        "ogc.register.activity-types": [
+          "https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+        ],
+        "ogc.model.cross-domain.prov": [
+          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+        ],
+        "ogc.rim.core-ontology": [
+          "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+        ]
+      },
+      "license": {
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
+      },
+      "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/validate_point_cloud/context.jsonld",
+      "schema": {
+        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/validate_point_cloud/schema.yaml",
+        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/validate_point_cloud/schema.json"
+      },
+      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/validate_point_cloud/schema.yaml",
+      "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/validate_point_cloud/context.jsonld",
+      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/validate_point_cloud/resolvedProperties.json",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/validate_point_cloud/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/3dgi/validate_point_cloud/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/3dgi/validate_point_cloud/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/3dgi/validate_point_cloud/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud"
+        }
+      }
+    },
+    {
       "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputDescription",
       "name": "Localoutlier process input description",
       "abstract": "Input description for the localoutlier process",
@@ -307,7 +491,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "maturity": "development",
       "tags": [
         "examples",
@@ -356,7 +540,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "maturity": "development",
       "tags": [
         "examples",
@@ -405,7 +589,7 @@
       "itemClass": "schema",
       "register": "ospd-dtaas-register",
       "version": "1.0",
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "maturity": "development",
       "tags": [
         "examples",
@@ -414,17 +598,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://ogc.model.registered-item.register-item-classes.geoprocessing",
-        "bblocks://ogc.model.registered-item.rim.registered-item"
+        "bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputDescription"
       ],
-      "shaclShapes": {
-        "ogc.model.registered-item.register-item-classes.geoprocessing": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl"
-        ],
-        "ogc.model.cross-domain.prov": [
-          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-        ]
-      },
       "license": {
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
       },
@@ -462,7 +637,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "maturity": "development",
       "tags": [
         "examples",
@@ -471,17 +646,59 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "bblocks://ogc.model.registered-item.register-item-classes.geoprocessing",
-        "bblocks://ogc.model.registered-item.rim.registered-item"
+        "bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputDescription",
+        "bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription",
+        "bblocks://ogc.api.processes.v1.schemas.process"
       ],
-      "shaclShapes": {
-        "ogc.model.registered-item.register-item-classes.geoprocessing": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl"
-        ],
-        "ogc.model.cross-domain.prov": [
-          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-        ]
+      "license": {
+        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
       },
+      "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/context.jsonld",
+      "schema": {
+        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/schema.yaml",
+        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/schema.json"
+      },
+      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription/schema.yaml",
+      "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription/context.jsonld",
+      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/resolvedProperties.json",
+      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/ldv/schemas/localoutlier/processDescription/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions",
+      "name": "Example OGC API Processes instance output descriptions",
+      "abstract": "Collection of output descriptions",
+      "status": "under-development",
+      "dateTimeAddition": "2025-12-17T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc-building-block-examples",
+      "version": "1.0",
+      "dateOfLastChange": "2026-11-04",
+      "maturity": "development",
+      "tags": [
+        "examples",
+        "ogc api",
+        "ogc api processes"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription"
+      ],
       "license": {
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
       },
@@ -511,199 +728,6 @@
       }
     },
     {
-      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.3dgi.convert_format",
-      "name": "Convert Format process",
-      "abstract": "Process to convert point cloud data between supported formats using the application package Convert Format.",
-      "highlighted": false,
-      "status": "under-development",
-      "dateTimeAddition": "2026-10-01T00:00:00Z",
-      "itemClass": "schema",
-      "register": "ospd-dtaas-register",
-      "version": "0.1",
-      "dateOfLastChange": "2026-10-30",
-      "maturity": "development",
-      "tags": [
-        "examples",
-        "ogc api",
-        "ogc api processes",
-        "convert format"
-      ],
-      "dependsOn": [
-        "bblocks://ogc.register.activity-types",
-        "bblocks://ogc.register.schemas.geoprocessing-activity-types-schema"
-      ],
-      "shaclShapes": {
-        "ogc.model.registered-item.register-item-classes.geoprocessing": [
-          "https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl"
-        ],
-        "ogc.model.cross-domain.prov": [
-          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-        ],
-        "ogc.rim.core-ontology": [
-          "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-        ],
-        "ogc.register.geoprocessing-activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
-        ]
-      },
-      "license": {
-        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
-      },
-      "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/context.jsonld",
-      "schema": {
-        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/schema.yaml",
-        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/schema.json"
-      },
-      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/schema.yaml",
-      "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/context.jsonld",
-      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/convert_format/resolvedProperties.json",
-      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/convert_format/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/3dgi/convert_format/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/3dgi/convert_format/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.3dgi.convert_format"
-        }
-      }
-    },
-    {
-      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings",
-      "name": "Reconstruct Buildings process",
-      "abstract": "Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.",
-      "highlighted": true,
-      "status": "under-development",
-      "dateTimeAddition": "2026-10-01T00:00:00Z",
-      "itemClass": "schema",
-      "register": "ospd-dtaas-register",
-      "version": "0.1",
-      "dateOfLastChange": "2026-10-30",
-      "maturity": "development",
-      "tags": [
-        "examples",
-        "ogc api",
-        "ogc api processes",
-        "reconstruct buildings"
-      ],
-      "dependsOn": [
-        "bblocks://ogc.register.activity-types",
-        "bblocks://ogc.register.schemas.geoprocessing-activity-types-schema"
-      ],
-      "shaclShapes": {
-        "ogc.register.activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
-        ],
-        "ogc.model.cross-domain.prov": [
-          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-        ],
-        "ogc.rim.core-ontology": [
-          "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-        ],
-        "ogc.register.geoprocessing-activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
-        ]
-      },
-      "license": {
-        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
-      },
-      "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/context.jsonld",
-      "schema": {
-        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/schema.yaml",
-        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/schema.json"
-      },
-      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/reconstruct_buildings/schema.yaml",
-      "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/reconstruct_buildings/context.jsonld",
-      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/resolvedProperties.json",
-      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/reconstruct_buildings/",
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings"
-        }
-      }
-    },
-    {
-      "itemIdentifier": "geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud",
-      "name": "Validate Point Cloud process",
-      "abstract": "Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.",
-      "highlighted": false,
-      "status": "under-development",
-      "dateTimeAddition": "2026-10-01T00:00:00Z",
-      "itemClass": "schema",
-      "register": "ospd-dtaas-register",
-      "version": "0.1",
-      "dateOfLastChange": "2026-10-30",
-      "maturity": "development",
-      "tags": [
-        "examples",
-        "ogc api",
-        "ogc api processes",
-        "point cloud"
-      ],
-      "dependsOn": [
-        "bblocks://ogc.register.activity-types",
-        "bblocks://ogc.register.schemas.geoprocessing-activity-types-schema"
-      ],
-      "shaclShapes": {
-        "ogc.register.activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
-        ],
-        "ogc.model.cross-domain.prov": [
-          "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
-        ],
-        "ogc.rim.core-ontology": [
-          "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
-        ],
-        "ogc.register.geoprocessing-activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
-        ]
-      },
-      "license": {
-        "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
-      },
-      "ldContext": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/validate_point_cloud/context.jsonld",
-      "schema": {
-        "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/validate_point_cloud/schema.yaml",
-        "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/validate_point_cloud/schema.json"
-      },
-      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/validate_point_cloud/schema.yaml",
-      "sourceLdContext": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/validate_point_cloud/context.jsonld",
-      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/validate_point_cloud/resolvedProperties.json",
-      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/3dgi/validate_point_cloud/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/3dgi/validate_point_cloud/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/3dgi/validate_point_cloud/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/json-full/dtaas/ogcapi/processes/3dgi/validate_point_cloud/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/bblock/geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud"
-        }
-      }
-    },
-    {
       "itemIdentifier": "geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis",
       "name": "Subsidence Analysis",
       "abstract": "A registered geoprocessing activity type for performing settlement calculations for urban development using the Deltares Atlantis calculation module.",
@@ -713,7 +737,7 @@
       "dateTimeAddition": "2026-10-30T00:00:00Z",
       "register": "ospd-dtaas-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "maturity": "development",
       "tags": [
         "examples",
@@ -727,10 +751,10 @@
       ],
       "shaclShapes": {
         "ogc.register.geoprocessing-activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
+          "https://ogcincubator.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
         ],
         "ogc.register.activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+          "https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -777,7 +801,7 @@
       "itemClass": "api",
       "register": "ospd-dtaas-register",
       "version": "1.0",
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "maturity": "development",
       "tags": [
         "examples",
@@ -864,7 +888,7 @@
       "license": {
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
       },
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/localoutlier-ipt/",
       "validationPassed": true,
       "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/ldv/localoutlier-ipt/",
@@ -902,7 +926,6 @@
       ],
       "dependsOn": [
         "bblocks://geonovum.dtaas.ogcapi.processes.ldv.localoutlier-ipt",
-        "bblocks://geonovum.dtaas.opentelemetry.trace",
         "bblocks://ogc.register.schemas.st-ml-activity-types-schema"
       ],
       "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references.",
@@ -916,10 +939,10 @@
       ],
       "shaclShapes": {
         "ogc.register.geoprocessing-activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
+          "https://ogcincubator.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl"
         ],
         "ogc.register.activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+          "https://ogcincubator.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
         ],
         "ogc.model.cross-domain.prov": [
           "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
@@ -928,7 +951,7 @@
           "https://geonovum-labs.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
         ],
         "ogc.register.st-ml-activity-types": [
-          "https://geonovum-labs.github.io/activity-type-register/_sources/st-ml-activity-types/shapes.shacl"
+          "https://ogcincubator.github.io/activity-type-register/_sources/st-ml-activity-types/shapes.shacl"
         ],
         "ogc.contrib.stac.extensions.mlm-ontology": [
           "https://ogcincubator.github.io/bblocks-stac/_sources/extensions/mlm-ontology/shapes.shacl"
@@ -937,7 +960,7 @@
       "license": {
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
       },
-      "dateOfLastChange": "2026-10-30",
+      "dateOfLastChange": "2026-11-04",
       "schema": {
         "application/yaml": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/opentelemetry-mapping-rml/schema.yaml",
         "application/json": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/opentelemetry-mapping-rml/schema.json"
@@ -945,7 +968,7 @@
       "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/opentelemetry-mapping-rml/schema.yaml",
       "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/opentelemetry-mapping-rml/resolvedProperties.json",
       "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/opentelemetry-mapping-rml/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/ldv/opentelemetry-mapping-rml/",
       "transforms": [
         {
@@ -968,13 +991,10 @@
                 "label": "RDF/Turtle",
                 "defaultExtension": "ttl"
               }
-            ],
-            "profiles": [
-              "bblocks://geonovum.dtaas.ogcapi.processes.ldv.otel-ipt"
             ]
           },
-          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/opentelemetry-mapping-rml/examples/otel-prov.rml.ttl",
-          "code": "@prefix rr: <http://www.w3.org/ns/r2rml#> .\n@prefix rml: <http://semweb.mmlab.be/ns/rml#> .\n@prefix ql: <http://semweb.mmlab.be/ns/ql#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix ex: <https://example.org/terms/> .\n@base <http://example.com/ns#> .\n\n<#ResultMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:constant \"http://example.org/result/localoutlier_simple\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate dcterms:description ;\n    rr:objectMap [ rr:constant \"Example IPT provenance output for a Local Outlier Factor process after the OTLP-to-PROV mapping.\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate ex:process ;\n    rr:objectMap [ rr:parentTriplesMap <#ProcessMap> ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate ex:provenance ;\n    rr:objectMap [ rr:parentTriplesMap <#ProvenanceMap> ]\n  ] .\n\n<#ProcessMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:constant \"localoutlier_simple\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"https://example.org/processes/localoutlier_simple\" ]\n  ] .\n\n<#ProvenanceMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:constant \"http://example.org/provenance/localoutlier_simple\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:activity ;\n    rr:objectMap [ rr:parentTriplesMap <#ActivityMap> ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:used ;\n    rr:objectMap [ rr:parentTriplesMap <#DataProductMap> ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:used ;\n    rr:objectMap [ rr:parentTriplesMap <#InputValueMap> ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:wasAssociatedWith ;\n    rr:objectMap [ rr:parentTriplesMap <#AgentMap> ]\n  ] .\n\n<#ActivityMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"{attributes[0].value.stringValue}\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"http://www.w3.org/ns/prov#Activity\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdfs:label ;\n    rr:objectMap [ rr:template \"{name}\" ]\n  ] .\n\n<#DataProductMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"{attributes[1].value.stringValue}\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"http://www.w3.org/ns/prov#Entity\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:role ;\n    rr:objectMap [ rr:constant \"dataObject\" ]\n  ] .\n\n<#InputValueMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[0].attributes[2].value.arrayValue.values[*]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"http://example.org/used/{intValue}\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"http://www.w3.org/ns/prov#Entity\" ]\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate prov:role ;\n    rr:objectMap [ rr:constant \"input\" ]\n  ] .\n\n<#AgentMap> a rr:TriplesMap ;\n  rml:logicalSource [\n    rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n    rml:referenceFormulation ql:JSONPath ;\n    rml:iterator \"$.resourceSpans[*]\"\n  ] ;\n  rr:subjectMap [\n    rr:template \"{resource.attributes[0].value.stringValue}\"\n  ] ;\n  rr:predicateObjectMap [\n    rr:predicate rdf:type ;\n    rr:objectMap [ rr:constant \"http://www.w3.org/ns/prov#SoftwareAgent\" ]\n  ] .\n"
+          "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/opentelemetry-mapping-rml/examples/otel-prov-stml.rml.ttl",
+          "code": "@prefix rr:      <http://www.w3.org/ns/r2rml#> .\n@prefix rml:     <http://semweb.mmlab.be/ns/rml#> .\n@prefix ql:      <http://semweb.mmlab.be/ns/ql#> .\n@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .\n@prefix prov:    <http://www.w3.org/ns/prov#> .\n@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n\n@base <http://trace.example.com/mapping/> .\n\n\n#################################################################\n# 1. ACTIVITY MAPPING (Gebaseerd op OpenTelemetry Spans)[cite: 1]\n#################################################################\n\n<#ActivityMapping>\n    a rr:TriplesMap ;\n\n    rml:logicalSource [\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n        rml:referenceFormulation ql:JSONPath ;\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*]\"\n    ] ;\n\n    rr:subjectMap [\n        rr:template \"http://trace.example.com/activity/{spanId}\" ;\n        rr:class prov:Activity ;\n        rr:termType rr:IRI\n    ] ;\n\n    rr:predicateObjectMap [\n        rr:predicate rdfs:label ;\n        rr:objectMap [\n            rml:reference \"name\" ;\n            rr:datatype xsd:string\n        ]\n    ] ;\n\n    # associatedAgentType koppeling (prov:wasAssociatedWith)[cite: 2]\n    rr:predicateObjectMap [\n        rr:predicate prov:wasAssociatedWith ;\n        rr:objectMap [\n            rr:parentTriplesMap <#AssociatedAgentMapping>\n        ]\n    ] ;\n\n    # usedEntityType koppeling (prov:used - dataset)[cite: 2]\n    rr:predicateObjectMap [\n        rr:predicate prov:used ;\n        rr:objectMap [\n            rr:parentTriplesMap <#UsedEntityDatasetMapping>\n        ]\n    ] ;\n\n    # generatedEntityType koppeling (prov:generated - dataproduct)[cite: 2]\n    rr:predicateObjectMap [\n        rr:predicate prov:generated ;\n        rr:objectMap [\n            rr:parentTriplesMap <#GeneratedEntityDataProductMapping>\n        ]\n    ] .\n\n\n#################################################################\n# 2. ASSOCIATED AGENT (associatedAgentType)[cite: 2]\n#################################################################\n\n<#AssociatedAgentMapping>\n    a rr:TriplesMap ;\n\n    rml:logicalSource [\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n        rml:referenceFormulation ql:JSONPath ;\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.processing_activity_id')]\"\n    ] ;\n\n    rr:subjectMap [\n        rr:template \"http://trace.example.com/agent/{value.stringValue}\" ;\n        rr:class prov:Agent ;\n        rr:termType rr:IRI\n    ] ;\n\n    rr:predicateObjectMap [\n        rr:predicate rdfs:label ;\n        rr:objectMap [\n            rml:reference \"value.stringValue\" ;\n            rr:datatype xsd:string\n        ]\n    ] ;\n\n    rr:predicateObjectMap [\n        rr:predicate dcterms:source ;\n        rr:objectMap [\n            rml:reference \"value.stringValue\" ;\n            rr:termType rr:IRI\n        ]\n    ] .\n\n\n#################################################################\n# 3. USED ENTITY (usedEntityType - Dataset)[cite: 2]\n#################################################################\n\n<#UsedEntityDatasetMapping>\n    a rr:TriplesMap ;\n\n    rml:logicalSource [\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n        rml:referenceFormulation ql:JSONPath ;\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataset_id')]\"\n    ] ;\n\n    rr:subjectMap [\n        rr:template \"http://trace.example.com/entity/dataset/{value.stringValue}\" ;\n        rr:class prov:Entity ;\n        rr:termType rr:IRI\n    ] ;\n\n    rr:predicateObjectMap [\n        rr:predicate rdfs:label ;\n        rr:objectMap [\n            rr:constant \"Dataset\" ;\n            rr:datatype xsd:string\n        ]\n    ] ;\n\n    rr:predicateObjectMap [\n        rr:predicate dcterms:source ;\n        rr:objectMap [\n            rml:reference \"value.stringValue\" ;\n            rr:termType rr:IRI\n        ]\n    ] .\n\n\n#################################################################\n# 4. GENERATED ENTITY (generatedEntityType - Data Product)[cite: 2]\n#################################################################\n\n<#GeneratedEntityDataProductMapping>\n    a rr:TriplesMap ;\n\n    rml:logicalSource [\n        rml:source \"../../../opentelemetry/trace/examples/localoutlier-trace.json\" ;\n        rml:referenceFormulation ql:JSONPath ;\n        rml:iterator \"$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataproduct_id')]\"\n    ] ;\n\n    rr:subjectMap [\n        rr:template \"http://trace.example.com/entity/data-product/{value.stringValue}\" ;\n        rr:class prov:Entity ;\n        rr:termType rr:IRI\n    ] ;\n\n    rr:predicateObjectMap [\n        rr:predicate rdfs:label ;\n        rr:objectMap [\n            rr:constant \"Data Product\" ;\n            rr:datatype xsd:string\n        ]\n    ] ;\n\n    rr:predicateObjectMap [\n        rr:predicate dcterms:source ;\n        rr:objectMap [\n            rml:reference \"value.stringValue\" ;\n            rr:termType rr:IRI\n        ]\n    ] ."
         }
       ],
       "documentation": {

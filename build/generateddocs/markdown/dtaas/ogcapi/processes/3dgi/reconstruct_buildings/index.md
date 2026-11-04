@@ -7,6 +7,134 @@ Process to reconstruct 3D building models from point cloud data using the applic
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Metadata description of Reconstruct Buildings process
+A process description using the APKG metadata profiles
+#### ttl
+```ttl
+@prefix apkg: <http://w3id.org/apkg/terms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1#> .
+
+ex:reconstruct_buildings a apkg:ApplicationPackage ;
+    dct:identifier "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1" ;
+    dct:title "Reconstruct Buildings" ;
+    dct:description "Reconstruct 3D building models from point cloud data." ;
+    dct:issued "2025-12-17"^^xsd:date ;
+    dct:modified "2025-12-17"^^xsd:date .
+    
+ex:reconstructBuildingsProcess a apkg:Process ;
+    dct:type "CommandLineTool" ;
+    apkg:hasInput ex:point_clouds ;
+    apkg:hasOutput ex:building_models .
+
+ex:point_clouds a apkg:Parameter ;
+    dct:identifier "point_clouds" ;
+    dct:type "object" ;
+    apkg:label "point_clouds" .
+
+ex:building_models a apkg:Parameter ;
+    dct:identifier "building_models" ;
+    dct:type "object" ;
+    apkg:label "building_models" .
+
+```
+
+
+### Metadata description of Reconstruct Buildings process in json
+A process description using the APKG metadata profiles
+#### json
+```json
+{
+  "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1",
+  "type": "https://w3id.org/ogc/rim/activity-type/ActivityType",
+  "objectIdentifier": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1",
+  "itemClass": "https://w3id.org/ogc/rim/activity-type/activityTypeItemClass",
+  "validityStatus": "valid",
+  "publicationStatus": "published",
+  "title": "Reconstruct Buildings",
+  "description": "Reconstruct 3D building models from point cloud data.",
+  "dct:issued": "2026-10-01",
+  "dct:modified": "2026-10-01",
+  "apkg:hasInput": ["point_clouds"],
+  "apkg:hasOutput": ["building_models"],
+  "apkg:processes": [
+    {
+      "type": "apkg:Process",
+      "dct:type": "CommandLineTool",
+      "apkg:hasInput": ["point_clouds"],
+      "apkg:hasOutput": ["building_models"]
+    }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/context.jsonld",
+  "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1",
+  "type": "https://w3id.org/ogc/rim/activity-type/ActivityType",
+  "objectIdentifier": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1",
+  "itemClass": "https://w3id.org/ogc/rim/activity-type/activityTypeItemClass",
+  "validityStatus": "valid",
+  "publicationStatus": "published",
+  "title": "Reconstruct Buildings",
+  "description": "Reconstruct 3D building models from point cloud data.",
+  "dct:issued": "2026-10-01",
+  "dct:modified": "2026-10-01",
+  "apkg:hasInput": [
+    "point_clouds"
+  ],
+  "apkg:hasOutput": [
+    "building_models"
+  ],
+  "apkg:processes": [
+    {
+      "type": "apkg:Process",
+      "dct:type": "CommandLineTool",
+      "apkg:hasInput": [
+        "point_clouds"
+      ],
+      "apkg:hasOutput": [
+        "building_models"
+      ]
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
+@prefix apkg: <http://w3id.org/apkg/terms#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1> a acttype:ActivityType ;
+    dct:description "Reconstruct 3D building models from point cloud data." ;
+    dct:issued "2026-10-01" ;
+    dct:modified "2026-10-01" ;
+    dct:title "Reconstruct Buildings" ;
+    apkg:hasInput "point_clouds" ;
+    apkg:hasOutput "building_models" ;
+    apkg:processes [ a apkg:Process ;
+            dct:type "CommandLineTool" ;
+            apkg:hasInput "point_clouds" ;
+            apkg:hasOutput "building_models" ] ;
+    rim:itemClass acttype:activityTypeItemClass ;
+    rim:objectIdentifier "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:valid .
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -14,16 +142,6 @@ $schema: https://json-schema.org/draft/2020-12/schema
 allOf:
 - $ref: https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.yaml
 - properties:
-    dct:identifier:
-      type: string
-      format: uri
-      x-jsonld-id: http://purl.org/dc/terms/identifier
-    dct:title:
-      type: string
-      x-jsonld-id: http://purl.org/dc/terms/title
-    dct:description:
-      type: string
-      x-jsonld-id: http://purl.org/dc/terms/description
     dct:issued:
       type: string
       format: date
@@ -42,10 +160,6 @@ allOf:
       items:
         type: string
       x-jsonld-id: http://w3id.org/apkg/terms#hasOutput
-  required:
-  - dct:identifier
-  - dct:title
-  - dct:issued
 additionalProperties: true
 x-jsonld-extra-terms:
   Register: https://w3id.org/ogc/rim/Register
@@ -199,7 +313,7 @@ x-bblocks-metadata:
   itemIdentifier: geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-04'
 
 ```
 

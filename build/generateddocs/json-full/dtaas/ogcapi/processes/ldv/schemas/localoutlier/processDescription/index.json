@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2026-10-30",
+  "dateOfLastChange": "2026-11-04",
   "maturity": "development",
   "tags": [
     "examples",
@@ -62,7 +62,7 @@
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml\n- properties:\n    inputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputDescription/schema.yaml\n      additionalProperties: false\n    outputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputDescription/schema.yaml\n      additionalProperties: false\nx-jsonld-extra-terms:\n  id: '@id'\n  version: http://purl.org/dc/terms/hasVersion\n  title: http://purl.org/dc/terms/title\n  description: http://purl.org/dc/terms/description\n  jobControlOptions: https://w3id.org/ogc/api/processes/jobControlOptions\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-10-30'\n",
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/process/schema.yaml\n- properties:\n    inputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputDescription/schema.yaml\n      additionalProperties: false\n    outputs:\n      $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputDescription/schema.yaml\n      additionalProperties: false\nx-jsonld-extra-terms:\n  id: '@id'\n  version: http://purl.org/dc/terms/hasVersion\n  title: http://purl.org/dc/terms/title\n  description: http://purl.org/dc/terms/description\n  jobControlOptions: https://w3id.org/ogc/api/processes/jobControlOptions\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-04'\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/ldv/schemas/localoutlier/processDescription"
 }

@@ -42,7 +42,7 @@
   "license": {
     "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
   },
-  "dateOfLastChange": "2026-10-30",
+  "dateOfLastChange": "2026-11-04",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/",
   "validationPassed": true,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv-rml-mapper/",
@@ -79,7 +79,7 @@
   "examples": [
     {
       "title": "OTLP to PROV-O RML transform input",
-      "content": "An OTLP trace transformed into PROV-O RDF using the RML plugin.",
+      "content": "An OTLP trace transformed into PROV-O RDF using the RML plugin. This transform conforms to the LDV Standard and shows the RML Transformation to the LDV Standard.",
       "snippets": [
         {
           "language": "json",

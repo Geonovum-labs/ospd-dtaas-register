@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ospd-dtaas-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-10-30",
+  "dateOfLastChange": "2026-11-04",
   "maturity": "development",
   "tags": [
     "examples",
@@ -59,7 +59,7 @@
       ]
     }
   ],
-  "annotatedSchema": "anyOf:\n- $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputDescription/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-10-30'\n",
+  "annotatedSchema": "anyOf:\n- $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/inputDescription/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-04'\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/ldv/schemas/inputDescriptions"
 }

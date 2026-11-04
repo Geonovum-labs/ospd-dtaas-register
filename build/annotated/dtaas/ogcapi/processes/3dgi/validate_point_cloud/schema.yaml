@@ -154,4 +154,4 @@ x-bblocks-metadata:
   itemIdentifier: geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-04'

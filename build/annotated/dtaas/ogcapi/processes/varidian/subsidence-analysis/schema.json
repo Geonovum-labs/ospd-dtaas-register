@@ -4,7 +4,7 @@
   "description": "A profile of the Geoprocessing Activity Type for subsidence analysis activities.\n",
   "allOf": [
     {
-      "$ref": "https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.json"
+      "$ref": "https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.yaml"
     },
     {
       "type": "object",
@@ -36,6 +36,6 @@
     "itemIdentifier": "geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis",
     "register": "https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json",
     "version": "0.1",
-    "dateOfLastChange": "2026-10-30"
+    "dateOfLastChange": "2026-11-04"
   }
 }

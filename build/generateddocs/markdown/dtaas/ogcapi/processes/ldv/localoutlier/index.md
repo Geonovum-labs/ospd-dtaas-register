@@ -10,7 +10,7 @@ An example of an OGC API Processes implementation using building blocks - Local 
 ## Examples
 
 ### Localoutlier process description
-A process description returned by the custom API.
+A process description returned by the Localoutlier API.
 #### json
 ```json
 {

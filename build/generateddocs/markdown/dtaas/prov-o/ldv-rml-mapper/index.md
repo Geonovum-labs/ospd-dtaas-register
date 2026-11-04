@@ -10,7 +10,7 @@ OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
 ## Examples
 
 ### OTLP to PROV-O RML transform input
-An OTLP trace transformed into PROV-O RDF using the RML plugin.
+An OTLP trace transformed into PROV-O RDF using the RML plugin. This transform conforms to the LDV Standard and shows the RML Transformation to the LDV Standard.
 #### json
 ```json
 {

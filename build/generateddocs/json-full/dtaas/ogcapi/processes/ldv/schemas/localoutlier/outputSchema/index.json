@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2026-10-30",
+  "dateOfLastChange": "2026-11-04",
   "maturity": "development",
   "tags": [
     "examples",
@@ -43,7 +43,7 @@
       ]
     }
   ],
-  "annotatedSchema": "type: object\nproperties:\n  output_dataset:\n    type: object\n    contentMediaType: application/json\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-10-30'\n",
+  "annotatedSchema": "type: object\nproperties:\n  output_dataset:\n    type: object\n    contentMediaType: application/json\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-04'\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/ldv/schemas/localoutlier/outputSchema"
 }

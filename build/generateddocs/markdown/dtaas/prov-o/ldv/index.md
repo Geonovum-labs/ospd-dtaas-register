@@ -10,7 +10,7 @@ target Prov-o schema for LDV
 ## Examples
 
 ### LDV PROV-O Schema
-LDV PROV-O schema
+LDV PROV-O schema. This is an example of a schema that conforms to the LDV standard
 #### ttl
 ```ttl
 @prefix prov: <http://www.w3.org/ns/prov#> .

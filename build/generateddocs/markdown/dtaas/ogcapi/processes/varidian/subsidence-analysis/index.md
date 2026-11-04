@@ -99,7 +99,7 @@ x-bblocks-metadata:
   itemIdentifier: geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-10-30'
+  dateOfLastChange: '2026-11-04'
 
 ```
 

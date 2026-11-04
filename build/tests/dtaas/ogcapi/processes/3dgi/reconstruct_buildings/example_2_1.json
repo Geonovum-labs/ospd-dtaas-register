@@ -1,0 +1,30 @@
+{
+  "id": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1",
+  "type": "https://w3id.org/ogc/rim/activity-type/ActivityType",
+  "objectIdentifier": "https://processes.staging.roofer-online.nl/ogcapi/processes/roofer:reconstruct_buildings:v1",
+  "itemClass": "https://w3id.org/ogc/rim/activity-type/activityTypeItemClass",
+  "validityStatus": "valid",
+  "publicationStatus": "published",
+  "title": "Reconstruct Buildings",
+  "description": "Reconstruct 3D building models from point cloud data.",
+  "dct:issued": "2026-10-01",
+  "dct:modified": "2026-10-01",
+  "apkg:hasInput": [
+    "point_clouds"
+  ],
+  "apkg:hasOutput": [
+    "building_models"
+  ],
+  "apkg:processes": [
+    {
+      "type": "apkg:Process",
+      "dct:type": "CommandLineTool",
+      "apkg:hasInput": [
+        "point_clouds"
+      ],
+      "apkg:hasOutput": [
+        "building_models"
+      ]
+    }
+  ]
+}

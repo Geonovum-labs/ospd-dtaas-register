@@ -38,6 +38,24 @@ target Prov-o schema for LDV
 
 OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
 
+### `geonovum.dtaas.ogcapi.processes.3dgi.convert_format` — Convert Format process
+
+**Type:** schema
+
+Process to convert point cloud data between supported formats using the application package Convert Format.
+
+### `geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings` — Reconstruct Buildings process
+
+**Type:** schema
+
+Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.
+
+### `geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud` — Validate Point Cloud process
+
+**Type:** schema
+
+Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.
+
 ### `geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputDescription` — Localoutlier process input description
 
 **Type:** schema
@@ -67,24 +85,6 @@ Process description for the localoutlier process
 **Type:** schema
 
 Collection of output descriptions
-
-### `geonovum.dtaas.ogcapi.processes.3dgi.convert_format` — Convert Format process
-
-**Type:** schema
-
-Process to convert point cloud data between supported formats using the application package Convert Format.
-
-### `geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings` — Reconstruct Buildings process
-
-**Type:** schema
-
-Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.
-
-### `geonovum.dtaas.ogcapi.processes.3dgi.validate_point_cloud` — Validate Point Cloud process
-
-**Type:** schema
-
-Process to validate point cloud data for OGC API Processes using the application package Validate Point Cloud.
 
 ### `geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis` — Subsidence Analysis
 
