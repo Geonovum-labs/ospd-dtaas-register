@@ -1,6 +1,6 @@
 examples:
   - title: LDV PROV-O Schema
-    content: LDV PROV-O schema 
+    content: LDV PROV-O schema. This is an example of a schema that conforms to the LDV standard
     snippets:
       - language: ttl
         ref: examples/ldv.ttl

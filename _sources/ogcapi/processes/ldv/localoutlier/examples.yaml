@@ -1,6 +1,7 @@
 examples:
+
   - title: Localoutlier process description
-    content: A process description returned by the custom API.
+    content: A process description returned by the Localoutlier API.
     snippets:
       - language: json
         ref: examples/process-description.json

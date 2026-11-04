@@ -48,8 +48,8 @@
             prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.register.geoprocessing-activity-types> ;
-            prof:hasArtifact <https://geonovum-labs.github.io/activity-type-register/_sources/geoprocessing-activity-types/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.model.registered-item.register-item-classes.geoprocessing> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
@@ -98,10 +98,11 @@
         "ogc api",
         "ogc api processes",
         "reconstruct buildings" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/schema.yaml> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.registered-item.register-item-classes.geoprocessing> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl> ;
+            prof:hasRole role:validation ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/3dgi/reconstruct_buildings/schema.json> ;
@@ -299,8 +300,8 @@
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.register.activity-types> ;
-            prof:hasArtifact <https://geonovum-labs.github.io/activity-type-register/_sources/activity-types/shapes.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.model.registered-item.register-item-classes.geoprocessing> ;
+            prof:hasArtifact <https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
@@ -785,9 +786,8 @@
     dct:description """register for various examples of building blocks.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:license [ rdfs:seeAlso <https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE> ] ;
-    dct:modified "2026-10-30T13:27:37.364425"^^xsd:dateTime ;
-    owl:imports <https://geonovum-labs.github.io/activity-type-register/build/register.json>,
-        <https://geonovum-labs.github.io/registered-item-model/build/register.json>,
+    dct:modified "2026-10-01T13:36:29.075624"^^xsd:dateTime ;
+    owl:imports <https://ogcincubator.github.io/registered-item-model/build/register.json>,
         <https://ogcincubator.github.io/bblocks-ogcapi-processes/build/register.json>,
         <https://ogcincubator.github.io/bblocks-openscience/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> ;

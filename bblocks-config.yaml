@@ -19,8 +19,10 @@ imports:
   # - https://opengeospatial.github.io/ogcapi-sosa/build/register.json
   - https://ogcincubator.github.io/bblocks-ogcapi-processes
   - https://ogcincubator.github.io/bblocks-openscience/
-  - https://geonovum-labs.github.io/registered-item-model/build/register.json
-  - https://geonovum-labs.github.io/activity-type-register/build/register.json
+  # - https://geonovum-labs.github.io/registered-item-model/build/register.json
+  - https://ogcincubator.github.io/registered-item-model/build/register.json
+  # - https://geonovum-labs.github.io/activity-type-register/build/register.json
+  - https://ogcincubator.github.io/activity-type-register/build/register.json
 
 plugins:
   transforms:

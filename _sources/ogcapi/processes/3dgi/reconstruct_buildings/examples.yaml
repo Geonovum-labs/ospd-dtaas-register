@@ -1,0 +1,12 @@
+examples:
+  - title: Metadata description of Reconstruct Buildings process
+    content: A process description using the APKG metadata profiles
+    snippets:
+      - language: ttl
+        ref: examples/metadata.ttl
+
+  - title: Metadata description of Reconstruct Buildings process in json
+    content: A process description using the APKG metadata profiles
+    snippets:
+      - language: json
+        ref: examples/metadata.json

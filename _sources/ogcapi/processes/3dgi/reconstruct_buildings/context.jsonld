@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/registered-item/context.jsonld",
+    "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item/context.jsonld",
     {
       "apkg": "http://w3id.org/apkg/terms#",
       "dct": "http://purl.org/dc/terms/",

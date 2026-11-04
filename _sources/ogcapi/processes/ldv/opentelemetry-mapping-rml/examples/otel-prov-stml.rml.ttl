@@ -1,0 +1,169 @@
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+@prefix rml:     <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql:      <http://semweb.mmlab.be/ns/ql#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@base <http://trace.example.com/mapping/> .
+
+
+#################################################################
+# 1. ACTIVITY MAPPING (Gebaseerd op OpenTelemetry Spans)[cite: 1]
+#################################################################
+
+<#ActivityMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/activity/{spanId}" ;
+        rr:class prov:Activity ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "name" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    # associatedAgentType koppeling (prov:wasAssociatedWith)[cite: 2]
+    rr:predicateObjectMap [
+        rr:predicate prov:wasAssociatedWith ;
+        rr:objectMap [
+            rr:parentTriplesMap <#AssociatedAgentMapping>
+        ]
+    ] ;
+
+    # usedEntityType koppeling (prov:used - dataset)[cite: 2]
+    rr:predicateObjectMap [
+        rr:predicate prov:used ;
+        rr:objectMap [
+            rr:parentTriplesMap <#UsedEntityDatasetMapping>
+        ]
+    ] ;
+
+    # generatedEntityType koppeling (prov:generated - dataproduct)[cite: 2]
+    rr:predicateObjectMap [
+        rr:predicate prov:generated ;
+        rr:objectMap [
+            rr:parentTriplesMap <#GeneratedEntityDataProductMapping>
+        ]
+    ] .
+
+
+#################################################################
+# 2. ASSOCIATED AGENT (associatedAgentType)[cite: 2]
+#################################################################
+
+<#AssociatedAgentMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.processing_activity_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/agent/{value.stringValue}" ;
+        rr:class prov:Agent ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate dcterms:source ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+
+#################################################################
+# 3. USED ENTITY (usedEntityType - Dataset)[cite: 2]
+#################################################################
+
+<#UsedEntityDatasetMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataset_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/entity/dataset/{value.stringValue}" ;
+        rr:class prov:Entity ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rr:constant "Dataset" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate dcterms:source ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:termType rr:IRI
+        ]
+    ] .
+
+
+#################################################################
+# 4. GENERATED ENTITY (generatedEntityType - Data Product)[cite: 2]
+#################################################################
+
+<#GeneratedEntityDataProductMapping>
+    a rr:TriplesMap ;
+
+    rml:logicalSource [
+        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:referenceFormulation ql:JSONPath ;
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataproduct_id')]"
+    ] ;
+
+    rr:subjectMap [
+        rr:template "http://trace.example.com/entity/data-product/{value.stringValue}" ;
+        rr:class prov:Entity ;
+        rr:termType rr:IRI
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ;
+        rr:objectMap [
+            rr:constant "Data Product" ;
+            rr:datatype xsd:string
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate dcterms:source ;
+        rr:objectMap [
+            rml:reference "value.stringValue" ;
+            rr:termType rr:IRI
+        ]
+    ] .

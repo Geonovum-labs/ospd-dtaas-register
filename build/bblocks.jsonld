@@ -234,8 +234,7 @@
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://ogcincubator.github.io/bblocks-ogcapi-processes/build/register.json",
     "https://ogcincubator.github.io/bblocks-openscience/build/register.json",
-    "https://geonovum-labs.github.io/registered-item-model/build/register.json",
-    "https://geonovum-labs.github.io/activity-type-register/build/register.json"
+    "https://ogcincubator.github.io/registered-item-model/build/register.json"
   ],
   "transformPlugins": [
     {
@@ -872,27 +871,13 @@
           "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
         },
         {
-          "prof:hasArtifact": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/inputDescriptions/schema.json",
-          "prof:hasRole": "role:schema",
-          "dct:format": "application/json",
-          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
-        }
-      ],
-      "sourceSchema": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/inputDescriptions/schema.yaml",
-      "ldContext": {
-        "prof:hasArtifact": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/inputDescriptions/context.jsonld",
-        "prof:hasRole": "role:mapping",
-        "dct:format": "application/ld+json",
-        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
-      },
-      "resolvedSchemaProperties": "https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/inputDescriptions/resolvedProperties.json",
-      "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/ogcapi/processes/ldv/schemas/inputDescriptions/",
-      "validationPassed": true,
-      "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/ogcapi/processes/ldv/schemas/inputDescriptions/",
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/generateddocs/markdown/dtaas/ogcapi/processes/ldv/schemas/inputDescriptions/index.md"
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.register-item-classes.geoprocessing",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
         },
         "json-full": {
           "mediatype": "application/json",
@@ -1018,7 +1003,28 @@
       ],
       "shaclShapes": null,
       "dependsOn": [
-        "bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription"
+        "bblocks://ogc.model.registered-item.register-item-classes.geoprocessing",
+        "bblocks://ogc.model.registered-item.rim.registered-item"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.registered-item.register-item-classes.geoprocessing",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.model.cross-domain.prov",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
       ],
       "license": {
         "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
@@ -1103,7 +1109,7 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://geonovum-labs.github.io/activity-type-register/_sources/activity-types/shapes.shacl"
+            "https://ogcincubator.github.io/registered-item-model/_sources/register-item-classes/geoprocessing/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.register.activity-types",
           "prof:hasRole": "role:validation",

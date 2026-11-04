@@ -6,19 +6,6 @@ $schema: https://json-schema.org/draft/2020-12/schema
 allOf:
   - $ref: "https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.yaml"
   - properties:
-      "dct:identifier":
-        type: string
-        format: uri
-      "dct:title":
-        type: string
-      "dct:description":
-        type: string
-      "dct:issued":
-        type: string
-        format: date
-      "dct:modified":
-        type: string
-        format: date
       "apkg:hasInput":
         type: array
         items:
@@ -27,8 +14,4 @@ allOf:
         type: array
         items:
           type: string
-    required:
-      - "dct:identifier"
-      - "dct:title"
-      - "dct:issued"
 additionalProperties: true
