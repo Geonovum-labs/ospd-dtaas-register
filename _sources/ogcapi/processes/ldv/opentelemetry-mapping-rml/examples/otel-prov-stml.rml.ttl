@@ -4,20 +4,22 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix acttype: <https://w3id.org/ogc/rim/activity-type/> .
 
 @base <http://trace.example.com/mapping/> .
 
 
 #################################################################
-# 1. ACTIVITY MAPPING (Gebaseerd op OpenTelemetry Spans)[cite: 1]
+# 1. ACTIVITY MAPPING
 #################################################################
 
 <#ActivityMapping>
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:source "../../localoutlier-ipt/examples/localoutlier-trace.json" ;
         rml:referenceFormulation ql:JSONPath ;
         rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*]"
     ] ;
@@ -29,6 +31,11 @@
     ] ;
 
     rr:predicateObjectMap [
+        rr:predicate rdf:type ;
+        rr:object prov:Activity
+    ] ;
+
+    rr:predicateObjectMap [
         rr:predicate rdfs:label ;
         rr:objectMap [
             rml:reference "name" ;
@@ -36,46 +43,91 @@
         ]
     ] ;
 
-    # associatedAgentType koppeling (prov:wasAssociatedWith)[cite: 2]
+    # PROV relaties gekoppeld via joinConditions op spanId
     rr:predicateObjectMap [
         rr:predicate prov:wasAssociatedWith ;
         rr:objectMap [
-            rr:parentTriplesMap <#AssociatedAgentMapping>
+            rr:parentTriplesMap <#AssociatedAgentMapping> ;
+            rr:joinCondition [
+                rr:child "spanId" ;
+                rr:parent "spanId"
+            ]
         ]
     ] ;
 
-    # usedEntityType koppeling (prov:used - dataset)[cite: 2]
     rr:predicateObjectMap [
         rr:predicate prov:used ;
         rr:objectMap [
-            rr:parentTriplesMap <#UsedEntityDatasetMapping>
+            rr:parentTriplesMap <#UsedEntityDatasetMapping> ;
+            rr:joinCondition [
+                rr:child "spanId" ;
+                rr:parent "spanId"
+            ]
         ]
     ] ;
 
-    # generatedEntityType koppeling (prov:generated - dataproduct)[cite: 2]
     rr:predicateObjectMap [
         rr:predicate prov:generated ;
         rr:objectMap [
-            rr:parentTriplesMap <#GeneratedEntityDataProductMapping>
+            rr:parentTriplesMap <#GeneratedEntityDataProductMapping> ;
+            rr:joinCondition [
+                rr:child "spanId" ;
+                rr:parent "spanId"
+            ]
+        ]
+    ] ;
+
+    # Schema properties gekoppeld via dezelfde parent mappings
+    rr:predicateObjectMap [
+        rr:predicate acttype:associatedAgentType ;
+        rr:objectMap [
+            rr:parentTriplesMap <#AssociatedAgentMapping> ;
+            rr:joinCondition [
+                rr:child "spanId" ;
+                rr:parent "spanId"
+            ]
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate acttype:usedEntityType ;
+        rr:objectMap [
+            rr:parentTriplesMap <#UsedEntityDatasetMapping> ;
+            rr:joinCondition [
+                rr:child "spanId" ;
+                rr:parent "spanId"
+            ]
+        ]
+    ] ;
+
+    rr:predicateObjectMap [
+        rr:predicate acttype:generatedEntityType ;
+        rr:objectMap [
+            rr:parentTriplesMap <#GeneratedEntityDataProductMapping> ;
+            rr:joinCondition [
+                rr:child "spanId" ;
+                rr:parent "spanId"
+            ]
         ]
     ] .
 
 
 #################################################################
-# 2. ASSOCIATED AGENT (associatedAgentType)[cite: 2]
+# 2. ASSOCIATED AGENT (processing_activity_id)
+# Itereren over alle attributes; pyrml pakt de juiste record dankzij de pad-structuur
 #################################################################
 
 <#AssociatedAgentMapping>
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:source "../../localoutlier-ipt/examples/localoutlier-trace.json" ;
         rml:referenceFormulation ql:JSONPath ;
-        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.processing_activity_id')]"
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*]"
     ] ;
 
     rr:subjectMap [
-        rr:template "http://trace.example.com/agent/{value.stringValue}" ;
+        rr:template "http://trace.example.com/agent/{attributes.2.value.stringValue}" ;
         rr:class prov:Agent ;
         rr:termType rr:IRI
     ] ;
@@ -83,7 +135,7 @@
     rr:predicateObjectMap [
         rr:predicate rdfs:label ;
         rr:objectMap [
-            rml:reference "value.stringValue" ;
+            rml:reference "attributes.2.value.stringValue" ;
             rr:datatype xsd:string
         ]
     ] ;
@@ -91,27 +143,27 @@
     rr:predicateObjectMap [
         rr:predicate dcterms:source ;
         rr:objectMap [
-            rml:reference "value.stringValue" ;
+            rml:reference "attributes.2.value.stringValue" ;
             rr:termType rr:IRI
         ]
     ] .
 
 
 #################################################################
-# 3. USED ENTITY (usedEntityType - Dataset)[cite: 2]
+# 3. USED ENTITY (dataset_id)
 #################################################################
 
 <#UsedEntityDatasetMapping>
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:source "../../localoutlier-ipt/examples/localoutlier-trace.json" ;
         rml:referenceFormulation ql:JSONPath ;
-        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataset_id')]"
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*]"
     ] ;
 
     rr:subjectMap [
-        rr:template "http://trace.example.com/entity/dataset/{value.stringValue}" ;
+        rr:template "http://trace.example.com/entity/dataset/{attributes.0.value.stringValue}" ;
         rr:class prov:Entity ;
         rr:termType rr:IRI
     ] ;
@@ -127,27 +179,27 @@
     rr:predicateObjectMap [
         rr:predicate dcterms:source ;
         rr:objectMap [
-            rml:reference "value.stringValue" ;
+            rml:reference "attributes.0.value.stringValue" ;
             rr:termType rr:IRI
         ]
     ] .
 
 
 #################################################################
-# 4. GENERATED ENTITY (generatedEntityType - Data Product)[cite: 2]
+# 4. GENERATED ENTITY (dataproduct_id)
 #################################################################
 
 <#GeneratedEntityDataProductMapping>
     a rr:TriplesMap ;
 
     rml:logicalSource [
-        rml:source "../../../opentelemetry/trace/examples/localoutlier-trace.json" ;
+        rml:source "../../localoutlier-ipt/examples/localoutlier-trace.json" ;
         rml:referenceFormulation ql:JSONPath ;
-        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*].attributes[?(@.key=='dpl.objects.dataproduct_id')]"
+        rml:iterator "$.resourceSpans[*].scopeSpans[*].spans[*]"
     ] ;
 
     rr:subjectMap [
-        rr:template "http://trace.example.com/entity/data-product/{value.stringValue}" ;
+        rr:template "http://trace.example.com/entity/data-product/{attributes.1.value.stringValue}" ;
         rr:class prov:Entity ;
         rr:termType rr:IRI
     ] ;
@@ -163,7 +215,7 @@
     rr:predicateObjectMap [
         rr:predicate dcterms:source ;
         rr:objectMap [
-            rml:reference "value.stringValue" ;
+            rml:reference "attributes.1.value.stringValue" ;
             rr:termType rr:IRI
         ]
     ] .

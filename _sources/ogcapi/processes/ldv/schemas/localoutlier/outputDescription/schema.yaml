@@ -14,4 +14,4 @@ properties:
             type: string
             const: output
           schema:
-            $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema#/properties/output_dataset
+            $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema#/properties/output_dataset

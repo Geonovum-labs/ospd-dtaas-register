@@ -20,8 +20,8 @@
   "extensionPoints": {
     "baseBuildingBlock": "ogc.api.processes.v1.api",
     "extensions": {
-      "ogc.api.processes.v1.schemas.inputDescription": "geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions",
-      "ogc.api.processes.v1.schemas.outputDescription": "geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions"
+      "ogc.api.processes.v1.schemas.inputDescription": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions",
+      "ogc.api.processes.v1.schemas.outputDescription": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions"
     }
   },
   "sources": [

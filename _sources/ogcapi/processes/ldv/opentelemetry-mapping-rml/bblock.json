@@ -10,7 +10,7 @@
   "maturity": "development",
   "tags": ["opentelemetry", "prov-o", "rml", "provenance"],
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.ldv.localoutlier-ipt",
+    "geonovum-labs.dtaas.ogcapi.processes.ldv.localoutlier-ipt",
     "ogc.register.schemas.st-ml-activity-types-schema"  ],
   "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references.",
   "resources": [

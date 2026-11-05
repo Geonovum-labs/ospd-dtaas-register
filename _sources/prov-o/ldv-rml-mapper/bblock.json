@@ -10,7 +10,7 @@
   "maturity": "development",
   "tags": ["opentelemetry", "prov-o", "rml", "provenance"],
   "dependsOn": [
-    "bblocks://geonovum.dtaas.opentelemetry.trace"
+    "bblocks://geonovum-labs.dtaas.opentelemetry.trace"
   ],
   "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references. This is the transform done in scope of the Logboek Dataverwerkingen voor Objectgegevens research project",
    "sources": [
@@ -30,10 +30,5 @@
       "ref": "examples/ldv-prov.rml.ttl",
       "format": "text/turtle"
     }
-  ],
-  "tags": [ 
-    "ldv",
-    "prov-o",
-    "rml"
   ]
 }

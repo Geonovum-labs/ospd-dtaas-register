@@ -1,2 +1,2 @@
 anyOf:
-  - $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription
+  - $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription

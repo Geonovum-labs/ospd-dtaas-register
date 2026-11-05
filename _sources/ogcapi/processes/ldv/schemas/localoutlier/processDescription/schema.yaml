@@ -2,10 +2,10 @@ allOf:
   - $ref: bblocks://ogc.api.processes.v1.schemas.process
   - properties:
       inputs:
-        $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputDescription
+        $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputDescription
         additionalProperties: false
       outputs:
-        $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription
+        $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription
         additionalProperties: false
       # output_column:
       #   type: object
@@ -23,4 +23,4 @@ allOf:
       #       type: integer
       #       const: 1
       #     schema:
-      #       $ref: bblocks://geonovum.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema#/properties/output_column
+      #       $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.schemas.localoutlier.inputSchema#/properties/output_column

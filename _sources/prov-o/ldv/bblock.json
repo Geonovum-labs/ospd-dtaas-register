@@ -16,9 +16,5 @@
       "ref": "examples/ldv.ttl",
       "format": "text/turtle"
     }
-  ],
-  "tags": [ 
-    "ldv",
-    "rml"
   ]
 }

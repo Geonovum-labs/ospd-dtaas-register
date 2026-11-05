@@ -46,7 +46,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription
+                $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription
         default:
           $ref: "bblocks://ogc.api.processes.v1.responses.ServerError"
 
@@ -76,7 +76,7 @@ paths:
                 - required: [inputs]
                   properties:
                     inputs:
-                      $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema
+                      $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema
             example:
               inputs:
                 dataset: https://example.com/data/points.geojson
@@ -91,7 +91,7 @@ paths:
               schema:
                 properties:
                   outputs:
-                    $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema
+                    $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema
         '201':
           $ref: "bblocks://ogc.api.processes.v1.responses.ExecuteAsync"
         '404':
@@ -123,7 +123,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
+                $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
         '404':
           $ref: "bblocks://ogc.api.processes.v1.responses.NotFound"
         '500':

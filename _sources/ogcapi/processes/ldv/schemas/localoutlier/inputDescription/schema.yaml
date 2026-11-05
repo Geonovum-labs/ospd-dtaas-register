@@ -18,7 +18,7 @@ properties:
         type: integer
         const: 1
       schema:
-        $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema#/properties/dataset
+        $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema#/properties/dataset
   n_neighbors:
     type: object
     properties:
@@ -35,7 +35,7 @@ properties:
         type: integer
         const: 1
       schema:
-        $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema#/properties/n_neighbors
+        $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema#/properties/n_neighbors
   leaf_size:
     type: object
     properties:
@@ -52,7 +52,7 @@ properties:
         type: integer
         const: 1
       schema:
-        $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema#/properties/leaf_size
+        $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema#/properties/leaf_size
   output_column:
     type: object
     properties:
@@ -69,4 +69,4 @@ properties:
         type: integer
         const: 1
       schema:
-        $ref: bblocks://geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema#/properties/output_column
+        $ref: bblocks://geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema#/properties/output_column

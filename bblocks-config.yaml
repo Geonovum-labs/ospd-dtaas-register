@@ -11,7 +11,7 @@ description: |
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
 # identifier-prefix: r1.tutorial.sensors.
-identifier-prefix: geonovum.dtaas.
+identifier-prefix: geonovum-labs.dtaas.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:

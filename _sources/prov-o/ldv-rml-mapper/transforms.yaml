@@ -8,5 +8,5 @@ transforms:
     outputs:
       mediaTypes: [ text/turtle ]
       profiles:
-        - bblocks://geonovum.dtaas.prov-o.ldv
+        - bblocks://geonovum-labs.dtaas.prov-o.ldv
     ref: examples/ldv-prov.rml.ttl
