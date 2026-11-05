@@ -1,7 +1,7 @@
 
 # Demo OGC API processes instance - LOF (Api)
 
-`geonovum.dtaas.ogcapi.processes.ldv.localoutlier` *v1.0*
+`geonovum-labs.dtaas.ogcapi.processes.ldv.localoutlier` *v1.0*
 
 An example of an OGC API Processes implementation using building blocks - Local Outlier Factor
 

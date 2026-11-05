@@ -1,7 +1,7 @@
 
 # LDV target schema (Model)
 
-`geonovum.dtaas.prov-o.ldv` *v0.1*
+`geonovum-labs.dtaas.prov-o.ldv` *v0.1*
 
 target Prov-o schema for LDV
 

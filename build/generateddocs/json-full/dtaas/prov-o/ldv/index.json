@@ -1,7 +1,7 @@
 
 
 {
-  "itemIdentifier": "geonovum.dtaas.prov-o.ldv",
+  "itemIdentifier": "geonovum-labs.dtaas.prov-o.ldv",
   "name": "LDV target schema",
   "abstract": "target Prov-o schema for LDV",
   "status": "under-development",
@@ -11,8 +11,9 @@
   "version": "0.1",
   "maturity": "development",
   "tags": [
+    "opentelemetry",
     "ldv",
-    "rml"
+    "provenance"
   ],
   "resources": [
     {
@@ -26,7 +27,7 @@
   "license": {
     "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
   },
-  "dateOfLastChange": "2026-11-04",
+  "dateOfLastChange": "2026-11-05",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv/",
   "validationPassed": true,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv/",

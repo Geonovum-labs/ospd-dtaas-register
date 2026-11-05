@@ -1,7 +1,7 @@
 
 
 {
-  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription",
+  "itemIdentifier": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription",
   "name": "Localoutlier process output description",
   "abstract": "Output description for the localoutlier process",
   "status": "under-development",
@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2026-11-04",
+  "dateOfLastChange": "2026-11-05",
   "maturity": "development",
   "tags": [
     "examples",
@@ -18,7 +18,7 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema",
+    "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema",
     "ogc.api.processes.v1.schemas.outputDescription"
   ],
   "license": {
@@ -60,7 +60,7 @@
       ]
     }
   ],
-  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.yaml\nproperties:\n  schema:\n    type: object\n    properties:\n      output_dataset:\n        type: object\n        properties:\n          title:\n            type: string\n            const: Output Dataset\n          description:\n            type: string\n            const: output\n          schema:\n            $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputSchema/schema.yaml#/properties/output_dataset\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-04'\n",
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/schemas/outputDescription/schema.yaml\nproperties:\n  schema:\n    type: object\n    properties:\n      output_dataset:\n        type: object\n        properties:\n          title:\n            type: string\n            const: Output Dataset\n          description:\n            type: string\n            const: output\n          schema:\n            $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputSchema/schema.yaml#/properties/output_dataset\nx-bblocks-metadata:\n  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-05'\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/ldv/schemas/localoutlier/outputDescription"
 }

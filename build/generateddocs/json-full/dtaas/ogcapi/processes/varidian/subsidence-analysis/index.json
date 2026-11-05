@@ -1,7 +1,7 @@
 
 
 {
-  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis",
+  "itemIdentifier": "geonovum-labs.dtaas.ogcapi.processes.varidian.subsidence-analysis",
   "name": "Subsidence Analysis",
   "abstract": "A registered geoprocessing activity type for performing settlement calculations for urban development using the Deltares Atlantis calculation module.",
   "status": "under-development",
@@ -10,7 +10,7 @@
   "dateTimeAddition": "2026-10-30T00:00:00Z",
   "register": "ospd-dtaas-register",
   "version": "0.1",
-  "dateOfLastChange": "2026-11-04",
+  "dateOfLastChange": "2026-11-05",
   "maturity": "development",
   "tags": [
     "examples",
@@ -76,7 +76,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Subsidence Analysis Activity Type\ndescription: 'A profile of the Geoprocessing Activity Type for subsidence analysis\n  activities.\n\n  '\nallOf:\n- $ref: https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.yaml\n- type: object\n  properties:\n    type:\n      const: https://w3id.org/ogc/rim/activity-type/ActivityType\n    itemClass:\n      const: https://w3id.org/ogc/rim/activity-type/activityTypeItemClass\n    usedEntityType:\n      const: https://example.org/def/SurchargeArea\n    generatedEntityType:\n      const: https://example.org/def/SubsidenceResult\n    associatedAgentType:\n      const: http://www.w3.org/ns/prov#SoftwareAgent\n  required:\n  - usedEntityType\n  - generatedEntityType\n  - associatedAgentType\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-04'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Subsidence Analysis Activity Type\ndescription: 'A profile of the Geoprocessing Activity Type for subsidence analysis\n  activities.\n\n  '\nallOf:\n- $ref: https://geonovum-labs.github.io/activity-type-register/build/annotated/register/schemas/geoprocessing-activity-types-schema/schema.yaml\n- type: object\n  properties:\n    type:\n      const: https://w3id.org/ogc/rim/activity-type/ActivityType\n    itemClass:\n      const: https://w3id.org/ogc/rim/activity-type/activityTypeItemClass\n    usedEntityType:\n      const: https://example.org/def/SurchargeArea\n    generatedEntityType:\n      const: https://example.org/def/SubsidenceResult\n    associatedAgentType:\n      const: http://www.w3.org/ns/prov#SoftwareAgent\n  required:\n  - usedEntityType\n  - generatedEntityType\n  - associatedAgentType\nx-bblocks-metadata:\n  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.varidian.subsidence-analysis\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-05'\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/varidian/subsidence-analysis"
 }

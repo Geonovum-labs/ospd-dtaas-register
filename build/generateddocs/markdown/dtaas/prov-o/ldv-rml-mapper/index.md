@@ -1,7 +1,7 @@
 
 # LDV RML Mapper (Schema)
 
-`geonovum.dtaas.prov-o.ldv-rml-mapper` *v0.1*
+`geonovum-labs.dtaas.prov-o.ldv-rml-mapper` *v0.1*
 
 OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
 

@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription - Localoutlier process description",
+  "title": "Validation report for geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription - Localoutlier process description",
   "bblockName": "Localoutlier process description",
-  "bblockId": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription",
-  "generated": "2026-11-04T16:24:48.439006+00:00",
+  "bblockId": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription",
+  "generated": "2026-11-05T15:21:20.086877+00:00",
   "result": true,
   "items": [
     {

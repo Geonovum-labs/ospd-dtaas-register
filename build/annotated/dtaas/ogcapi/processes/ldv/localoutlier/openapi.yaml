@@ -57,12 +57,12 @@ paths:
                         additionalProperties:
                           $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/inputDescriptions/schema.yaml
                           x-bblocks-extension-source: ogc.api.processes.v1.schemas.inputDescription
-                          x-bblocks-extension-target: geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions
+                          x-bblocks-extension-target: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions
                       outputs:
                         additionalProperties:
                           $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/outputDescriptions/schema.yaml
                           x-bblocks-extension-source: ogc.api.processes.v1.schemas.outputDescription
-                          x-bblocks-extension-target: geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
+                          x-bblocks-extension-target: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
           description: A process description.
         404:
           $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/NotFound/schema.yaml
@@ -99,7 +99,7 @@ paths:
                   - allOf:
                     - $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/outputDescriptions/schema.yaml
                       x-bblocks-extension-source: ogc.api.processes.v1.schemas.outputDescription
-                      x-bblocks-extension-target: geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
+                      x-bblocks-extension-target: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
                       allOf:
                       - properties:
                           additionalParameters:
@@ -321,22 +321,22 @@ paths:
                           additionalProperties:
                             $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/inputDescriptions/schema.yaml
                             x-bblocks-extension-source: ogc.api.processes.v1.schemas.inputDescription
-                            x-bblocks-extension-target: geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions
+                            x-bblocks-extension-target: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions
                         outputs:
                           additionalProperties:
                             $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/outputDescriptions/schema.yaml
                             x-bblocks-extension-source: ogc.api.processes.v1.schemas.outputDescription
-                            x-bblocks-extension-target: geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
+                            x-bblocks-extension-target: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
                   - properties:
                       inputs:
                         allOf:
                         - $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/inputDescriptions/schema.yaml
                           x-bblocks-extension-source: ogc.api.processes.v1.schemas.inputDescription
-                          x-bblocks-extension-target: geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions
+                          x-bblocks-extension-target: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions
                       outputs:
                         $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/outputDescriptions/schema.yaml
                         x-bblocks-extension-source: ogc.api.processes.v1.schemas.outputDescription
-                        x-bblocks-extension-target: geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
+                        x-bblocks-extension-target: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
         default:
           $ref: https://ogcincubator.github.io/bblocks-ogcapi-processes/build/annotated/api/processes/v1/responses/ServerError/schema.yaml
   /processes/localoutlier/execution:
@@ -384,5 +384,5 @@ servers:
   url: http://localhost:5000
 x-bblocks-extends: ogc.api.processes.v1.api
 x-bblocks-extensions:
-  ogc.api.processes.v1.schemas.inputDescription: geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions
-  ogc.api.processes.v1.schemas.outputDescription: geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
+  ogc.api.processes.v1.schemas.inputDescription: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions
+  ogc.api.processes.v1.schemas.outputDescription: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions

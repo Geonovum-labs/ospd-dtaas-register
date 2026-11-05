@@ -1,7 +1,7 @@
 
 # Reconstruct Buildings process (Schema)
 
-`geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings` *v0.1*
+`geonovum-labs.dtaas.ogcapi.processes.3dgi.reconstruct_buildings` *v0.1*
 
 Process to reconstruct 3D building models from point cloud data using the application package Reconstruct Buildings.
 
@@ -310,10 +310,10 @@ x-jsonld-prefixes:
   apkg: http://w3id.org/apkg/terms#
   schema: https://schema.org/
 x-bblocks-metadata:
-  itemIdentifier: geonovum.dtaas.ogcapi.processes.3dgi.reconstruct_buildings
+  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.3dgi.reconstruct_buildings
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-05'
 
 ```
 

@@ -1,19 +1,20 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <https://w3id.org/ogc/rim/activity-type/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://trace.example.com/activity/f2773d02c278c008> rdfs:label "LocalOutlierFactor"^^xsd:string ;
     prov:generated <http://trace.example.com/entity/data-product/http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> ;
-    prov:used <http://trace.example.com/entity/dataset/http://localhost:5000/collections/knmi_meetstations/queryables?f=json> ;
-    prov:wasAssociatedWith <http://trace.example.com/agent/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> .
-
-<http://trace.example.com/agent/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> rdfs:label <https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> ;
-    dcterms:source <https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> .
+    prov:used <http://trace.example.com/entity/dataset/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> ;
+    prov:wasAssociatedWith <http://trace.example.com/agent/> ;
+    ns1:associatedAgentType <http://trace.example.com/agent/> ;
+    ns1:generatedEntityType <http://trace.example.com/entity/data-product/http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> ;
+    ns1:usedEntityType <http://trace.example.com/entity/dataset/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> .
 
 <http://trace.example.com/entity/data-product/http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> rdfs:label "Data Product" ;
     dcterms:source <http://localhost:5000/collections/catalog/items/pygeoapi.process.localoutlier.LOFProcessor> .
 
-<http://trace.example.com/entity/dataset/http://localhost:5000/collections/knmi_meetstations/queryables?f=json> rdfs:label "Dataset" ;
-    dcterms:source <http://localhost:5000/collections/knmi_meetstations/queryables?f=json> .
+<http://trace.example.com/entity/dataset/https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> rdfs:label "Dataset" ;
+    dcterms:source <https://algoritmes.overheid.nl/nl/algoritme/maaidata-provincie-noordholland/68294175> .
 

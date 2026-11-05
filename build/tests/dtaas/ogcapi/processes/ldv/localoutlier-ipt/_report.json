@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for geonovum.dtaas.ogcapi.processes.ldv.localoutlier-ipt - Opentelemetry trace from Localoutlier Factor OGC API Process",
+  "title": "Validation report for geonovum-labs.dtaas.ogcapi.processes.ldv.localoutlier-ipt - Opentelemetry trace from Localoutlier Factor OGC API Process",
   "bblockName": "Opentelemetry trace from Localoutlier Factor OGC API Process",
-  "bblockId": "geonovum.dtaas.ogcapi.processes.ldv.localoutlier-ipt",
-  "generated": "2026-11-04T16:24:50.784053+00:00",
+  "bblockId": "geonovum-labs.dtaas.ogcapi.processes.ldv.localoutlier-ipt",
+  "generated": "2026-11-05T15:21:23.166785+00:00",
   "result": true,
   "items": [
     {

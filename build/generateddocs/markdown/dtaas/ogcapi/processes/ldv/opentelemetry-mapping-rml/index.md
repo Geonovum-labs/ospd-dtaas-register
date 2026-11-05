@@ -1,7 +1,7 @@
 
 # OpenTelemetry to PROV-O mapping (RML plugin) (Schema)
 
-`geonovum.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml` *v0.1*
+`geonovum-labs.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml` *v0.1*
 
 OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.
 
@@ -353,7 +353,7 @@ properties:
       preparation activity type."
 unevaluatedProperties: true
 x-bblocks-metadata:
-  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml
+  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '0.1'
   dateOfLastChange: '2026-08-28'

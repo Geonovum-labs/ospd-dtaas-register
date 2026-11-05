@@ -28,9 +28,9 @@
     }
   },
   "x-bblocks-metadata": {
-    "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription",
+    "itemIdentifier": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription",
     "register": "https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json",
     "version": "1.0",
-    "dateOfLastChange": "2026-11-04"
+    "dateOfLastChange": "2026-11-05"
   }
 }

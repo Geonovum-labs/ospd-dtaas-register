@@ -1,7 +1,7 @@
 
 # OpenTelemetry trace with DTaaS provenance attributes (Schema)
 
-`geonovum.dtaas.opentelemetry.trace` *v0.1*
+`geonovum-labs.dtaas.opentelemetry.trace` *v0.1*
 
 OTLP JSON trace shape used to record OGC API Processes provenance.
 
@@ -413,7 +413,7 @@ $defs:
           boolValue:
             type: boolean
 x-bblocks-metadata:
-  itemIdentifier: geonovum.dtaas.opentelemetry.trace
+  itemIdentifier: geonovum-labs.dtaas.opentelemetry.trace
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '0.1'
   dateOfLastChange: '2026-08-26'

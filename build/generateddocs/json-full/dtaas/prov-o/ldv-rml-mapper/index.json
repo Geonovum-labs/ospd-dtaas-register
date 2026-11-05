@@ -1,7 +1,7 @@
 
 
 {
-  "itemIdentifier": "geonovum.dtaas.prov-o.ldv-rml-mapper",
+  "itemIdentifier": "geonovum-labs.dtaas.prov-o.ldv-rml-mapper",
   "name": "LDV RML Mapper",
   "abstract": "OpenTelemetry OTLP JSON transformed to PROV-O RDF using an RML transform plugin.",
   "status": "under-development",
@@ -12,12 +12,13 @@
   "version": "0.1",
   "maturity": "development",
   "tags": [
-    "ldv",
+    "opentelemetry",
     "prov-o",
-    "rml"
+    "rml",
+    "provenance"
   ],
   "dependsOn": [
-    "geonovum.dtaas.opentelemetry.trace"
+    "geonovum-labs.dtaas.opentelemetry.trace"
   ],
   "description": "The transform uses the RML transformer plugin to convert OTLP resourceSpans into PROV-O RDF. Span and trace records become PROV activities and array-valued data object identifiers become qualified usage references. This is the transform done in scope of the Logboek Dataverwerkingen voor Objectgegevens research project",
   "sources": [
@@ -42,7 +43,7 @@
   "license": {
     "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
   },
-  "dateOfLastChange": "2026-11-04",
+  "dateOfLastChange": "2026-11-05",
   "sourceFiles": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/",
   "validationPassed": true,
   "testOutputs": "https://github.com/Geonovum-labs/ospd-dtaas-register/blob/main/build/tests/dtaas/prov-o/ldv-rml-mapper/",
@@ -69,7 +70,7 @@
           }
         ],
         "profiles": [
-          "bblocks://geonovum.dtaas.prov-o.ldv"
+          "bblocks://geonovum-labs.dtaas.prov-o.ldv"
         ]
       },
       "ref": "https://geonovum-labs.github.io/ospd-dtaas-register/_sources/prov-o/ldv-rml-mapper/examples/ldv-prov.rml.ttl",
@@ -91,9 +92,9 @@
               "sizeBytes": 28221,
               "url": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/example_1_1.ldv-to-prov-o-rml.ttl",
               "profilesValidation": {
-                "geonovum.dtaas.prov-o.ldv": {
+                "geonovum-labs.dtaas.prov-o.ldv": {
                   "result": true,
-                  "report": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/geonovum.dtaas.prov-o.ldv/_report.json"
+                  "report": "https://geonovum-labs.github.io/ospd-dtaas-register/build/tests/dtaas/prov-o/ldv-rml-mapper/transforms/geonovum-labs.dtaas.prov-o.ldv/_report.json"
                 }
               }
             }

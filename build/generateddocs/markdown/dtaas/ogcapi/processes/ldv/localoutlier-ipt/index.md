@@ -1,9 +1,9 @@
 
 # Opentelemetry trace from Localoutlier Factor OGC API Process (Api)
 
-`geonovum.dtaas.ogcapi.processes.ldv.localoutlier-ipt` *v0.1*
+`geonovum-labs.dtaas.ogcapi.processes.ldv.localoutlier-ipt` *v0.1*
 
-Opentelemetry trace from Localoutlier Factor OGC API Process (geonovum.dtaas.ogcapi.processes.ldv.localoutlier)
+Opentelemetry trace from Localoutlier Factor OGC API Process (geonovum-labs.dtaas.ogcapi.processes.ldv.localoutlier)
 
 [*Status*](http://www.opengis.net/def/status): Under development
 

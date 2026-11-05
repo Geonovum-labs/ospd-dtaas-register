@@ -1,7 +1,7 @@
 
 
 {
-  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.localoutlier",
+  "itemIdentifier": "geonovum-labs.dtaas.ogcapi.processes.ldv.localoutlier",
   "name": "Demo OGC API processes instance - LOF",
   "abstract": "An example of an OGC API Processes implementation using building blocks - Local Outlier Factor",
   "description": "This OGC API Process served as an example implementation in the LDV (Logboek Dataverwerkingen voor (geo) objecten) project. It uses a Local Outlier Factor Machine Learning Algorithm for classification of observations/measurements. The Process itself does not expose provenance information directly in the API, but in the implementation OpenTelemetry is used server side to create a trace with provenance information using the OpenTelemetry Trace/Span semantics and adhering to the Dutch LDV standard.",
@@ -10,7 +10,7 @@
   "itemClass": "api",
   "register": "ospd-dtaas-register",
   "version": "1.0",
-  "dateOfLastChange": "2026-11-04",
+  "dateOfLastChange": "2026-11-05",
   "maturity": "development",
   "tags": [
     "examples",
@@ -23,8 +23,8 @@
   "extensionPoints": {
     "baseBuildingBlock": "ogc.api.processes.v1.api",
     "extensions": {
-      "ogc.api.processes.v1.schemas.inputDescription": "geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions",
-      "ogc.api.processes.v1.schemas.outputDescription": "geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions"
+      "ogc.api.processes.v1.schemas.inputDescription": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions",
+      "ogc.api.processes.v1.schemas.outputDescription": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions"
     }
   },
   "sources": [
@@ -39,11 +39,11 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions",
-    "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema",
-    "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema",
-    "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription",
-    "geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions",
+    "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.inputDescriptions",
+    "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema",
+    "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputSchema",
+    "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription",
+    "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions",
     "ogc.api.processes.v1.api",
     "ogc.api.processes.v1.parameters.jobId",
     "ogc.api.processes.v1.paths.Conformance",

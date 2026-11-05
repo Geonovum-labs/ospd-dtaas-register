@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for geonovum.dtaas.prov-o.ldv-rml-mapper - LDV RML Mapper",
+  "title": "Validation report for geonovum-labs.dtaas.prov-o.ldv-rml-mapper - LDV RML Mapper",
   "bblockName": "LDV RML Mapper",
-  "bblockId": "geonovum.dtaas.prov-o.ldv-rml-mapper",
-  "generated": "2026-11-04T16:24:43.423109+00:00",
+  "bblockId": "geonovum-labs.dtaas.prov-o.ldv-rml-mapper",
+  "generated": "2026-11-05T15:21:14.098941+00:00",
   "result": true,
   "items": [
     {

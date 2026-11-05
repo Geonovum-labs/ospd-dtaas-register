@@ -1,7 +1,7 @@
 
 # Convert Format process (Schema)
 
-`geonovum.dtaas.ogcapi.processes.3dgi.convert_format` *v0.1*
+`geonovum-labs.dtaas.ogcapi.processes.3dgi.convert_format` *v0.1*
 
 Process to convert point cloud data between supported formats using the application package Convert Format.
 
@@ -300,10 +300,10 @@ x-jsonld-prefixes:
   apkg: http://w3id.org/apkg/terms#
   schema: https://schema.org/
 x-bblocks-metadata:
-  itemIdentifier: geonovum.dtaas.ogcapi.processes.3dgi.convert_format
+  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.3dgi.convert_format
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-05'
 
 ```
 

@@ -1,7 +1,7 @@
 
 # Subsidence Analysis (Schema)
 
-`geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis` *v0.1*
+`geonovum-labs.dtaas.ogcapi.processes.varidian.subsidence-analysis` *v0.1*
 
 A registered geoprocessing activity type for performing settlement calculations for urban development using the Deltares Atlantis calculation module.
 
@@ -96,10 +96,10 @@ allOf:
   - generatedEntityType
   - associatedAgentType
 x-bblocks-metadata:
-  itemIdentifier: geonovum.dtaas.ogcapi.processes.varidian.subsidence-analysis
+  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.varidian.subsidence-analysis
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-05'
 
 ```
 

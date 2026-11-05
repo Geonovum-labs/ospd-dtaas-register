@@ -1,7 +1,7 @@
 
 
 {
-  "itemIdentifier": "geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions",
+  "itemIdentifier": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions",
   "name": "Example OGC API Processes instance output descriptions",
   "abstract": "Collection of output descriptions",
   "status": "under-development",
@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-examples",
   "version": "1.0",
-  "dateOfLastChange": "2026-11-04",
+  "dateOfLastChange": "2026-11-05",
   "maturity": "development",
   "tags": [
     "examples",
@@ -18,7 +18,7 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription"
+    "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription"
   ],
   "license": {
     "url": "https://geonovum-labs.github.io/ospd-dtaas-register/LICENSE"
@@ -59,7 +59,7 @@
       ]
     }
   ],
-  "annotatedSchema": "anyOf:\n- $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputDescription/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-04'\n",
+  "annotatedSchema": "anyOf:\n- $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputDescription/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions\n  register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-05'\n",
   "gitRepository": "https://github.com/Geonovum-labs/ospd-dtaas-register",
   "gitPath": "_sources/ogcapi/processes/ldv/schemas/outputDescriptions"
 }

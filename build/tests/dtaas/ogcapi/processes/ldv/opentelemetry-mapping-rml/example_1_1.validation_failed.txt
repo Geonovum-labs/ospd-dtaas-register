@@ -1,5 +1,5 @@
-Validation report for geonovum.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml - OpenTelemetry to PROV-O mapping (RML plugin)
-Generated 2026-11-04T16:24:51.061401+00:00
+Validation report for geonovum-labs.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml - OpenTelemetry to PROV-O mapping (RML plugin)
+Generated 2026-11-05T15:21:23.550410+00:00
 === Files ===
 Using ../localoutlier-ipt/examples/localoutlier-trace.json from examples
 === End Files ===
@@ -70,7 +70,7 @@ Failed validating 'required' in schema:
      'type': 'object',
      'unevaluatedProperties': True,
      'x-bblocks-metadata': {'dateOfLastChange': '2026-08-28',
-                            'itemIdentifier': 'geonovum.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml',
+                            'itemIdentifier': 'geonovum-labs.dtaas.ogcapi.processes.ldv.opentelemetry-mapping-rml',
                             'register': 'https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json',
                             'version': '0.1'}}
 

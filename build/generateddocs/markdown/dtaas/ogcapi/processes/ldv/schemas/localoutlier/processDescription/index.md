@@ -1,7 +1,7 @@
 
 # Localoutlier process description (Schema)
 
-`geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription` *v1.0*
+`geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription` *v1.0*
 
 Process description for the localoutlier process
 
@@ -69,10 +69,10 @@ x-jsonld-extra-terms:
   description: http://purl.org/dc/terms/description
   jobControlOptions: https://w3id.org/ogc/api/processes/jobControlOptions
 x-bblocks-metadata:
-  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription
+  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.processDescription
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-05'
 
 ```
 

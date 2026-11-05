@@ -1,7 +1,7 @@
 
 # Example OGC API Processes instance output descriptions (Schema)
 
-`geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions` *v1.0*
+`geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions` *v1.0*
 
 Collection of output descriptions
 
@@ -50,10 +50,10 @@ Collection of output descriptions
 anyOf:
 - $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputDescription/schema.yaml
 x-bblocks-metadata:
-  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
+  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.outputDescriptions
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-05'
 
 ```
 

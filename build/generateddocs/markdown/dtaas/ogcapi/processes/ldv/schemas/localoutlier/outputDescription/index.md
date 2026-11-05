@@ -1,7 +1,7 @@
 
 # Localoutlier process output description (Schema)
 
-`geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription` *v1.0*
+`geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription` *v1.0*
 
 Output description for the localoutlier process
 
@@ -66,10 +66,10 @@ properties:
           schema:
             $ref: https://geonovum-labs.github.io/ospd-dtaas-register/build/annotated/dtaas/ogcapi/processes/ldv/schemas/localoutlier/outputSchema/schema.yaml#/properties/output_dataset
 x-bblocks-metadata:
-  itemIdentifier: geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription
+  itemIdentifier: geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.outputDescription
   register: https://geonovum-labs.github.io/ospd-dtaas-register/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-05'
 
 ```
 

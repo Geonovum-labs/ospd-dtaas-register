@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema - Localoutlier process input schema",
+  "title": "Validation report for geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema - Localoutlier process input schema",
   "bblockName": "Localoutlier process input schema",
-  "bblockId": "geonovum.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema",
-  "generated": "2026-11-04T16:24:43.369575+00:00",
+  "bblockId": "geonovum-labs.dtaas.ogcapi.processes.ldv.schemas.localoutlier.inputSchema",
+  "generated": "2026-11-05T15:21:14.068560+00:00",
   "result": true,
   "items": [
     {
